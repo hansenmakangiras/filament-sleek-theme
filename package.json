@@ -1,8 +1,20 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "install": "^0.13.0",
-    "npm": "^11.5.2",
-    "tailwindcss": "^4.1.12"
+  "name": "filament-awin-theme",
+  "version": "1.2.0",
+  "description": "A modern, responsive, and customizable theme for FilamentPHP v4 & v5",
+  "license": "MIT",
+  "author": "Rebwar Mustafa <hello@resma.tech>",
+  "homepage": "https://github.com/resmatech/filament-awin-theme",
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i resources/css/theme.css -o resources/dist/theme.css --minify",
+    "dev": "tailwindcss -i resources/css/theme.css -o resources/dist/theme.css --watch",
+    "format": "prettier --write \"resources/css/**/*.css\""
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "prettier": "^3.5.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.3.3"
   }
 }

@@ -4,9 +4,9 @@ A **modern, responsive, and customizable** theme for FilamentPHP, designed to el
 ## ✨ Features
 
 - **Dark/Light Mode** – Toggle between elegant color schemes
-- **FilamentPHP v4 Ready** – Fully compatible with the latest version
+- **FilamentPHP v4 & v5 Ready** – Fully compatible with Filament v4 and v5
 - **Fully Responsive** – Works flawlessly on all devices
-- **Tailwind CSS/Sass** – Easy to customize and extend
+- **Tailwind CSS v4** – Easy to customize and extend
 - **Plug & Play** – Install and activate in minutes
 
 ## Installation
@@ -26,6 +26,11 @@ input: [
 Then rebuild assets:
 ```bash
 npm run build
+```
+
+*(Optional)* You can also publish the CSS files directly into your project:
+```bash
+php artisan vendor:publish --tag=filament-awin-theme-css
 ```
 
 ### 3. Register the Plugin

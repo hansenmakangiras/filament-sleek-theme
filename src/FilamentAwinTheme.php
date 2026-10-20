@@ -2,11 +2,9 @@
 
 namespace Resma\FilamentAwinTheme;
 
-use Filament\Panel;
 use Filament\Contracts\Plugin;
-use Filament\Support\Assets\Theme;
+use Filament\Panel;
 use Filament\Support\Colors\Color;
-use Filament\Support\Facades\FilamentAsset;
 
 class FilamentAwinTheme implements Plugin
 {
@@ -14,6 +12,7 @@ class FilamentAwinTheme implements Plugin
      * @var array<string, string>|string
      */
     public array|string $primaryColor = Color::Blue;
+
     public function getId(): string
     {
         return 'filament-awin-theme';
@@ -48,5 +47,15 @@ class FilamentAwinTheme implements Plugin
         $this->primaryColor = $color;
 
         return $this;
+    }
+
+    /**
+     * Get the primary color.
+     *
+     * @return array<string, string>|string
+     */
+    public function getPrimaryColor(): array|string
+    {
+        return $this->primaryColor;
     }
 }
