@@ -200,6 +200,34 @@ body.dark.sleek-oled .fi-modal-footer {
     border-color: #222225 !important;
 }
 
+/* Notifications in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-no-notification,
+.dark .sleek-oled .fi-no-notification,
+.dark body.sleek-oled .fi-no-notification,
+html.dark.sleek-oled .fi-no-notification,
+body.dark.sleek-oled .fi-no-notification {
+    background-color: #0c0c0e !important;
+    border: 1px solid #27272a !important;
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.9), 0 0 0 1px #27272a !important;
+}
+
+/* Tabs in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-tabs,
+.dark .sleek-oled .fi-tabs,
+html.dark.sleek-oled .fi-tabs,
+body.dark.sleek-oled .fi-tabs {
+    background-color: #000000 !important;
+    border-color: #27272a !important;
+}
+
+.dark.sleek-oled .fi-tabs::before,
+.dark .sleek-oled .fi-tabs::before,
+html.dark.sleek-oled .fi-tabs::before,
+body.dark.sleek-oled .fi-tabs::before {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
 /* =========================================
    Subtle Radius Mode
    ========================================= */
@@ -217,6 +245,8 @@ html.sleek-radius-subtle .fi-main-ctn {
 .sleek-radius-subtle .fi-wi-widget,
 .sleek-radius-subtle .fi-modal-window,
 .sleek-radius-subtle .fi-dropdown-panel,
+.sleek-radius-subtle .fi-no-notification,
+.sleek-radius-subtle .fi-tabs,
 html.sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.sleek-radius-subtle .fi-ta,
 html.sleek-radius-subtle .fi-ta-ctn,
@@ -225,8 +255,17 @@ html.sleek-radius-subtle .fi-sc-section,
 html.sleek-radius-subtle .fi-wi-stats-overview-stat,
 html.sleek-radius-subtle .fi-wi-widget,
 html.sleek-radius-subtle .fi-modal-window,
-html.sleek-radius-subtle .fi-dropdown-panel {
+html.sleek-radius-subtle .fi-dropdown-panel,
+html.sleek-radius-subtle .fi-no-notification,
+html.sleek-radius-subtle .fi-tabs,
+body.sleek-radius-subtle .fi-tabs {
     border-radius: 0.75rem !important;
+}
+
+.sleek-radius-subtle .fi-tabs::before,
+html.sleek-radius-subtle .fi-tabs::before,
+body.sleek-radius-subtle .fi-tabs::before {
+    border-radius: 0.5rem !important;
 }
 
 /* =========================================
@@ -291,8 +330,14 @@ html.dark.sleek-scrollbars *::-webkit-scrollbar-thumb:hover {
    ========================================= */
 /* Table Header Cells */
 .sleek-compact .fi-ta-header-cell,
+.sleek-compact .fi-ta-actions-header-cell,
+.sleek-compact .fi-ta-empty-header-cell,
 html.sleek-compact .fi-ta-header-cell,
-body.sleek-compact .fi-ta-header-cell {
+html.sleek-compact .fi-ta-actions-header-cell,
+html.sleek-compact .fi-ta-empty-header-cell,
+body.sleek-compact .fi-ta-header-cell,
+body.sleek-compact .fi-ta-actions-header-cell,
+body.sleek-compact .fi-ta-empty-header-cell {
     padding-top: 0.375rem !important;
     padding-bottom: 0.375rem !important;
     padding-block: 0.375rem !important;
@@ -925,6 +970,80 @@ body.sleek-glass .fi-ta-header-ctn,
 body.sleek-glass .fi-ta-header-toolbar {
     position: relative !important;
     z-index: 20 !important;
+}
+
+/* Frosted Notifications in Glass Mode */
+html.sleek-glass:not(.dark) .fi-no-notification,
+body.sleek-glass:not(.dark) .fi-no-notification {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-no-notification,
+body.dark.sleek-glass:not(.sleek-oled) .fi-no-notification {
+    background-color: rgba(15, 23, 42, 0.82) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-no-notification,
+body.dark.sleek-glass.sleek-oled .fi-no-notification {
+    background-color: rgba(12, 12, 15, 0.88) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+}
+
+/* Frosted Tabs in Glass Mode */
+html.sleek-glass:not(.dark) .fi-tabs,
+body.sleek-glass:not(.dark) .fi-tabs {
+    background-color: rgba(255, 255, 255, 0.45) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+html.sleek-glass:not(.dark) .fi-tabs::before,
+body.sleek-glass:not(.dark) .fi-tabs::before {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-tabs,
+body.dark.sleek-glass:not(.sleek-oled) .fi-tabs {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-tabs::before,
+body.dark.sleek-glass:not(.sleek-oled) .fi-tabs::before {
+    background-color: rgba(15, 23, 42, 0.65) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-tabs,
+body.dark.sleek-glass.sleek-oled .fi-tabs {
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-tabs::before,
+body.dark.sleek-glass.sleek-oled .fi-tabs::before {
+    background-color: rgba(12, 12, 15, 0.75) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
 }
 
 /* =========================================

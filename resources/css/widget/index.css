@@ -12,7 +12,20 @@
 } */
 
 .fi-wi-widget:not(.fi-wi-stats-overview){
-    @apply p-1 border border-gray-300 bg-gray-50 dark:bg-gray-800 rounded-2xl dark:border-gray-700;
+    @apply p-1 border border-gray-300 bg-gray-50 dark:bg-gray-800 rounded-2xl dark:border-gray-700 flex flex-col h-full;
+}
+
+.fi-wi-widget:not(.fi-wi-stats-overview) > .fi-section,
+.fi-wi-widget:not(.fi-wi-stats-overview) > .fi-sc-section {
+    @apply flex flex-col flex-1 h-full;
+}
+
+.fi-wi-widget:not(.fi-wi-stats-overview) .fi-section-content-ctn {
+    @apply flex flex-col flex-1;
+}
+
+.fi-wi-widget:not(.fi-wi-stats-overview) .fi-section-content {
+    @apply flex flex-col flex-1;
 }
 
 .fi-wi-widget.fi-wi-table {
