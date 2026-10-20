@@ -134,4 +134,16 @@ return [
 
     'sidebar_contrast' => false,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Topbar Contrast
+    |--------------------------------------------------------------------------
+    |
+    | When enabled in light mode, renders the topbar in matching deep dark contrast
+    | for a unified header frame.
+    |
+    */
+
+    'topbar_contrast' => false,
+
 ];

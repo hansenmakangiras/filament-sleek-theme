@@ -8,17 +8,16 @@
 
 /* Prevent Sidebar Menu Items from bleeding wide across the screen */
 .fi-sidebar-item {
-    overflow: hidden;
+    position: relative;
     max-width: 100%;
 }
 
 .fi-sidebar-item .fi-sidebar-item-btn {
-    overflow: hidden;
     max-width: 100%;
     width: 100%;
 }
 
-.fi-sidebar-item.fi-active .fi-sidebar-item-btn {
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
     @apply transition-all duration-300 rounded-full shadow-sm bg-primary-600 dark:bg-primary-500;
 }
 
@@ -26,21 +25,29 @@
     @apply transition-all duration-300 bg-gray-50 dark:bg-gray-800;
 }
 
-.fi-sidebar-item.fi-active .fi-sidebar-item-btn .fi-sidebar-item-label,
-.fi-sidebar-item.fi-active .fi-sidebar-item-btn .fi-sidebar-item-icon {
-    @apply text-primary-50;
+/* Ensure Active items have high contrast pure white text and icon in both light & dark mode */
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-sidebar-item-label,
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-icon,
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn svg {
+    color: #ffffff !important;
+    font-weight: 600;
 }
 
-.fi-sidebar-item>.fi-sidebar-item-btn {
-    @apply hover:bg-gray-100 dark:hover:bg-gray-700 hover:transition-all hover:duration-300 hover:rounded-full;
+.fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn {
+    @apply hover:bg-gray-100 dark:hover:bg-gray-800 hover:transition-all hover:duration-200 hover:rounded-full;
 }
 
-.fi-sidebar-item:hover .fi-sidebar-item-btn .fi-sidebar-item-label,
-.fi-sidebar-item:hover .fi-sidebar-item-btn .fi-sidebar-item-icon {
-    @apply text-gray-800 transition-all duration-300 dark:text-gray-200;
+.fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label {
+    @apply text-gray-900 dark:text-gray-100 transition-all duration-200;
 }
 
-.fi-sidebar-item:hover.fi-active .fi-sidebar-item-btn {
+.fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+.fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg {
+    @apply text-gray-700 dark:text-gray-300 transition-all duration-200;
+}
+
+.fi-sidebar-item:hover.fi-active > .fi-sidebar-item-btn {
     @apply bg-primary-500 dark:bg-primary-600;
 }
 
@@ -48,9 +55,12 @@
     @apply transition-all duration-300 bg-gray-50 dark:bg-gray-800;
 }
 
-.fi-sidebar-item:hover.fi-active .fi-sidebar-item-btn .fi-sidebar-item-label,
-.fi-sidebar-item:hover.fi-active .fi-sidebar-item-btn .fi-sidebar-item-icon {
-    @apply transition duration-200 text-gray-50;
+.fi-sidebar-item:hover.fi-active > .fi-sidebar-item-btn,
+.fi-sidebar-item:hover.fi-active > .fi-sidebar-item-btn .fi-sidebar-item-label,
+.fi-sidebar-item:hover.fi-active > .fi-sidebar-item-btn .fi-icon,
+.fi-sidebar-item:hover.fi-active > .fi-sidebar-item-btn svg {
+    color: #ffffff !important;
+    font-weight: 600;
 }
 
 .fi-sidebar-item .fi-sidebar-item-badge-ctn .fi-badge {

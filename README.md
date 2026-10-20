@@ -150,6 +150,14 @@ FilamentSleekTheme::make()
     ->sidebarContrast();
 ```
 
+### 11. Topbar Contrast Mode
+Render a dark high-contrast topbar in light mode, seamlessly unifying the header frame with the sidebar:
+```php
+FilamentSleekTheme::make()
+    ->sidebarContrast()
+    ->topbarContrast();
+```
+
 ### Combine Everything Fluently
 ```php
 FilamentSleekTheme::make()
@@ -157,7 +165,9 @@ FilamentSleekTheme::make()
     ->oled()
     ->glass()
     ->compact()
-    ->accentGlow();
+    ->accentGlow()
+    ->sidebarContrast()
+    ->topbarContrast();
 ```
 
 ## ⚙️ Global Configuration File (Optional)
@@ -183,6 +193,7 @@ The published `config/filament-sleek-theme.php` allows you to set defaults for:
 - `thin_scrollbars`
 - `accent_glow`
 - `sidebar_contrast`
+- `topbar_contrast`
 
 ## 🛠️ Customizing Theme CSS (Optional)
 

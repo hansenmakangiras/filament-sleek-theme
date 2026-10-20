@@ -46,6 +46,8 @@ class FilamentSleekTheme implements Plugin
 
     public bool $sidebarContrast = false;
 
+    public bool $topbarContrast = false;
+
     public function __construct()
     {
         if (function_exists('config')) {
@@ -79,6 +81,7 @@ class FilamentSleekTheme implements Plugin
             $this->thinScrollbars = (bool) config('filament-sleek-theme.thin_scrollbars', true);
             $this->accentGlow = (bool) config('filament-sleek-theme.accent_glow', false);
             $this->sidebarContrast = (bool) config('filament-sleek-theme.sidebar_contrast', false);
+            $this->topbarContrast = (bool) config('filament-sleek-theme.topbar_contrast', false);
         }
     }
 
@@ -144,6 +147,10 @@ class FilamentSleekTheme implements Plugin
 
         if ($this->isSidebarContrast()) {
             $classes[] = 'sleek-sidebar-contrast';
+        }
+
+        if ($this->isTopbarContrast()) {
+            $classes[] = 'sleek-topbar-contrast';
         }
 
         if (! empty($classes)) {
@@ -353,6 +360,21 @@ class FilamentSleekTheme implements Plugin
     public function isSidebarContrast(): bool
     {
         return $this->sidebarContrast;
+    }
+
+    /**
+     * Enable or disable topbar contrast mode in light theme.
+     */
+    public function topbarContrast(bool $condition = true): static
+    {
+        $this->topbarContrast = $condition;
+
+        return $this;
+    }
+
+    public function isTopbarContrast(): bool
+    {
+        return $this->topbarContrast;
     }
 
     /**

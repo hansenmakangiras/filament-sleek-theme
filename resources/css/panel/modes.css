@@ -313,6 +313,52 @@ body.sleek-compact .fi-sidebar-group-items {
     gap: 0.125rem !important;
 }
 
+/* Compact Tenant Menu */
+.sleek-compact .fi-sidebar .fi-tenant-menu,
+html.sleek-compact .fi-sidebar .fi-tenant-menu,
+body.sleek-compact .fi-sidebar .fi-tenant-menu {
+    margin-top: 0.5rem !important;
+    margin-inline: 0.75rem !important;
+}
+
+.sleek-compact .fi-tenant-menu-trigger,
+html.sleek-compact .fi-tenant-menu-trigger,
+body.sleek-compact .fi-tenant-menu-trigger {
+    padding: 0.25rem 0.625rem !important;
+    gap: 0.5rem !important;
+    min-height: 2rem !important;
+}
+
+.sleek-compact .fi-tenant-menu-trigger .fi-tenant-avatar,
+.sleek-compact .fi-tenant-menu-trigger .fi-avatar,
+html.sleek-compact .fi-tenant-menu-trigger .fi-tenant-avatar,
+html.sleek-compact .fi-tenant-menu-trigger .fi-avatar {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    font-size: 0.6875rem !important;
+}
+
+.sleek-compact .fi-tenant-menu-trigger-tenant-name,
+html.sleek-compact .fi-tenant-menu-trigger-tenant-name,
+body.sleek-compact .fi-tenant-menu-trigger-tenant-name {
+    font-size: 0.8125rem !important;
+    line-height: 1.125rem !important;
+}
+
+.sleek-compact .fi-tenant-menu-trigger-current-tenant-label,
+html.sleek-compact .fi-tenant-menu-trigger-current-tenant-label,
+body.sleek-compact .fi-tenant-menu-trigger-current-tenant-label {
+    font-size: 0.6875rem !important;
+    line-height: 0.875rem !important;
+}
+
+.sleek-compact .fi-tenant-menu-trigger .fi-icon,
+html.sleek-compact .fi-tenant-menu-trigger .fi-icon,
+body.sleek-compact .fi-tenant-menu-trigger .fi-icon {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
 /* =========================================
    Frosted Glass / Glassmorphism Mode
    ========================================= */
@@ -387,23 +433,32 @@ html.sleek-glass .fi-ta-header-toolbar {
 /* =========================================
    Subtle Accent Glow Mode
    ========================================= */
+.sleek-glow .fi-sidebar-item,
+body.sleek-glow .fi-sidebar-item,
+html.sleek-glow .fi-sidebar-item {
+    overflow: visible !important;
+}
+
 .sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
 .sleek-glow .fi-sidebar-item-active > .fi-sidebar-item-btn,
 body.sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
 html.sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
-    box-shadow: 0 4px 18px -2px color-mix(in srgb, var(--primary-500, #10b981) 50%, transparent), 0 2px 6px -1px color-mix(in srgb, var(--primary-600, #059669) 35%, transparent) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 16px 2px color-mix(in srgb, var(--primary-500, #10b981) 45%, transparent),
+                0 2px 6px -1px color-mix(in srgb, var(--primary-600, #059669) 35%, transparent) !important;
 }
 
 .sleek-glow .fi-btn-primary:not(:disabled):hover,
 body.sleek-glow .fi-btn-primary:not(:disabled):hover,
 html.sleek-glow .fi-btn-primary:not(:disabled):hover {
-    box-shadow: 0 6px 20px -2px color-mix(in srgb, var(--primary-500, #10b981) 50%, transparent), 0 2px 6px -1px color-mix(in srgb, var(--primary-600, #059669) 35%, transparent) !important;
+    box-shadow: 0 0 16px 2px color-mix(in srgb, var(--primary-500, #10b981) 40%, transparent),
+                0 2px 6px -1px color-mix(in srgb, var(--primary-600, #059669) 30%, transparent) !important;
 }
 
 .sleek-glow .fi-tabs-item.fi-active,
 body.sleek-glow .fi-tabs-item.fi-active,
 html.sleek-glow .fi-tabs-item.fi-active {
-    box-shadow: 0 2px 10px -1px color-mix(in srgb, var(--primary-500, #10b981) 40%, transparent) !important;
+    box-shadow: 0 0 12px 1px color-mix(in srgb, var(--primary-500, #10b981) 35%, transparent) !important;
 }
 
 /* =========================================
@@ -415,6 +470,14 @@ body.sleek-sidebar-contrast:not(.dark) .fi-sidebar,
 :not(.dark) body.sleek-sidebar-contrast .fi-sidebar {
     background-color: #0f172a !important;
     border-right-color: #1e293b !important;
+}
+
+/* Ensure content container joins flush with sidebar - no awkward white rounded scoop! */
+html.sleek-sidebar-contrast .fi-main-ctn,
+body.sleek-sidebar-contrast .fi-main-ctn,
+:not(.dark).sleek-sidebar-contrast .fi-main-ctn {
+    border-start-start-radius: 0 !important;
+    border-top-left-radius: 0 !important;
 }
 
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header,
@@ -431,6 +494,7 @@ body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header-controls,
 }
 
 /* Sidebar Logo & Branding */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-logo,
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-logo span,
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-logo h1,
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-sidebar-header-logo-ctn a {
@@ -438,13 +502,36 @@ html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-sidebar-header-logo-ctn a
 }
 
 /* Tenant Menu in Contrast Sidebar */
-html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger,
-html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger-text {
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger {
     color: #f8fafc !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger-tenant-name,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger-tenant-name,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar .fi-tenant-menu-trigger-tenant-name {
+    color: #f8fafc !important;
+    font-weight: 600 !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger-current-tenant-label,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger-current-tenant-label {
+    color: #94a3b8 !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger .fi-icon,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger .fi-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger svg,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger svg {
+    color: #94a3b8 !important;
 }
 
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger:hover {
     background-color: #1e293b !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger:hover .fi-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger:hover svg {
+    color: #f8fafc !important;
 }
 
 /* Sidebar Group Labels & Controls */
@@ -468,25 +555,41 @@ body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-side
 
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-icon,
 body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-icon,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) svg,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) svg,
 :not(.dark).sleek-sidebar-contrast .fi-sidebar-item-icon {
     color: #94a3b8 !important;
 }
 
 /* Hover States */
-html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-btn:hover,
-body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-btn:hover,
-:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-btn:hover {
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover {
     background-color: #1e293b !important;
 }
 
-html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-label,
-body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-label {
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label {
     color: #ffffff !important;
 }
 
-html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-icon,
-body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-icon {
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-icon,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg {
     color: #f8fafc !important;
+}
+
+/* Active Item in Contrast Sidebar */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-sidebar-item-label,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-icon,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item.fi-active > .fi-sidebar-item-btn svg {
+    color: #ffffff !important;
 }
 
 /* Grouped Border Parts */
@@ -509,3 +612,117 @@ html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-user-menu-trigger:hover {
 html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-user-menu-trigger .fi-icon {
     color: #94a3b8 !important;
 }
+
+/* =========================================
+   Topbar Contrast Mode (Dark topbar in Light mode)
+   ========================================= */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar-ctn,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar-ctn,
+:not(.dark).sleek-topbar-contrast .fi-topbar-ctn,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar,
+:not(.dark).sleek-topbar-contrast .fi-topbar {
+    background-color: #0f172a !important;
+    border-bottom: 1px solid #1e293b !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Topbar Logo & Branding */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-logo,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-logo *,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-logo,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-logo * {
+    color: #f8fafc !important;
+}
+
+/* Topbar Sidebar Collapse Toggle Buttons */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-icon-btn,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-icon-btn,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-topbar-open-collapse-sidebar-btn,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-topbar-close-collapse-sidebar-btn,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-topbar-open-sidebar-btn,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-topbar-close-sidebar-btn {
+    color: #94a3b8 !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-icon-btn:hover,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-icon-btn:hover,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-topbar-open-collapse-sidebar-btn:hover,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-topbar-close-collapse-sidebar-btn:hover {
+    color: #ffffff !important;
+    background-color: #1e293b !important;
+}
+
+/* Global Search Input in Contrast Topbar */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-global-search-field input,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-global-search-field input,
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-input-wrp,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-input-wrp {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar input::placeholder,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar input::placeholder {
+    color: #94a3b8 !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-global-search-field .fi-icon,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-global-search-field .fi-icon {
+    color: #94a3b8 !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar kbd,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar kbd {
+    background-color: #334155 !important;
+    border-color: #475569 !important;
+    color: #cbd5e1 !important;
+}
+
+/* Topbar Items (Top Navigation) */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar-item-btn,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar-item-btn {
+    color: #cbd5e1 !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar-item-btn:hover,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar-item-btn:hover {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar-item.fi-active .fi-topbar-item-btn,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar-item.fi-active .fi-topbar-item-btn {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    color: var(--primary-400, #34d399) !important;
+}
+
+/* Topbar User Menu Trigger */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger {
+    color: #f8fafc !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger:hover,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger:hover {
+    background-color: #1e293b !important;
+}
+
+/* Topbar Tenant Menu */
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-tenant-menu-trigger,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-tenant-menu-trigger {
+    color: #f8fafc !important;
+}
+
+html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-tenant-menu-trigger:hover,
+body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-tenant-menu-trigger:hover {
+    background-color: #1e293b !important;
+}
+
+/* Topbar & Main Container Integration */
+html.sleek-topbar-contrast .fi-main-ctn,
+body.sleek-topbar-contrast .fi-main-ctn {
+    border-top-color: #1e293b !important;
+}
+

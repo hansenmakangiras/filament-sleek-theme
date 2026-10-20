@@ -181,12 +181,22 @@ it('can configure sidebar contrast mode', function () {
     expect($plugin->isSidebarContrast())->toBeTrue();
 });
 
+it('can configure topbar contrast mode', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isTopbarContrast())->toBeFalse();
+
+    $plugin->topbarContrast();
+    expect($plugin->isTopbarContrast())->toBeTrue();
+});
+
 it('loads defaults from config file', function () {
     config()->set('filament-sleek-theme.preset', 'emerald');
     config()->set('filament-sleek-theme.oled', true);
     config()->set('filament-sleek-theme.compact', true);
     config()->set('filament-sleek-theme.glass', true);
     config()->set('filament-sleek-theme.accent_glow', true);
+    config()->set('filament-sleek-theme.sidebar_contrast', true);
+    config()->set('filament-sleek-theme.topbar_contrast', true);
 
     $plugin = FilamentSleekTheme::make();
 
@@ -194,7 +204,9 @@ it('loads defaults from config file', function () {
         ->and($plugin->isOled())->toBeTrue()
         ->and($plugin->isCompact())->toBeTrue()
         ->and($plugin->isGlass())->toBeTrue()
-        ->and($plugin->isAccentGlow())->toBeTrue();
+        ->and($plugin->isAccentGlow())->toBeTrue()
+        ->and($plugin->isSidebarContrast())->toBeTrue()
+        ->and($plugin->isTopbarContrast())->toBeTrue();
 });
 
 it('can execute install command with publish flags', function () {

@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.0] - 2026-10-20
+## [1.3.0] - 2026-10-20
+
+### Added
+- 🪄 **Topbar Contrast Mode (`topbarContrast()`):** Added first-class fluent method `->topbarContrast()` and config option `'topbar_contrast' => false` to render the topbar in matching deep dark slate (`#0f172a`), creating a unified, seamless header frame for the entire panel alongside `sidebarContrast()`.
+- 🏢 **Compact Tenant Menu:** Added tight spacing, 1.5rem avatars, and adjusted typography for the tenant switcher in `compact()` mode.
+
+### Fixed
+- 🌟 **Smooth Rounded Accent Glow (`accentGlow()`):** Removed `overflow: hidden` on `.fi-sidebar-item` and `.fi-sidebar-item-btn` that was clipping the glow into a flat, boxy rectangle. Shifted to radial non-offset blur (`0 0 16px 2px`) that smoothly diffuses around the pill curvature.
+- 📐 **Seamless Content Join in `sidebarContrast()`:** Removed awkward rounded scoop (`border-top-left-radius: 0 !important; border-start-start-radius: 0 !important;`) on `.fi-main-ctn` so the main content joins completely flush against the dark sidebar.
+- 🏢 **Tenant Dropdown Contrast:** Targeted `.fi-tenant-menu-trigger-tenant-name` and chevron icons with high-contrast text (`#f8fafc`) on dark sidebar surfaces, eliminating low-contrast or invisible text in light mode.
+- 🔆 **Active Navigation Item Contrast in Dark & Light Modes:** Enforced pure white `#ffffff !important` with 600 font weight on active navigation item labels and icons in both light and dark mode, preventing washed-out mint or pale green text.
+- 🖱️ **Sidebar Item Hover States:** Protected active pills from hover degradation and added sleek `#1e293b` hover pills with crisp white text in `sidebarContrast()` mode.
 
 ### Added
 - 📜 **Native Thin Scrollbars (`thinScrollbars()`):** Replaced bulky OS scrollbars with modern 6px curved scrollbars (supporting WebKit & Firefox) with light and dark mode adaptation.
