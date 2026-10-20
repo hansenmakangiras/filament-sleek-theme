@@ -13,7 +13,7 @@ A **modern, sleek, responsive, and customizable** theme for FilamentPHP v4 & v5,
 > Originally forked from [resmatech/filament-awin-theme](https://github.com/resmatech/filament-awin-theme). Maintained and updated by [Hansen Makangiras](https://github.com/hansenmakangiras) with full **Filament v5 & v4 dual compatibility**, Service Provider support, and modern testing setup.
 
 <p align="center">
-  <img src="./images/screenshot/sidebar-contrast-glass-compact-accentglow-preview.png" alt="Filament Sleek Theme Preview" width="100%">
+  <img src="./images/screenshot/cover-showcase-dual.jpg" alt="Filament Sleek Theme Preview" width="100%">
 </p>
 
 ## ✨ Features
