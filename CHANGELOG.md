@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file.
   - **Modals:** Compacted modal headers, content, and footers.
 
 ### Fixed
+- 🪟 **True Full-Dashboard Glassmorphism (`glass()`):** Transformed `.sleek-glass` into a real, full-dashboard glassmorphism system:
+  - **Floating Panels & Dropdowns:** Converted `.fi-dropdown-panel` and `.fi-modal-window` to authentic frosted glass (`rgba(255, 255, 255, 0.8)`, `backdrop-filter: blur(20px) saturate(190%)`, white glass borders) so underlying table rows, widgets, and charts visibly blur through floating menus.
+  - **Cards, Widgets & Table Acrylics:** Applied frosted translucent fills (`rgba(255, 255, 255, 0.72)` in light, `rgba(15, 23, 42, 0.65)` in dark), `blur(18px)`, and inner glass reflection rings to stats overview widgets, section cards, and tables.
+  - **Ambient Canvas Mesh Gradient:** Added ultra-subtle ambient multi-color radial gradient meshes to `.fi-main-ctn` across light, dark, and OLED modes, allowing frosted glass cards to refract light dynamically.
 - ☀️ **Strict Dark Scoping for OLED Mode (`oled()`):** Enforced `.dark` scoping across all OLED pure-black selectors (`.dark.sleek-oled`, `html.dark.sleek-oled`, `body.dark.sleek-oled`), preventing OLED styles from unintentionally forcing dark backgrounds onto the sidebar and canvas when the user switches to Light mode.
 - 🎨 **Light Mode Inset Canvas in `topbarContrast()`:** Explicitly styled `.fi-main-ctn` with light background (`#f8fafc`) and subtle borders in light mode when `topbarContrast()` is active, ensuring dark text, page titles, and breadcrumbs are 100% legible against the light canvas while the topbar and sidebar retain their dark frame.
 - 🖤 **Refined OLED Pure Black Mode (`oled()`):** Upgraded border lines from virtually invisible `#1a1a1a` to crisp `#27272a` (zinc-800 hairline borders), framing tables, sections, and containers with luxury modern contrast. Added first-class OLED styling for dropdown panels (`.fi-dropdown-panel`), theme switchers, table rows, and modals (`#0c0c0e`, border `#27272a`, deep elevation shadows) — eliminating clashing slate blue backgrounds on user and tenant menus in OLED mode.

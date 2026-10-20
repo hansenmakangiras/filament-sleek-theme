@@ -640,13 +640,14 @@ body.sleek-compact .fi-tenant-menu-trigger .fi-icon {
 /* =========================================
    Frosted Glass / Glassmorphism Mode
    ========================================= */
+/* Topbar Glass */
 .sleek-glass .fi-topbar,
 html.sleek-glass .fi-topbar,
 body.sleek-glass .fi-topbar {
-    backdrop-filter: blur(16px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
-    border-bottom: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 .dark.sleek-glass .fi-topbar,
@@ -654,7 +655,7 @@ body.sleek-glass .fi-topbar {
 .dark body.sleek-glass .fi-topbar,
 html.dark.sleek-glass .fi-topbar {
     background-color: rgba(15, 23, 42, 0.8) !important;
-    border-bottom: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .dark.sleek-glass.sleek-oled .fi-topbar,
@@ -662,58 +663,192 @@ html.dark.sleek-glass .fi-topbar {
 .dark.sleek-oled body.sleek-glass .fi-topbar,
 html.dark.sleek-glass.sleek-oled .fi-topbar {
     background-color: rgba(0, 0, 0, 0.85) !important;
-    border-bottom: none !important;
+    border-bottom: 1px solid #27272a !important;
 }
 
-.sleek-glass .fi-modal-window,
-html.sleek-glass .fi-modal-window,
-body.sleek-glass .fi-modal-window {
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12) !important;
+/* Ambient Canvas Mesh Gradient in Glass Mode */
+html.sleek-glass:not(.dark) .fi-main-ctn,
+body.sleek-glass:not(.dark) .fi-main-ctn {
+    background: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.07) 0px, transparent 45%),
+                radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.06) 0px, transparent 50%),
+                #f1f5f9 !important;
 }
 
-.dark.sleek-glass .fi-modal-window,
-.dark .sleek-glass .fi-modal-window,
-.dark body.sleek-glass .fi-modal-window,
-html.dark.sleek-glass .fi-modal-window {
-    background-color: rgba(15, 23, 42, 0.95) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4) !important;
+html.dark.sleek-glass:not(.sleek-oled) .fi-main-ctn,
+body.dark.sleek-glass:not(.sleek-oled) .fi-main-ctn {
+    background: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.09) 0px, transparent 45%),
+                radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+                #090e17 !important;
 }
 
-/* Dropdown Panel in Glass Mode: Keep solid background so underlying elements/colors never bleed through */
-.sleek-glass .fi-dropdown-panel,
-html.sleek-glass .fi-dropdown-panel,
-body.sleek-glass .fi-dropdown-panel {
-    background-color: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+html.dark.sleek-glass.sleek-oled .fi-main-ctn,
+body.dark.sleek-glass.sleek-oled .fi-main-ctn {
+    background: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 40%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.07) 0px, transparent 40%),
+                #000000 !important;
 }
 
-.dark.sleek-glass .fi-dropdown-panel,
-.dark .sleek-glass .fi-dropdown-panel,
-.dark body.sleek-glass .fi-dropdown-panel,
-html.dark.sleek-glass .fi-dropdown-panel {
-    background-color: #1e293b !important;
+/* Glassmorphism Cards, Stats Widgets, Sections & Table Containers */
+html.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
+html.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
+html.sleek-glass:not(.dark) .fi-section,
+html.sleek-glass:not(.dark) .fi-sc-section,
+html.sleek-glass:not(.dark) .fi-ta,
+html.sleek-glass:not(.dark) .fi-ta-ctn,
+body.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
+body.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
+body.sleek-glass:not(.dark) .fi-section,
+body.sleek-glass:not(.dark) .fi-sc-section,
+body.sleek-glass:not(.dark) .fi-ta,
+body.sleek-glass:not(.dark) .fi-ta-ctn {
+    background-color: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: blur(18px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
+html.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
+html.dark.sleek-glass:not(.sleek-oled) .fi-section,
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-section,
+html.dark.sleek-glass:not(.sleek-oled) .fi-ta,
+html.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn,
+body.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
+body.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
+body.dark.sleek-glass:not(.sleek-oled) .fi-section,
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-section,
+body.dark.sleek-glass:not(.sleek-oled) .fi-ta,
+body.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn {
+    background-color: rgba(15, 23, 42, 0.65) !important;
+    backdrop-filter: blur(18px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset !important;
 }
 
-.dark.sleek-glass.sleek-oled .fi-dropdown-panel,
-.dark.sleek-oled .sleek-glass .fi-dropdown-panel,
-.dark.sleek-oled body.sleek-glass .fi-dropdown-panel,
-html.dark.sleek-glass.sleek-oled .fi-dropdown-panel {
-    background-color: #080808 !important;
-    border: 1px solid #1a1a1a !important;
+html.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
+html.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
+html.dark.sleek-glass.sleek-oled .fi-section,
+html.dark.sleek-glass.sleek-oled .fi-sc-section,
+html.dark.sleek-glass.sleek-oled .fi-ta,
+html.dark.sleek-glass.sleek-oled .fi-ta-ctn,
+body.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
+body.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
+body.dark.sleek-glass.sleek-oled .fi-section,
+body.dark.sleek-glass.sleek-oled .fi-sc-section,
+body.dark.sleek-glass.sleek-oled .fi-ta,
+body.dark.sleek-glass.sleek-oled .fi-ta-ctn {
+    background-color: rgba(12, 12, 15, 0.75) !important;
+    backdrop-filter: blur(18px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
 }
 
-.sleek-glass .fi-ta-header-toolbar,
-html.sleek-glass .fi-ta-header-toolbar {
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+/* Frosted Modal Dialogs */
+html.sleek-glass:not(.dark) .fi-modal-window,
+body.sleek-glass:not(.dark) .fi-modal-window {
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    background-color: rgba(255, 255, 255, 0.82) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.18),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-modal-window,
+body.dark.sleek-glass:not(.sleek-oled) .fi-modal-window {
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    background-color: rgba(15, 23, 42, 0.82) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-modal-window,
+body.dark.sleek-glass.sleek-oled .fi-modal-window {
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    background-color: rgba(12, 12, 15, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+/* Frosted Dropdown Panels (Visible Glass over Tables & Cards) */
+html.sleek-glass:not(.dark) .fi-dropdown-panel,
+body.sleek-glass:not(.dark) .fi-dropdown-panel {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.14),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel,
+body.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-dropdown-panel,
+body.dark.sleek-glass.sleek-oled .fi-dropdown-panel {
+    background-color: rgba(12, 12, 15, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+}
+
+/* Form Inputs in Glass Mode */
+html.sleek-glass:not(.dark) .fi-input-wrp,
+body.sleek-glass:not(.dark) .fi-input-wrp {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border: 1px solid rgba(203, 213, 225, 0.7) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+html.dark.sleek-glass .fi-input-wrp,
+body.dark.sleek-glass .fi-input-wrp {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+/* Table Header & Rows in Glass Mode */
+html.sleek-glass:not(.dark) .fi-ta-header,
+html.sleek-glass:not(.dark) .fi-ta-header-toolbar,
+html.sleek-glass:not(.dark) .fi-ta-header-cell {
+    background-color: rgba(248, 250, 252, 0.45) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+html.sleek-glass:not(.dark) .fi-ta-row:hover {
+    background-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+html.dark.sleek-glass .fi-ta-header,
+html.dark.sleek-glass .fi-ta-header-toolbar,
+html.dark.sleek-glass .fi-ta-header-cell {
+    background-color: rgba(15, 23, 42, 0.45) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+html.dark.sleek-glass .fi-ta-row:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
 }
 
 /* =========================================
