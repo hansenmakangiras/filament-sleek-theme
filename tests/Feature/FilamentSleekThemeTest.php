@@ -3,23 +3,23 @@
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Colors\Color;
-use Resma\FilamentAwinTheme\FilamentAwinTheme;
+use HansenMakangiras\FilamentSleekTheme\FilamentSleekTheme;
 
 it('can instantiate the plugin', function () {
-    $plugin = FilamentAwinTheme::make();
+    $plugin = FilamentSleekTheme::make();
 
-    expect($plugin)->toBeInstanceOf(FilamentAwinTheme::class)
+    expect($plugin)->toBeInstanceOf(FilamentSleekTheme::class)
         ->and($plugin)->toBeInstanceOf(Plugin::class);
 });
 
 it('has the correct plugin id', function () {
-    $plugin = FilamentAwinTheme::make();
+    $plugin = FilamentSleekTheme::make();
 
-    expect($plugin->getId())->toBe('filament-awin-theme');
+    expect($plugin->getId())->toBe('filament-sleek-theme');
 });
 
 it('can customize primary color with palette or hex', function () {
-    $plugin = FilamentAwinTheme::make();
+    $plugin = FilamentSleekTheme::make();
 
     // Default primary color
     expect($plugin->getPrimaryColor())->toBe(Color::Blue);
@@ -34,7 +34,7 @@ it('can customize primary color with palette or hex', function () {
 });
 
 it('can register plugin into a filament panel', function () {
-    $plugin = FilamentAwinTheme::make()->primaryColor(Color::Emerald);
+    $plugin = FilamentSleekTheme::make()->primaryColor(Color::Emerald);
     $panel = new Panel();
 
     $plugin->register($panel);

@@ -1,9 +1,9 @@
 <?php
 
-namespace Resma\FilamentAwinTheme\Tests;
+namespace HansenMakangiras\FilamentSleekTheme\Tests;
 
+use HansenMakangiras\FilamentSleekTheme\FilamentSleekThemeServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Resma\FilamentAwinTheme\FilamentAwinThemeServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app): array
     {
         return [
-            FilamentAwinThemeServiceProvider::class,
+            FilamentSleekThemeServiceProvider::class,
         ];
     }
 }

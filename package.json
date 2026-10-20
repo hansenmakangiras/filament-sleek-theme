@@ -1,10 +1,10 @@
 {
-  "name": "filament-awin-theme",
-  "version": "1.2.0",
-  "description": "A modern, responsive, and customizable theme for FilamentPHP v4 & v5",
+  "name": "filament-sleek-theme",
+  "version": "1.0.0",
+  "description": "A modern, sleek, responsive, and customizable theme for FilamentPHP v4 & v5",
   "license": "MIT",
-  "author": "Rebwar Mustafa <hello@resma.tech>",
-  "homepage": "https://github.com/resmatech/filament-awin-theme",
+  "author": "Hansen Makangiras <hansenmakangiras@gmail.com>",
+  "homepage": "https://github.com/hansenmakangiras/filament-sleek-theme",
   "type": "module",
   "scripts": {
     "build": "tailwindcss -i resources/css/theme.css -o resources/dist/theme.css --minify",

@@ -1,13 +1,13 @@
 <?php
 
-namespace Resma\FilamentAwinTheme;
+namespace HansenMakangiras\FilamentSleekTheme;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentAwinThemeServiceProvider extends PackageServiceProvider
+class FilamentSleekThemeServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filament-awin-theme';
+    public static string $name = 'filament-sleek-theme';
 
     public function configurePackage(Package $package): void
     {
@@ -20,8 +20,8 @@ class FilamentAwinThemeServiceProvider extends PackageServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../resources/css' => resource_path('css/filament/awin-theme'),
-            ], 'filament-awin-theme-css');
+                __DIR__ . '/../resources/css' => resource_path('css/filament/sleek-theme'),
+            ], 'filament-sleek-theme-css');
         }
     }
 }

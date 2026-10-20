@@ -1,12 +1,12 @@
 <?php
 
-namespace Resma\FilamentAwinTheme;
+namespace HansenMakangiras\FilamentSleekTheme;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Colors\Color;
 
-class FilamentAwinTheme implements Plugin
+class FilamentSleekTheme implements Plugin
 {
     /**
      * @var array<string, string>|string
@@ -15,7 +15,7 @@ class FilamentAwinTheme implements Plugin
 
     public function getId(): string
     {
-        return 'filament-awin-theme';
+        return 'filament-sleek-theme';
     }
 
     public static function make(): static
@@ -29,7 +29,7 @@ class FilamentAwinTheme implements Plugin
             ->colors([
                 'primary' => $this->primaryColor,
             ])
-            ->viteTheme('vendor/resma/filament-awin-theme/resources/css/theme.css');
+            ->viteTheme('vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css');
     }
 
     public function boot(Panel $panel): void

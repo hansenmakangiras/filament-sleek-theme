@@ -1,29 +1,35 @@
 {
-    "name": "resma/filament-awin-theme",
-    "description": "A modern, responsive, and customizable theme for FilamentPHP, designed to elevate your admin panel with a sleek interface and seamless user experience.",
+    "name": "hansenmakangiras/filament-sleek-theme",
+    "description": "A modern, sleek, responsive, and customizable theme for FilamentPHP v4 & v5.",
     "keywords": [
-        "Resma",
+        "hansenmakangiras",
         "laravel",
         "filamentphp",
-        "filament-awin-theme",
+        "filament-sleek-theme",
         "theme",
-        "filament"
+        "filament",
+        "sleek"
     ],
-    "homepage": "https://github.com/resmatech/filament-awin-theme",
+    "homepage": "https://github.com/hansenmakangiras/filament-sleek-theme",
     "support": {
-        "issues": "https://github.com/resmatech/filament-awin-theme/issues",
-        "source": "https://github.com/resmatech/filament-awin-theme"
+        "issues": "https://github.com/hansenmakangiras/filament-sleek-theme/issues",
+        "source": "https://github.com/hansenmakangiras/filament-sleek-theme"
     },
     "license": "MIT",
     "authors": [
         {
+            "name": "Hansen Makangiras",
+            "email": "hansenmakangiras@gmail.com",
+            "role": "Maintainer"
+        },
+        {
             "name": "Rebwar Mustafa",
             "email": "hello@resma.tech",
-            "role": "Developer"
+            "role": "Original Author"
         }
     ],
     "require": {
-        "php": "^8.2|^8.3|^8.4|^8.5",
+        "php": "^8.2",
         "filament/filament": "^4.0|^5.0",
         "illuminate/support": "^11.0|^12.0|^13.0",
         "spatie/laravel-package-tools": "^1.16.0"
@@ -37,12 +43,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Resma\\FilamentAwinTheme\\": "src/"
+            "HansenMakangiras\\FilamentSleekTheme\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Resma\\FilamentAwinTheme\\Tests\\": "tests/"
+            "HansenMakangiras\\FilamentSleekTheme\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -54,7 +60,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Resma\\FilamentAwinTheme\\FilamentAwinThemeServiceProvider"
+                "HansenMakangiras\\FilamentSleekTheme\\FilamentSleekThemeServiceProvider"
             ]
         }
     },

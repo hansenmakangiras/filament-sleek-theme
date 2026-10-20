@@ -1,26 +1,32 @@
-# Awin Theme - A Sleek FilamentPHP Theme
-A **modern, responsive, and customizable** theme for FilamentPHP, designed to elevate your admin panel with a sleek interface and seamless user experience. Perfect for developers who want a professional look with minimal setup.
+# Filament Sleek Theme
+
+A **modern, sleek, responsive, and customizable** theme for FilamentPHP v4 & v5, designed to elevate your admin panel with curved interfaces, pill navigation, and minimal shadow styling.
+
+> [!NOTE]
+> Originally forked from [resmatech/filament-awin-theme](https://github.com/resmatech/filament-awin-theme). Maintained and updated by [Hansen Makangiras](https://github.com/hansenmakangiras) with full **Filament v5 & v4 dual compatibility**, Service Provider support, and modern testing setup.
 
 ## ✨ Features
 
+- **FilamentPHP v4 & v5 Ready** – Fully compatible with both Filament v4 and v5
 - **Dark/Light Mode** – Toggle between elegant color schemes
-- **FilamentPHP v4 & v5 Ready** – Fully compatible with Filament v4 and v5
-- **Fully Responsive** – Works flawlessly on all devices
-- **Tailwind CSS v4** – Easy to customize and extend
-- **Plug & Play** – Install and activate in minutes
+- **Curved & Pill Design** – Smooth rounded cards, table containers, and pill-shaped navigation
+- **Fully Responsive** – Works flawlessly on desktop and mobile devices
+- **Tailwind CSS v4** – Built on modern Tailwind CSS v4 styling
+- **Plug & Play** – Minimal setup, configure colors effortlessly
 
 ## Installation
 
 ### 1. Install via Composer
 ```bash
-composer require resma/filament-awin-theme
+composer require hansenmakangiras/filament-sleek-theme
 ```
+
 ### 2. Add CSS to Vite
 In your `vite.config.js`, include the theme's CSS:
 ```js
 input: [
     // ...existing files,
-    'vendor/resma/filament-awin-theme/resources/css/theme.css'
+    'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css'
 ],
 ```
 Then rebuild assets:
@@ -30,48 +36,44 @@ npm run build
 
 *(Optional)* You can also publish the CSS files directly into your project:
 ```bash
-php artisan vendor:publish --tag=filament-awin-theme-css
+php artisan vendor:publish --tag=filament-sleek-theme-css
 ```
 
 ### 3. Register the Plugin
-In your panel provider:
+In your panel provider (e.g. `app/Providers/Filament/AdminPanelProvider.php`):
 ```php 
-use Resma\FilamentAwinTheme\FilamentAwinTheme;
+use HansenMakangiras\FilamentSleekTheme\FilamentSleekTheme;
 
 public function panel(Panel $panel): Panel
 {
     return $panel
         // ...your existing config
         ->plugins([
-            FilamentAwinTheme::make(),
+            FilamentSleekTheme::make(),
         ]);
 }
 ```
 
 ## 🎨 Customizing the Primary Color
 
-The `FilamentAwinTheme` plugin allows you to set a custom primary color for your Filament panel.  
+The `FilamentSleekTheme` plugin allows you to set a custom primary color for your Filament panel.
 
 ### Using Filament’s Built-in Color Palettes
-
-Filament provides predefined color palettes with proper shades (e.g. `500`, `600`, `700`), which are recommended for consistent UI.
-
 ```php
-use Resma\FilamentAwinTheme\FilamentAwinTheme;
+use HansenMakangiras\FilamentSleekTheme\FilamentSleekTheme;
 use Filament\Support\Colors\Color;
 
 $panel
     ->plugins([
-        FilamentAwinTheme::make()
-            ->primaryColor(Color::Emerald), // Use Filament's Emerald color palette
+        FilamentSleekTheme::make()
+            ->primaryColor(Color::Emerald),
     ]);
 ```
-### Using a Custom Hex Color
-You can also pass a single hex value if you don’t want to use a palette:
 
+### Using a Custom Hex Color
 ```php
-FilamentAwinTheme::make()
-    ->primaryColor('#3b82f6'); // Custom blue color
+FilamentSleekTheme::make()
+    ->primaryColor('#3b82f6');
 ```
 
 ## Screenshots
