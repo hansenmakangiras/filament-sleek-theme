@@ -13,7 +13,8 @@ All notable changes to this project will be documented in this file.
 - 📐 **Seamless Content Join in `sidebarContrast()`:** Removed awkward rounded scoop (`border-top-left-radius: 0 !important; border-start-start-radius: 0 !important;`) on `.fi-main-ctn` so the main content joins completely flush against the dark sidebar.
 - 🏢 **Tenant Dropdown Contrast:** Targeted `.fi-tenant-menu-trigger-tenant-name` and chevron icons with high-contrast text (`#f8fafc`) on dark sidebar surfaces, eliminating low-contrast or invisible text in light mode.
 - 🔆 **Active Navigation Item Contrast in Dark & Light Modes:** Enforced pure white `#ffffff !important` with 600 font weight on active navigation item labels and icons in both light and dark mode, preventing washed-out mint or pale green text.
-- 🖱️ **Sidebar Item Hover States:** Protected active pills from hover degradation and added sleek `#1e293b` hover pills with crisp white text in `sidebarContrast()` mode.
+- 🪟 **Frosted Glass Seamless Topbar (`glass()`):** Removed bottom border line from `.fi-topbar` under the logo to ensure an unbroken, clean layout matching the default sleek design.
+- 🏢 **Frosted Glass Dropdown Readability:** Enforced solid opaque backgrounds on `.fi-dropdown-panel` in `glass()` mode, preventing bright underlying elements (such as green active sidebar navigation pills) from bleeding through and obscuring menu items.
 
 ### Added
 - 📜 **Native Thin Scrollbars (`thinScrollbars()`):** Replaced bulky OS scrollbars with modern 6px curved scrollbars (supporting WebKit & Firefox) with light and dark mode adaptation.

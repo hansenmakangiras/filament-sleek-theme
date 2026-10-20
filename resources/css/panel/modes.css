@@ -367,23 +367,24 @@ html.sleek-glass .fi-topbar,
 body.sleek-glass .fi-topbar {
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-    background-color: rgba(255, 255, 255, 0.75) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: none !important;
 }
 
 .dark.sleek-glass .fi-topbar,
 .dark .sleek-glass .fi-topbar,
 .dark body.sleek-glass .fi-topbar,
 html.dark.sleek-glass .fi-topbar {
-    background-color: rgba(15, 23, 42, 0.75) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    border-bottom: none !important;
 }
 
 .dark.sleek-glass.sleek-oled .fi-topbar,
 .dark.sleek-oled .sleek-glass .fi-topbar,
 .dark.sleek-oled body.sleek-glass .fi-topbar,
 html.dark.sleek-glass.sleek-oled .fi-topbar {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    border-bottom: none !important;
 }
 
 .sleek-glass .fi-modal-window,
@@ -391,7 +392,7 @@ html.sleek-glass .fi-modal-window,
 body.sleek-glass .fi-modal-window {
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
     border: 1px solid rgba(255, 255, 255, 0.4) !important;
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12) !important;
 }
@@ -400,28 +401,35 @@ body.sleek-glass .fi-modal-window {
 .dark .sleek-glass .fi-modal-window,
 .dark body.sleek-glass .fi-modal-window,
 html.dark.sleek-glass .fi-modal-window {
-    background-color: rgba(15, 23, 42, 0.8) !important;
+    background-color: rgba(15, 23, 42, 0.95) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* Dropdown Panel in Glass Mode: Keep solid background so underlying elements/colors never bleed through */
 .sleek-glass .fi-dropdown-panel,
 html.sleek-glass .fi-dropdown-panel,
 body.sleek-glass .fi-dropdown-panel {
-    backdrop-filter: blur(16px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-    background-color: rgba(255, 255, 255, 0.85) !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08) !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark.sleek-glass .fi-dropdown-panel,
 .dark .sleek-glass .fi-dropdown-panel,
 .dark body.sleek-glass .fi-dropdown-panel,
 html.dark.sleek-glass .fi-dropdown-panel {
-    background-color: rgba(15, 23, 42, 0.85) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3) !important;
+    background-color: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark.sleek-glass.sleek-oled .fi-dropdown-panel,
+.dark.sleek-oled .sleek-glass .fi-dropdown-panel,
+.dark.sleek-oled body.sleek-glass .fi-dropdown-panel,
+html.dark.sleek-glass.sleek-oled .fi-dropdown-panel {
+    background-color: #080808 !important;
+    border: 1px solid #1a1a1a !important;
 }
 
 .sleek-glass .fi-ta-header-toolbar,
