@@ -386,6 +386,68 @@ body.dark.sleek-oled .fi-fo-markdown-editor-toolbar {
     border-color: #222225 !important;
 }
 
+/* Wizard in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-sc-wizard.fi-contained,
+.dark.sleek-oled .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
+html.dark.sleek-oled .fi-sc-wizard.fi-contained,
+html.dark.sleek-oled .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
+body.dark.sleek-oled .fi-sc-wizard.fi-contained,
+body.dark.sleek-oled .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
+.dark.sleek-oled .fi-sc-wizard-header,
+html.dark.sleek-oled .fi-sc-wizard-header,
+body.dark.sleek-oled .fi-sc-wizard-header {
+    border-color: #222225 !important;
+}
+
+/* Popover Panels: Date/Time Picker & Color Picker in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-fo-date-time-picker-panel,
+.dark.sleek-oled .fi-fo-color-picker-panel,
+html.dark.sleek-oled .fi-fo-date-time-picker-panel,
+html.dark.sleek-oled .fi-fo-color-picker-panel,
+body.dark.sleek-oled .fi-fo-date-time-picker-panel,
+body.dark.sleek-oled .fi-fo-color-picker-panel {
+    background-color: #09090b !important;
+    border: 1px solid #27272a !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a !important;
+}
+
+/* Infolist Repeatables, Tables & Key-Value in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+.dark.sleek-oled .fi-in-table-repeatable > table,
+.dark.sleek-oled .fi-in-key-value,
+html.dark.sleek-oled .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+html.dark.sleek-oled .fi-in-table-repeatable > table,
+html.dark.sleek-oled .fi-in-key-value,
+body.dark.sleek-oled .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+body.dark.sleek-oled .fi-in-table-repeatable > table,
+body.dark.sleek-oled .fi-in-key-value {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
+/* Sticky Modal Header and Footer in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+.dark.sleek-oled .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+html.dark.sleek-oled .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+html.dark.sleek-oled .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+body.dark.sleek-oled .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+body.dark.sleek-oled .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
+/* Table Grouping Header Row in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-ta-group-header-row > td,
+html.dark.sleek-oled .fi-ta-group-header-row > td,
+body.dark.sleek-oled .fi-ta-group-header-row > td {
+    background-color: #0c0c0e !important;
+    border-color: #222225 !important;
+}
+
 /* =========================================
    Subtle Radius Mode
    ========================================= */
@@ -412,6 +474,13 @@ html.sleek-radius-subtle .fi-main-ctn {
 .sleek-radius-subtle .fi-fo-key-value,
 .sleek-radius-subtle .fi-fo-rich-editor,
 .sleek-radius-subtle .fi-fo-markdown-editor,
+.sleek-radius-subtle .fi-sc-wizard.fi-contained,
+.sleek-radius-subtle .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
+.sleek-radius-subtle .fi-fo-date-time-picker-panel,
+.sleek-radius-subtle .fi-fo-color-picker-panel,
+.sleek-radius-subtle .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+.sleek-radius-subtle .fi-in-table-repeatable > table,
+.sleek-radius-subtle .fi-in-key-value,
 html.sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.sleek-radius-subtle .fi-ta,
 html.sleek-radius-subtle .fi-ta-ctn,
@@ -430,6 +499,13 @@ html.sleek-radius-subtle .fi-fo-builder-item,
 html.sleek-radius-subtle .fi-fo-key-value,
 html.sleek-radius-subtle .fi-fo-rich-editor,
 html.sleek-radius-subtle .fi-fo-markdown-editor,
+html.sleek-radius-subtle .fi-sc-wizard.fi-contained,
+html.sleek-radius-subtle .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
+html.sleek-radius-subtle .fi-fo-date-time-picker-panel,
+html.sleek-radius-subtle .fi-fo-color-picker-panel,
+html.sleek-radius-subtle .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+html.sleek-radius-subtle .fi-in-table-repeatable > table,
+html.sleek-radius-subtle .fi-in-key-value,
 body.sleek-radius-subtle .fi-tabs {
     border-radius: 0.75rem !important;
 }
@@ -964,6 +1040,8 @@ html.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.f
 html.sleek-glass:not(.dark) .fi-sc-tabs,
 html.sleek-glass:not(.dark) .fi-sc-tabs.fi-contained,
 html.sleek-glass:not(.dark) .fi-sc-tabs-tab,
+html.sleek-glass:not(.dark) .fi-sc-wizard.fi-contained,
+html.sleek-glass:not(.dark) .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
 html.sleek-glass:not(.dark) .fi-ta,
 html.sleek-glass:not(.dark) .fi-ta-ctn,
 body.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
@@ -974,6 +1052,8 @@ body.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.f
 body.sleek-glass:not(.dark) .fi-sc-tabs,
 body.sleek-glass:not(.dark) .fi-sc-tabs.fi-contained,
 body.sleek-glass:not(.dark) .fi-sc-tabs-tab,
+body.sleek-glass:not(.dark) .fi-sc-wizard.fi-contained,
+body.sleek-glass:not(.dark) .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
 body.sleek-glass:not(.dark) .fi-ta,
 body.sleek-glass:not(.dark) .fi-ta-ctn {
     background-color: rgba(255, 255, 255, 0.72) !important;
@@ -992,6 +1072,8 @@ html.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contai
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs,
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs.fi-contained,
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs-tab,
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-wizard.fi-contained,
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
@@ -1002,6 +1084,8 @@ body.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contai
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs,
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs.fi-contained,
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs-tab,
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-wizard.fi-contained,
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
 body.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 body.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn {
     background-color: rgba(15, 23, 42, 0.65) !important;
@@ -1020,6 +1104,8 @@ html.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):n
 html.dark.sleek-glass.sleek-oled .fi-sc-tabs,
 html.dark.sleek-glass.sleek-oled .fi-sc-tabs.fi-contained,
 html.dark.sleek-glass.sleek-oled .fi-sc-tabs-tab,
+html.dark.sleek-glass.sleek-oled .fi-sc-wizard.fi-contained,
+html.dark.sleek-glass.sleek-oled .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
 html.dark.sleek-glass.sleek-oled .fi-ta,
 html.dark.sleek-glass.sleek-oled .fi-ta-ctn,
 body.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
@@ -1030,6 +1116,8 @@ body.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):n
 body.dark.sleek-glass.sleek-oled .fi-sc-tabs,
 body.dark.sleek-glass.sleek-oled .fi-sc-tabs.fi-contained,
 body.dark.sleek-glass.sleek-oled .fi-sc-tabs-tab,
+body.dark.sleek-glass.sleek-oled .fi-sc-wizard.fi-contained,
+body.dark.sleek-glass.sleek-oled .fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header,
 body.dark.sleek-glass.sleek-oled .fi-ta,
 body.dark.sleek-glass.sleek-oled .fi-ta-ctn {
     background-color: rgba(12, 12, 15, 0.75) !important;
@@ -1099,9 +1187,44 @@ body.dark.sleek-glass.sleek-oled .fi-modal-window {
                 0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
 }
 
-/* Frosted Dropdown Panels (Visible Glass over Tables & Cards) */
+/* Frosted Sticky Modal Header & Footer in Glass Mode */
+html.sleek-glass:not(.dark) .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+html.sleek-glass:not(.dark) .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+body.sleek-glass:not(.dark) .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+body.sleek-glass:not(.dark) .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+html.dark.sleek-glass:not(.sleek-oled) .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+body.dark.sleek-glass:not(.sleek-oled) .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+body.dark.sleek-glass:not(.sleek-oled) .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    background-color: rgba(15, 23, 42, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+html.dark.sleek-glass.sleek-oled .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+body.dark.sleek-glass.sleek-oled .fi-modal.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+body.dark.sleek-glass.sleek-oled .fi-modal.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    background-color: rgba(12, 12, 15, 0.9) !important;
+    border-color: #27272a !important;
+}
+
+/* Frosted Dropdown & Popover Panels (Visible Glass over Tables & Cards) */
 html.sleek-glass:not(.dark) .fi-dropdown-panel,
-body.sleek-glass:not(.dark) .fi-dropdown-panel {
+html.sleek-glass:not(.dark) .fi-fo-date-time-picker-panel,
+html.sleek-glass:not(.dark) .fi-fo-color-picker-panel,
+body.sleek-glass:not(.dark) .fi-dropdown-panel,
+body.sleek-glass:not(.dark) .fi-fo-date-time-picker-panel,
+body.sleek-glass:not(.dark) .fi-fo-color-picker-panel {
     background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(20px) saturate(190%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
@@ -1112,7 +1235,11 @@ body.sleek-glass:not(.dark) .fi-dropdown-panel {
 }
 
 html.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel,
-body.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel {
+html.dark.sleek-glass:not(.sleek-oled) .fi-fo-date-time-picker-panel,
+html.dark.sleek-glass:not(.sleek-oled) .fi-fo-color-picker-panel,
+body.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel,
+body.dark.sleek-glass:not(.sleek-oled) .fi-fo-date-time-picker-panel,
+body.dark.sleek-glass:not(.sleek-oled) .fi-fo-color-picker-panel {
     background-color: rgba(15, 23, 42, 0.8) !important;
     backdrop-filter: blur(20px) saturate(190%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
@@ -1123,7 +1250,11 @@ body.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel {
 }
 
 html.dark.sleek-glass.sleek-oled .fi-dropdown-panel,
-body.dark.sleek-glass.sleek-oled .fi-dropdown-panel {
+html.dark.sleek-glass.sleek-oled .fi-fo-date-time-picker-panel,
+html.dark.sleek-glass.sleek-oled .fi-fo-color-picker-panel,
+body.dark.sleek-glass.sleek-oled .fi-dropdown-panel,
+body.dark.sleek-glass.sleek-oled .fi-fo-date-time-picker-panel,
+body.dark.sleek-glass.sleek-oled .fi-fo-color-picker-panel {
     background-color: rgba(12, 12, 15, 0.85) !important;
     backdrop-filter: blur(20px) saturate(190%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
@@ -1161,6 +1292,10 @@ html.sleek-glass:not(.dark) .fi-ta-summary-row {
     background-color: rgba(248, 250, 252, 0.5) !important;
 }
 
+html.sleek-glass:not(.dark) .fi-ta-group-header-row > td {
+    background-color: rgba(248, 250, 252, 0.55) !important;
+}
+
 html.sleek-glass:not(.dark) .fi-ta-row:hover {
     background-color: rgba(255, 255, 255, 0.55) !important;
 }
@@ -1175,6 +1310,10 @@ html.dark.sleek-glass .fi-ta-empty-header-cell {
 
 html.dark.sleek-glass .fi-ta-summary-row {
     background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+html.dark.sleek-glass .fi-ta-group-header-row > td {
+    background-color: rgba(15, 23, 42, 0.55) !important;
 }
 
 html.dark.sleek-glass .fi-ta-row:hover {
@@ -1365,17 +1504,23 @@ body.dark.sleek-glass .fi-ta-selection-indicator {
     border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* Frosted Repeaters, Builders & Rich Editor in Glass Mode */
+/* Frosted Repeaters, Builders, Infolists & Rich Editor in Glass Mode */
 html.sleek-glass:not(.dark) .fi-fo-repeater-item,
 html.sleek-glass:not(.dark) .fi-fo-builder-item,
 html.sleek-glass:not(.dark) .fi-fo-key-value,
 html.sleek-glass:not(.dark) .fi-fo-rich-editor,
 html.sleek-glass:not(.dark) .fi-fo-markdown-editor,
+html.sleek-glass:not(.dark) .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+html.sleek-glass:not(.dark) .fi-in-table-repeatable > table,
+html.sleek-glass:not(.dark) .fi-in-key-value,
 body.sleek-glass:not(.dark) .fi-fo-repeater-item,
 body.sleek-glass:not(.dark) .fi-fo-builder-item,
 body.sleek-glass:not(.dark) .fi-fo-key-value,
 body.sleek-glass:not(.dark) .fi-fo-rich-editor,
-body.sleek-glass:not(.dark) .fi-fo-markdown-editor {
+body.sleek-glass:not(.dark) .fi-fo-markdown-editor,
+body.sleek-glass:not(.dark) .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+body.sleek-glass:not(.dark) .fi-in-table-repeatable > table,
+body.sleek-glass:not(.dark) .fi-in-key-value {
     background-color: rgba(255, 255, 255, 0.65) !important;
     backdrop-filter: blur(14px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
@@ -1387,11 +1532,17 @@ html.dark.sleek-glass .fi-fo-builder-item,
 html.dark.sleek-glass .fi-fo-key-value,
 html.dark.sleek-glass .fi-fo-rich-editor,
 html.dark.sleek-glass .fi-fo-markdown-editor,
+html.dark.sleek-glass .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+html.dark.sleek-glass .fi-in-table-repeatable > table,
+html.dark.sleek-glass .fi-in-key-value,
 body.dark.sleek-glass .fi-fo-repeater-item,
 body.dark.sleek-glass .fi-fo-builder-item,
 body.dark.sleek-glass .fi-fo-key-value,
 body.dark.sleek-glass .fi-fo-rich-editor,
-body.dark.sleek-glass .fi-fo-markdown-editor {
+body.dark.sleek-glass .fi-fo-markdown-editor,
+body.dark.sleek-glass .fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+body.dark.sleek-glass .fi-in-table-repeatable > table,
+body.dark.sleek-glass .fi-in-key-value {
     background-color: rgba(15, 23, 42, 0.55) !important;
     backdrop-filter: blur(14px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(14px) saturate(180%) !important;

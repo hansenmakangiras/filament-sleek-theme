@@ -43,3 +43,7 @@
 .fi-ta-selection-indicator {
     @apply border-b border-gray-200 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-800/80 transition-colors;
 }
+
+.fi-ta-group-header-row > td {
+    @apply bg-gray-50/80 dark:bg-gray-800/80 transition-colors;
+}

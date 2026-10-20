@@ -24,3 +24,27 @@
 .fi-fo-markdown-editor-toolbar {
     @apply bg-gray-50/70 dark:bg-gray-800/70 border-b border-gray-200 dark:border-gray-700;
 }
+
+/* Wizard Multistep Containers */
+.fi-sc-wizard.fi-contained,
+.fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header {
+    @apply rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-none ring-0 overflow-hidden;
+}
+
+.fi-sc-wizard.fi-contained .fi-sc-wizard-header {
+    @apply border-b border-gray-200 dark:border-gray-700;
+}
+
+/* Popover Panels: Date/Time Picker & Color Picker */
+.fi-fo-date-time-picker-panel,
+.fi-fo-color-picker-panel {
+    @apply rounded-2xl border border-gray-200 dark:border-gray-700 shadow-xl ring-0 dark:bg-gray-800 overflow-hidden;
+    z-index: 50 !important;
+}
+
+/* Infolist Repeatables, Tables & Key-Value Containers */
+.fi-in-repeatable.fi-contained > .fi-in-repeatable-item,
+.fi-in-table-repeatable > table,
+.fi-in-key-value {
+    @apply rounded-2xl border border-gray-200 dark:border-gray-700 shadow-none ring-0 overflow-hidden bg-white dark:bg-gray-800;
+}
