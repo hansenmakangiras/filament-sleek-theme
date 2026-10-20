@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1] - 2026-10-20
+
+### Documentation & Assets
+- 🖼️ **Official 2560×1440 Studio Showcase Covers:** Added high-resolution (16:9, 2560×1440px) official studio showcase covers (`cover-showcase-dual.jpg` and `cover-showcase-light.jpg`) featuring real application screenshots with macOS window framing, subtle ambient drop shadows, and official branding.
+- 🏷️ **Official Ecosystem Badges:** Added live Packagist version, GitHub Actions CI test status, Total Downloads, License MIT, PHP version (^8.2), and Filament dual compatibility (v4 | v5) badges to `README.md`.
+- 📸 **README Showcase Gallery:** Updated the README hero banner and screenshot gallery with real high-resolution screenshots showcasing Frosted Glass, OLED Dark Mode with Accent Glow, and High-Density Compact layouts.
+- 📦 **Packagist Clean Release:** Published as an immutable patch release to provide a clean, warning-free distribution on Packagist.
+
 ## [1.3.0] - 2026-10-20
 
 ### Added
