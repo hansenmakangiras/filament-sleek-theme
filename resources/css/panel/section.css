@@ -1,7 +1,20 @@
-.fi-section {
-    @apply bg-white dark:bg-gray-800 rounded-[calc(var(--radius-2xl)-var(--spacing))]  border border-gray-300 dark:border-gray-700 p-1 ring-0 shadow-none;
+.fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *) {
+    @apply bg-white dark:bg-gray-800 rounded-[calc(var(--radius-2xl)-var(--spacing))] border border-gray-300 dark:border-gray-700 p-1 ring-0 shadow-none;
 }
 
-.fi-sc-section{
+.fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *) {
     @apply p-1 border border-gray-300 bg-gray-50 dark:bg-gray-800 rounded-2xl dark:border-gray-700;
+}
+
+/* Uncontained Sections & Stats Overview Container: eliminate outer background plates between stat items */
+.fi-section-not-contained,
+.fi-sc-section-not-contained,
+.fi-wi-stats-overview,
+.fi-wi-stats-overview .fi-section,
+.fi-wi-stats-overview .fi-sc-section {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }

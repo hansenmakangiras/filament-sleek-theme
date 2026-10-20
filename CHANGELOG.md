@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
   - **Modals:** Compacted modal headers, content, and footers.
 
 ### Fixed
+- 📊 **Stats Overview Outer Container Cleanup:** Eliminated redundant outer background plate and borders around `StatsOverviewWidget` containers (`.fi-wi-stats-overview`, `.fi-section-not-contained`, `.fi-sc-section-not-contained`) across default, glass, and OLED modes. Each stat widget card now sits cleanly and independently on the canvas without nested outer boxes or distracting backgrounds peeking through the gaps between stat items.
 - 🪟 **True Full-Dashboard Glassmorphism (`glass()`):** Transformed `.sleek-glass` into a real, full-dashboard glassmorphism system:
   - **Floating Panels & Dropdowns:** Converted `.fi-dropdown-panel` and `.fi-modal-window` to authentic frosted glass (`rgba(255, 255, 255, 0.8)`, `backdrop-filter: blur(20px) saturate(190%)`, white glass borders) so underlying table rows, widgets, and charts visibly blur through floating menus.
   - **Cards, Widgets & Table Acrylics:** Applied frosted translucent fills (`rgba(255, 255, 255, 0.72)` in light, `rgba(15, 23, 42, 0.65)` in dark), `blur(18px)`, and inner glass reflection rings to stats overview widgets, section cards, and tables.

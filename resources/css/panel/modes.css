@@ -49,30 +49,53 @@ body.dark.sleek-oled .fi-main-ctn {
 .dark body.sleek-oled .fi-ta,
 .dark.sleek-oled .fi-ta-ctn,
 .dark body.sleek-oled .fi-ta-ctn,
-.dark.sleek-oled .fi-section,
-.dark body.sleek-oled .fi-section,
-.dark.sleek-oled .fi-sc-section,
-.dark body.sleek-oled .fi-sc-section,
-.dark.sleek-oled .fi-wi-widget,
-.dark body.sleek-oled .fi-wi-widget,
+.dark.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark body.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark body.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
+.dark body.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 .dark.sleek-oled .fi-wi-stats-overview-stat,
 .dark body.sleek-oled .fi-wi-stats-overview-stat,
 .dark.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
 .dark body.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.dark.sleek-oled .fi-ta,
 html.dark.sleek-oled .fi-ta-ctn,
-html.dark.sleek-oled .fi-section,
-html.dark.sleek-oled .fi-sc-section,
-html.dark.sleek-oled .fi-wi-widget,
+html.dark.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 html.dark.sleek-oled .fi-wi-stats-overview-stat,
 body.dark.sleek-oled .fi-ta,
 body.dark.sleek-oled .fi-ta-ctn,
-body.dark.sleek-oled .fi-section,
-body.dark.sleek-oled .fi-sc-section,
-body.dark.sleek-oled .fi-wi-widget,
+body.dark.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 body.dark.sleek-oled .fi-wi-stats-overview-stat {
     background-color: #09090b !important;
     border-color: #27272a !important;
+}
+
+/* Ensure Stats Overview Containers in OLED Mode Have No Enclosing Box */
+.dark.sleek-oled .fi-wi-stats-overview,
+.dark.sleek-oled .fi-wi-stats-overview .fi-section,
+.dark.sleek-oled .fi-wi-stats-overview .fi-sc-section,
+.dark.sleek-oled .fi-section-not-contained,
+.dark.sleek-oled .fi-sc-section-not-contained,
+html.dark.sleek-oled .fi-wi-stats-overview,
+html.dark.sleek-oled .fi-wi-stats-overview .fi-section,
+html.dark.sleek-oled .fi-wi-stats-overview .fi-sc-section,
+html.dark.sleek-oled .fi-section-not-contained,
+html.dark.sleek-oled .fi-sc-section-not-contained,
+body.dark.sleek-oled .fi-wi-stats-overview,
+body.dark.sleek-oled .fi-wi-stats-overview .fi-section,
+body.dark.sleek-oled .fi-wi-stats-overview .fi-sc-section,
+body.dark.sleek-oled .fi-section-not-contained,
+body.dark.sleek-oled .fi-sc-section-not-contained {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
 
 /* Table Rows & Dividers in OLED Mode (Dark Only) */
@@ -693,14 +716,14 @@ body.dark.sleek-glass.sleek-oled .fi-main-ctn {
 /* Glassmorphism Cards, Stats Widgets, Sections & Table Containers */
 html.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 html.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
-html.sleek-glass:not(.dark) .fi-section,
-html.sleek-glass:not(.dark) .fi-sc-section,
+html.sleek-glass:not(.dark) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.sleek-glass:not(.dark) .fi-ta,
 html.sleek-glass:not(.dark) .fi-ta-ctn,
 body.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 body.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
-body.sleek-glass:not(.dark) .fi-section,
-body.sleek-glass:not(.dark) .fi-sc-section,
+body.sleek-glass:not(.dark) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.sleek-glass:not(.dark) .fi-ta,
 body.sleek-glass:not(.dark) .fi-ta-ctn {
     background-color: rgba(255, 255, 255, 0.72) !important;
@@ -713,14 +736,14 @@ body.sleek-glass:not(.dark) .fi-ta-ctn {
 
 html.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
 html.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
-html.dark.sleek-glass:not(.sleek-oled) .fi-section,
-html.dark.sleek-glass:not(.sleek-oled) .fi-sc-section,
+html.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
-body.dark.sleek-glass:not(.sleek-oled) .fi-section,
-body.dark.sleek-glass:not(.sleek-oled) .fi-sc-section,
+body.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 body.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn {
     background-color: rgba(15, 23, 42, 0.65) !important;
@@ -733,14 +756,14 @@ body.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn {
 
 html.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
 html.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
-html.dark.sleek-glass.sleek-oled .fi-section,
-html.dark.sleek-glass.sleek-oled .fi-sc-section,
+html.dark.sleek-glass.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-glass.sleek-oled .fi-ta,
 html.dark.sleek-glass.sleek-oled .fi-ta-ctn,
 body.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
 body.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
-body.dark.sleek-glass.sleek-oled .fi-section,
-body.dark.sleek-glass.sleek-oled .fi-sc-section,
+body.dark.sleek-glass.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-glass.sleek-oled .fi-ta,
 body.dark.sleek-glass.sleek-oled .fi-ta-ctn {
     background-color: rgba(12, 12, 15, 0.75) !important;
@@ -749,6 +772,29 @@ body.dark.sleek-glass.sleek-oled .fi-ta-ctn {
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8),
                 0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+/* Ensure Stats Overview Containers in Glass Mode Have No Enclosing Plate */
+.sleek-glass .fi-wi-stats-overview,
+.sleek-glass .fi-wi-stats-overview .fi-section,
+.sleek-glass .fi-wi-stats-overview .fi-sc-section,
+.sleek-glass .fi-section-not-contained,
+.sleek-glass .fi-sc-section-not-contained,
+html.sleek-glass .fi-wi-stats-overview,
+html.sleek-glass .fi-wi-stats-overview .fi-section,
+html.sleek-glass .fi-wi-stats-overview .fi-sc-section,
+html.sleek-glass .fi-section-not-contained,
+html.sleek-glass .fi-sc-section-not-contained,
+body.sleek-glass .fi-wi-stats-overview,
+body.sleek-glass .fi-wi-stats-overview .fi-section,
+body.sleek-glass .fi-wi-stats-overview .fi-sc-section,
+body.sleek-glass .fi-section-not-contained,
+body.sleek-glass .fi-sc-section-not-contained {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
 
 /* Frosted Modal Dialogs */
