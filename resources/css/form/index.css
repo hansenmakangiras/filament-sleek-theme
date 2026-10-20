@@ -48,3 +48,28 @@
 .fi-in-key-value {
     @apply rounded-2xl border border-gray-200 dark:border-gray-700 shadow-none ring-0 overflow-hidden bg-white dark:bg-gray-800;
 }
+
+/* Fieldset Containers */
+.fi-fieldset:not(.fi-fieldset-not-contained) {
+    @apply rounded-2xl border border-gray-300 dark:border-gray-700 shadow-none ring-0 bg-white dark:bg-gray-800;
+}
+
+/* File Upload & FilePond Containers */
+.fi-fo-file-upload .filepond--root:not([data-style-panel-layout='compact circle']) {
+    @apply rounded-2xl border border-gray-300 dark:border-gray-700 shadow-none ring-0 overflow-hidden bg-white dark:bg-gray-800 transition-all;
+}
+
+.fi-fo-file-upload-editor-window {
+    @apply rounded-2xl border border-gray-300 dark:border-gray-700 shadow-2xl ring-0;
+}
+
+.fi-fo-file-upload-editor-overlay {
+    backdrop-filter: blur(8px) saturate(130%);
+    -webkit-backdrop-filter: blur(8px) saturate(130%);
+}
+
+/* Checkbox Soft Modern Radius */
+input[type='checkbox'].fi-checkbox-input {
+    @apply rounded-md;
+}
+
