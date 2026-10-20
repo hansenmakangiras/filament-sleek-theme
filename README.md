@@ -12,6 +12,10 @@ A **modern, sleek, responsive, and customizable** theme for FilamentPHP v4 & v5,
 > [!NOTE]
 > Originally forked from [resmatech/filament-awin-theme](https://github.com/resmatech/filament-awin-theme). Maintained and updated by [Hansen Makangiras](https://github.com/hansenmakangiras) with full **Filament v5 & v4 dual compatibility**, Service Provider support, and modern testing setup.
 
+<p align="center">
+  <img src="./images/screenshot/sidebar-contrast-glass-compact-accentglow-preview.png" alt="Filament Sleek Theme Preview" width="100%">
+</p>
+
 ## ✨ Features
 
 - **FilamentPHP v4 & v5 Ready** – Fully compatible with both Filament v4 and v5
@@ -215,53 +219,63 @@ FilamentSleekTheme::make()
 ```
 
 ## Screenshots
+
+### 🌟 Frosted Glass & Ambient Glow
+<p align="center">
+  <a href="./images/screenshot/glass-preview.png" target="_blank">
+    <img src="./images/screenshot/glass-preview.png" alt="Frosted Glass Preview" width="100%">
+  </a>
+</p>
+
+### 🖤 OLED Pure Black Dark Mode with Accent Glow
+<p align="center">
+  <a href="./images/screenshot/oled-darkmode-accentglow-preview.png" target="_blank">
+    <img src="./images/screenshot/oled-darkmode-accentglow-preview.png" alt="OLED Dark Mode with Accent Glow" width="100%">
+  </a>
+</p>
+
+### 🌓 Combined Modes: Glass, Compact & Sidebar Contrast
 <table>
+    <thead>
+        <tr>
+            <th width="50%">Light Mode (Glass + Compact + Accent Glow)</th>
+            <th width="50%">Dark Mode (Glass + Compact + Accent Glow)</th>
+        </tr>
+    </thead>
     <tbody>
         <tr>
             <td>
-                <a href="./images/Dashboard-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Dashboard-dark.png" alt="Dashboard Dark"/>
+                <a href="./images/screenshot/sidebar-contrast-glass-compact-accentglow-preview.png" target="_blank">
+                    <img src="./images/screenshot/sidebar-contrast-glass-compact-accentglow-preview.png" alt="Sidebar Contrast Glass Compact Light"/>
                 </a>
             </td>
             <td>
-                <a href="./images/Dashboard-light.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Dashboard-light.png" alt="Dashboard Light"/>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="./images/Form-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Form-dark.png" alt="Form Dark"/>
-                </a>
-            </td>
-            <td>
-                <a href="./images/Form-light.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Form-light.png" alt="Form Light"/>
+                <a href="./images/screenshot/sidebar-contrast-glass-compact-accentglow-darkmode-preview.png" target="_blank">
+                    <img src="./images/screenshot/sidebar-contrast-glass-compact-accentglow-darkmode-preview.png" alt="Sidebar Contrast Glass Compact Dark"/>
                 </a>
             </td>
         </tr>
+    </tbody>
+</table>
+
+### 📊 Sidebar Contrast & High-Density Compact Mode
+<table>
+    <thead>
         <tr>
-            <td>
-                <a href="./images/Table-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Table-dark.png" alt="Table Dark"/>
-                </a>
-            </td>
-            <td>
-                <a href="./images/Table-light.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Table-light.png" alt="Table Light"/>
-                </a>
-            </td>
+            <th width="50%">Sidebar Contrast</th>
+            <th width="50%">Sidebar Contrast + Compact Mode</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
             <td>
-                <a href="./images/Notifications-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Notifications-dark.png" alt="Notifications Dark"/>
+                <a href="./images/screenshot/sidebar-contrast-preview.png" target="_blank">
+                    <img src="./images/screenshot/sidebar-contrast-preview.png" alt="Sidebar Contrast Preview"/>
                 </a>
             </td>
             <td>
-                <a href="./images/Notifications-light.png" target="_blank">
-                    <img style="border-radius: 10px" src="./images/Notifications-light.png" alt="Notifications Light"/>
+                <a href="./images/screenshot/sidebar-contrast-compact-preview.png" target="_blank">
+                    <img src="./images/screenshot/sidebar-contrast-compact-preview.png" alt="Sidebar Contrast Compact Preview"/>
                 </a>
             </td>
         </tr>
