@@ -15,9 +15,13 @@
     @apply rounded-xl;
 }
 
-/* Ensure active dropdown within table cells or rows floats above siblings */
-.fi-ta-row:has(.fi-dropdown-panel),
-.fi-ta-cell:has(.fi-dropdown-panel) {
+/* Ensure active dropdown within table cells or rows floats above siblings only when actively open */
+.fi-ta-row:has([aria-expanded="true"]),
+.fi-ta-cell:has([aria-expanded="true"]),
+.fi-ta-row:has(.fi-dropdown-open),
+.fi-ta-cell:has(.fi-dropdown-open),
+.fi-ta-row:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+.fi-ta-cell:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])) {
     position: relative;
     z-index: 30;
 }

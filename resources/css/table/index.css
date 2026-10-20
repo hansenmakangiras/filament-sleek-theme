@@ -23,7 +23,17 @@
 .fi-ta-header-ctn,
 .fi-ta-header-toolbar {
     position: relative;
-    z-index: 20;
+    z-index: 25;
+}
+
+.fi-ta-header-ctn:has([aria-expanded="true"]),
+.fi-ta-header-toolbar:has([aria-expanded="true"]),
+.fi-ta-header-ctn:has(.fi-dropdown-open),
+.fi-ta-header-toolbar:has(.fi-dropdown-open),
+.fi-ta-header-ctn:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+.fi-ta-header-toolbar:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])) {
+    position: relative;
+    z-index: 40;
 }
 
 .fi-dropdown .fi-icon-btn-badge-ctn {

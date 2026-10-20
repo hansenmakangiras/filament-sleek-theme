@@ -1,9 +1,46 @@
-.fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *) {
+/* Contained Sections (Standard Cards) */
+.fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *) {
     @apply bg-white dark:bg-gray-800 rounded-[calc(var(--radius-2xl)-var(--spacing))] border border-gray-300 dark:border-gray-700 p-1 ring-0 shadow-none;
 }
 
 .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *) {
     @apply p-1 border border-gray-300 bg-gray-50 dark:bg-gray-800 rounded-2xl dark:border-gray-700;
+}
+
+/* Aside Sections (e.g. Profile Page & Aside Forms) */
+.fi-section.fi-aside {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem;
+}
+
+.fi-section.fi-aside > .fi-section-header {
+    @apply pt-2 pe-4;
+}
+
+.fi-section.fi-aside > .fi-section-content-ctn {
+    @apply bg-white dark:bg-gray-800 rounded-2xl border border-gray-300 dark:border-gray-700 shadow-none ring-0 overflow-hidden;
+}
+
+/* Breathing room between aside sections & profile cards */
+div:has(> * > .fi-section.fi-aside),
+div:has(> .fi-section.fi-aside) {
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+div:has(> * > .fi-section.fi-aside) > *,
+div:has(> .fi-section.fi-aside) > * {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
 }
 
 /* Uncontained Sections & Stats Overview Container: eliminate outer background plates between stat items */

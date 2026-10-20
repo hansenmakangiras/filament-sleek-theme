@@ -84,8 +84,10 @@ body.dark.sleek-oled .fi-main-ctn {
 .dark body.sleek-oled .fi-ta,
 .dark.sleek-oled .fi-ta-ctn,
 .dark body.sleek-oled .fi-ta-ctn,
-.dark.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
-.dark body.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark.sleek-oled .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark body.sleek-oled .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+.dark.sleek-oled .fi-section.fi-aside > .fi-section-content-ctn,
+.dark body.sleek-oled .fi-section.fi-aside > .fi-section-content-ctn,
 .dark.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 .dark body.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 .dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
@@ -96,13 +98,15 @@ body.dark.sleek-oled .fi-main-ctn {
 .dark body.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.dark.sleek-oled .fi-ta,
 html.dark.sleek-oled .fi-ta-ctn,
-html.dark.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-oled .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-oled .fi-section.fi-aside > .fi-section-content-ctn,
 html.dark.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 html.dark.sleek-oled .fi-wi-stats-overview-stat,
 body.dark.sleek-oled .fi-ta,
 body.dark.sleek-oled .fi-ta-ctn,
-body.dark.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-oled .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-oled .fi-section.fi-aside > .fi-section-content-ctn,
 body.dark.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 body.dark.sleek-oled .fi-wi-stats-overview-stat {
@@ -120,7 +124,10 @@ body.dark.sleek-oled .fi-wi-stats-overview-stat {
     box-shadow: none !important;
 }
 
-/* Ensure Stats Overview Containers in OLED Mode Have No Enclosing Box */
+/* Ensure Aside Sections and Stats Overview Containers in OLED Mode Have No Enclosing Box */
+.dark.sleek-oled .fi-section.fi-aside,
+html.dark.sleek-oled .fi-section.fi-aside,
+body.dark.sleek-oled .fi-section.fi-aside,
 .dark.sleek-oled .fi-wi-stats-overview,
 .dark.sleek-oled .fi-wi-stats-overview .fi-section,
 .dark.sleek-oled .fi-wi-stats-overview .fi-sc-section,
@@ -391,6 +398,7 @@ html.sleek-radius-subtle .fi-main-ctn {
 .sleek-radius-subtle .fi-ta,
 .sleek-radius-subtle .fi-ta-ctn,
 .sleek-radius-subtle .fi-section,
+.sleek-radius-subtle .fi-section.fi-aside > .fi-section-content-ctn,
 .sleek-radius-subtle .fi-sc-section,
 .sleek-radius-subtle .fi-wi-stats-overview-stat,
 .sleek-radius-subtle .fi-wi-widget,
@@ -408,6 +416,7 @@ html.sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.sleek-radius-subtle .fi-ta,
 html.sleek-radius-subtle .fi-ta-ctn,
 html.sleek-radius-subtle .fi-section,
+html.sleek-radius-subtle .fi-section.fi-aside > .fi-section-content-ctn,
 html.sleek-radius-subtle .fi-sc-section,
 html.sleek-radius-subtle .fi-wi-stats-overview-stat,
 html.sleek-radius-subtle .fi-wi-widget,
@@ -949,7 +958,8 @@ body.dark.sleek-glass.sleek-oled .fi-main-ctn {
 html.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 html.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 html.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
-html.sleek-glass:not(.dark) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.sleek-glass:not(.dark) .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.sleek-glass:not(.dark) .fi-section.fi-aside > .fi-section-content-ctn,
 html.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.sleek-glass:not(.dark) .fi-sc-tabs,
 html.sleek-glass:not(.dark) .fi-sc-tabs.fi-contained,
@@ -958,7 +968,8 @@ html.sleek-glass:not(.dark) .fi-ta,
 html.sleek-glass:not(.dark) .fi-ta-ctn,
 body.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 body.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
-body.sleek-glass:not(.dark) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.sleek-glass:not(.dark) .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.sleek-glass:not(.dark) .fi-section.fi-aside > .fi-section-content-ctn,
 body.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.sleek-glass:not(.dark) .fi-sc-tabs,
 body.sleek-glass:not(.dark) .fi-sc-tabs.fi-contained,
@@ -975,7 +986,8 @@ body.sleek-glass:not(.dark) .fi-ta-ctn {
 
 html.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
 html.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
-html.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass:not(.sleek-oled) .fi-section.fi-aside > .fi-section-content-ctn,
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs,
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs.fi-contained,
@@ -984,7 +996,8 @@ html.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
-body.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass:not(.sleek-oled) .fi-section.fi-aside > .fi-section-content-ctn,
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs,
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs.fi-contained,
@@ -1001,7 +1014,8 @@ body.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn {
 
 html.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
 html.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
-html.dark.sleek-glass.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass.sleek-oled .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass.sleek-oled .fi-section.fi-aside > .fi-section-content-ctn,
 html.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-glass.sleek-oled .fi-sc-tabs,
 html.dark.sleek-glass.sleek-oled .fi-sc-tabs.fi-contained,
@@ -1010,7 +1024,8 @@ html.dark.sleek-glass.sleek-oled .fi-ta,
 html.dark.sleek-glass.sleek-oled .fi-ta-ctn,
 body.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
 body.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
-body.dark.sleek-glass.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass.sleek-oled .fi-section:not(.fi-aside):not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass.sleek-oled .fi-section.fi-aside > .fi-section-content-ctn,
 body.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-glass.sleek-oled .fi-sc-tabs,
 body.dark.sleek-glass.sleek-oled .fi-sc-tabs.fi-contained,
@@ -1025,7 +1040,10 @@ body.dark.sleek-glass.sleek-oled .fi-ta-ctn {
                 0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
 }
 
-/* Ensure Stats Overview Containers in Glass Mode Have No Enclosing Plate */
+/* Ensure Aside Sections and Stats Overview Containers in Glass Mode Have No Enclosing Plate */
+.sleek-glass .fi-section.fi-aside,
+html.sleek-glass .fi-section.fi-aside,
+body.sleek-glass .fi-section.fi-aside,
 .sleek-glass .fi-wi-stats-overview,
 .sleek-glass .fi-wi-stats-overview .fi-section,
 .sleek-glass .fi-wi-stats-overview .fi-sc-section,
@@ -1045,6 +1063,8 @@ body.sleek-glass .fi-sc-section-not-contained {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     padding: 0 !important;
 }
 
@@ -1169,7 +1189,29 @@ html.sleek-glass .fi-ta-header-toolbar,
 body.sleek-glass .fi-ta-header-ctn,
 body.sleek-glass .fi-ta-header-toolbar {
     position: relative !important;
-    z-index: 20 !important;
+    z-index: 25 !important;
+}
+
+.sleek-glass .fi-ta-header-ctn:has([aria-expanded="true"]),
+.sleek-glass .fi-ta-header-toolbar:has([aria-expanded="true"]),
+.sleek-glass .fi-ta-header-ctn:has(.fi-dropdown-open),
+.sleek-glass .fi-ta-header-toolbar:has(.fi-dropdown-open),
+.sleek-glass .fi-ta-header-ctn:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+.sleek-glass .fi-ta-header-toolbar:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+html.sleek-glass .fi-ta-header-ctn:has([aria-expanded="true"]),
+html.sleek-glass .fi-ta-header-toolbar:has([aria-expanded="true"]),
+html.sleek-glass .fi-ta-header-ctn:has(.fi-dropdown-open),
+html.sleek-glass .fi-ta-header-toolbar:has(.fi-dropdown-open),
+html.sleek-glass .fi-ta-header-ctn:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+html.sleek-glass .fi-ta-header-toolbar:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+body.sleek-glass .fi-ta-header-ctn:has([aria-expanded="true"]),
+body.sleek-glass .fi-ta-header-toolbar:has([aria-expanded="true"]),
+body.sleek-glass .fi-ta-header-ctn:has(.fi-dropdown-open),
+body.sleek-glass .fi-ta-header-toolbar:has(.fi-dropdown-open),
+body.sleek-glass .fi-ta-header-ctn:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])),
+body.sleek-glass .fi-ta-header-toolbar:has(.fi-dropdown-panel:not([style*="display: none"]):not([hidden])) {
+    position: relative !important;
+    z-index: 40 !important;
 }
 
 /* Frosted Notifications in Glass Mode */
