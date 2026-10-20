@@ -12,13 +12,37 @@ html.dark.sleek-oled body,
     background-color: #000000 !important;
 }
 
-.dark.sleek-oled .fi-main-ctn,
-.dark body.sleek-oled .fi-main-ctn,
-html.dark.sleek-oled .fi-main-ctn {
-    background-color: #050505 !important;
-    border-color: #1a1a1a !important;
+/* Sidebar in OLED Mode */
+.dark.sleek-oled .fi-sidebar,
+.dark .sleek-oled .fi-sidebar,
+.dark body.sleek-oled .fi-sidebar,
+html.dark.sleek-oled .fi-sidebar,
+body.sleek-oled .fi-sidebar {
+    background-color: #000000 !important;
+    border-inline-end-color: #27272a !important;
+    border-right-color: #27272a !important;
 }
 
+.dark.sleek-oled .fi-sidebar-header,
+.dark.sleek-oled .fi-sidebar-footer,
+.dark.sleek-oled .fi-sidebar-header-ctn,
+html.dark.sleek-oled .fi-sidebar-header,
+html.dark.sleek-oled .fi-sidebar-footer,
+html.dark.sleek-oled .fi-sidebar-header-ctn {
+    background-color: #000000 !important;
+    border-color: #27272a !important;
+}
+
+/* Main Container in OLED Mode */
+.dark.sleek-oled .fi-main-ctn,
+.dark body.sleek-oled .fi-main-ctn,
+html.dark.sleek-oled .fi-main-ctn,
+body.sleek-oled .fi-main-ctn {
+    background-color: #000000 !important;
+    border-color: #27272a !important;
+}
+
+/* Cards, Tables, Widgets, and Sections in OLED Mode */
 .dark.sleek-oled .fi-ta,
 .dark body.sleek-oled .fi-ta,
 .dark.sleek-oled .fi-ta-ctn,
@@ -29,15 +53,107 @@ html.dark.sleek-oled .fi-main-ctn {
 .dark body.sleek-oled .fi-sc-section,
 .dark.sleek-oled .fi-wi-widget,
 .dark body.sleek-oled .fi-wi-widget,
+.dark.sleek-oled .fi-wi-stats-overview-stat,
+.dark body.sleek-oled .fi-wi-stats-overview-stat,
 .dark.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
 .dark body.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.dark.sleek-oled .fi-ta,
 html.dark.sleek-oled .fi-ta-ctn,
 html.dark.sleek-oled .fi-section,
 html.dark.sleek-oled .fi-sc-section,
-html.dark.sleek-oled .fi-wi-widget {
-    background-color: #080808 !important;
-    border-color: #1a1a1a !important;
+html.dark.sleek-oled .fi-wi-widget,
+html.dark.sleek-oled .fi-wi-stats-overview-stat {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
+/* Table Rows & Dividers in OLED Mode */
+.dark.sleek-oled .fi-ta-header,
+.dark.sleek-oled .fi-ta-header-toolbar,
+.dark.sleek-oled .fi-ta-header-cell,
+.dark.sleek-oled .fi-ta-cell,
+.dark.sleek-oled .fi-ta-row,
+.dark.sleek-oled .fi-ta-summary-row,
+.dark.sleek-oled .fi-ta-pagination,
+html.dark.sleek-oled .fi-ta-header,
+html.dark.sleek-oled .fi-ta-header-toolbar,
+html.dark.sleek-oled .fi-ta-header-cell,
+html.dark.sleek-oled .fi-ta-cell,
+html.dark.sleek-oled .fi-ta-row,
+html.dark.sleek-oled .fi-ta-summary-row,
+html.dark.sleek-oled .fi-ta-pagination {
+    border-color: #222225 !important;
+}
+
+.dark.sleek-oled .fi-ta-row:hover,
+html.dark.sleek-oled .fi-ta-row:hover {
+    background-color: #121215 !important;
+}
+
+/* Inputs and Form Wrappers in OLED Mode */
+.dark.sleek-oled .fi-input-wrp,
+html.dark.sleek-oled .fi-input-wrp,
+body.sleek-oled .fi-input-wrp {
+    background-color: #0c0c0e !important;
+    border-color: #27272a !important;
+}
+
+/* Dropdown Panels & Popovers in OLED Mode */
+.dark.sleek-oled .fi-dropdown-panel,
+.dark .sleek-oled .fi-dropdown-panel,
+.dark body.sleek-oled .fi-dropdown-panel,
+html.dark.sleek-oled .fi-dropdown-panel,
+body.sleek-oled .fi-dropdown-panel {
+    background-color: #0c0c0e !important;
+    border: 1px solid #27272a !important;
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.9), 0 0 0 1px #27272a !important;
+}
+
+.dark.sleek-oled .fi-dropdown-list-item:hover,
+.dark .sleek-oled .fi-dropdown-list-item:hover,
+html.dark.sleek-oled .fi-dropdown-list-item:hover,
+body.sleek-oled .fi-dropdown-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark.sleek-oled .fi-dropdown-header,
+html.dark.sleek-oled .fi-dropdown-header {
+    border-bottom-color: #222225 !important;
+}
+
+/* Theme Switcher in OLED Mode */
+.dark.sleek-oled .fi-theme-switcher,
+.dark .sleek-oled .fi-theme-switcher,
+html.dark.sleek-oled .fi-theme-switcher,
+body.sleek-oled .fi-theme-switcher {
+    background-color: #141416 !important;
+    border: 1px solid #27272a !important;
+}
+
+.dark.sleek-oled .fi-theme-switcher button.fi-active,
+.dark .sleek-oled .fi-theme-switcher button.fi-active,
+html.dark.sleek-oled .fi-theme-switcher button.fi-active,
+body.sleek-oled .fi-theme-switcher button.fi-active {
+    background-color: #27272a !important;
+    color: #ffffff !important;
+}
+
+/* Modals in OLED Mode */
+.dark.sleek-oled .fi-modal-window,
+.dark .sleek-oled .fi-modal-window,
+.dark body.sleek-oled .fi-modal-window,
+html.dark.sleek-oled .fi-modal-window,
+body.sleek-oled .fi-modal-window {
+    background-color: #0c0c0e !important;
+    border: 1px solid #27272a !important;
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a !important;
+}
+
+.dark.sleek-oled .fi-modal-header,
+.dark.sleek-oled .fi-modal-footer,
+html.dark.sleek-oled .fi-modal-header,
+html.dark.sleek-oled .fi-modal-footer {
+    border-color: #222225 !important;
 }
 
 /* =========================================
