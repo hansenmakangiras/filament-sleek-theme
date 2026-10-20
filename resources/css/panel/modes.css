@@ -12,12 +12,12 @@ html.dark.sleek-oled body,
     background-color: #000000 !important;
 }
 
-/* Sidebar in OLED Mode */
+/* Sidebar in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-sidebar,
 .dark .sleek-oled .fi-sidebar,
 .dark body.sleek-oled .fi-sidebar,
 html.dark.sleek-oled .fi-sidebar,
-body.sleek-oled .fi-sidebar {
+body.dark.sleek-oled .fi-sidebar {
     background-color: #000000 !important;
     border-inline-end-color: #27272a !important;
     border-right-color: #27272a !important;
@@ -28,21 +28,23 @@ body.sleek-oled .fi-sidebar {
 .dark.sleek-oled .fi-sidebar-header-ctn,
 html.dark.sleek-oled .fi-sidebar-header,
 html.dark.sleek-oled .fi-sidebar-footer,
-html.dark.sleek-oled .fi-sidebar-header-ctn {
+html.dark.sleek-oled .fi-sidebar-header-ctn,
+body.dark.sleek-oled .fi-sidebar-header,
+body.dark.sleek-oled .fi-sidebar-footer {
     background-color: #000000 !important;
     border-color: #27272a !important;
 }
 
-/* Main Container in OLED Mode */
+/* Main Container in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-main-ctn,
 .dark body.sleek-oled .fi-main-ctn,
 html.dark.sleek-oled .fi-main-ctn,
-body.sleek-oled .fi-main-ctn {
+body.dark.sleek-oled .fi-main-ctn {
     background-color: #000000 !important;
     border-color: #27272a !important;
 }
 
-/* Cards, Tables, Widgets, and Sections in OLED Mode */
+/* Cards, Tables, Widgets, and Sections in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-ta,
 .dark body.sleek-oled .fi-ta,
 .dark.sleek-oled .fi-ta-ctn,
@@ -62,12 +64,18 @@ html.dark.sleek-oled .fi-ta-ctn,
 html.dark.sleek-oled .fi-section,
 html.dark.sleek-oled .fi-sc-section,
 html.dark.sleek-oled .fi-wi-widget,
-html.dark.sleek-oled .fi-wi-stats-overview-stat {
+html.dark.sleek-oled .fi-wi-stats-overview-stat,
+body.dark.sleek-oled .fi-ta,
+body.dark.sleek-oled .fi-ta-ctn,
+body.dark.sleek-oled .fi-section,
+body.dark.sleek-oled .fi-sc-section,
+body.dark.sleek-oled .fi-wi-widget,
+body.dark.sleek-oled .fi-wi-stats-overview-stat {
     background-color: #09090b !important;
     border-color: #27272a !important;
 }
 
-/* Table Rows & Dividers in OLED Mode */
+/* Table Rows & Dividers in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-ta-header,
 .dark.sleek-oled .fi-ta-header-toolbar,
 .dark.sleek-oled .fi-ta-header-cell,
@@ -81,29 +89,33 @@ html.dark.sleek-oled .fi-ta-header-cell,
 html.dark.sleek-oled .fi-ta-cell,
 html.dark.sleek-oled .fi-ta-row,
 html.dark.sleek-oled .fi-ta-summary-row,
-html.dark.sleek-oled .fi-ta-pagination {
+html.dark.sleek-oled .fi-ta-pagination,
+body.dark.sleek-oled .fi-ta-row,
+body.dark.sleek-oled .fi-ta-header-cell {
     border-color: #222225 !important;
 }
 
 .dark.sleek-oled .fi-ta-row:hover,
-html.dark.sleek-oled .fi-ta-row:hover {
+html.dark.sleek-oled .fi-ta-row:hover,
+body.dark.sleek-oled .fi-ta-row:hover {
     background-color: #121215 !important;
 }
 
-/* Inputs and Form Wrappers in OLED Mode */
+/* Inputs and Form Wrappers in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-input-wrp,
 html.dark.sleek-oled .fi-input-wrp,
-body.sleek-oled .fi-input-wrp {
+body.dark.sleek-oled .fi-input-wrp,
+.dark body.sleek-oled .fi-input-wrp {
     background-color: #0c0c0e !important;
     border-color: #27272a !important;
 }
 
-/* Dropdown Panels & Popovers in OLED Mode */
+/* Dropdown Panels & Popovers in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-dropdown-panel,
 .dark .sleek-oled .fi-dropdown-panel,
 .dark body.sleek-oled .fi-dropdown-panel,
 html.dark.sleek-oled .fi-dropdown-panel,
-body.sleek-oled .fi-dropdown-panel {
+body.dark.sleek-oled .fi-dropdown-panel {
     background-color: #0c0c0e !important;
     border: 1px solid #27272a !important;
     box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.9), 0 0 0 1px #27272a !important;
@@ -112,20 +124,21 @@ body.sleek-oled .fi-dropdown-panel {
 .dark.sleek-oled .fi-dropdown-list-item:hover,
 .dark .sleek-oled .fi-dropdown-list-item:hover,
 html.dark.sleek-oled .fi-dropdown-list-item:hover,
-body.sleek-oled .fi-dropdown-list-item:hover {
+body.dark.sleek-oled .fi-dropdown-list-item:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .dark.sleek-oled .fi-dropdown-header,
-html.dark.sleek-oled .fi-dropdown-header {
+html.dark.sleek-oled .fi-dropdown-header,
+body.dark.sleek-oled .fi-dropdown-header {
     border-bottom-color: #222225 !important;
 }
 
-/* Theme Switcher in OLED Mode */
+/* Theme Switcher in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-theme-switcher,
 .dark .sleek-oled .fi-theme-switcher,
 html.dark.sleek-oled .fi-theme-switcher,
-body.sleek-oled .fi-theme-switcher {
+body.dark.sleek-oled .fi-theme-switcher {
     background-color: #141416 !important;
     border: 1px solid #27272a !important;
 }
@@ -133,17 +146,17 @@ body.sleek-oled .fi-theme-switcher {
 .dark.sleek-oled .fi-theme-switcher button.fi-active,
 .dark .sleek-oled .fi-theme-switcher button.fi-active,
 html.dark.sleek-oled .fi-theme-switcher button.fi-active,
-body.sleek-oled .fi-theme-switcher button.fi-active {
+body.dark.sleek-oled .fi-theme-switcher button.fi-active {
     background-color: #27272a !important;
     color: #ffffff !important;
 }
 
-/* Modals in OLED Mode */
+/* Modals in OLED Mode (Dark Only) */
 .dark.sleek-oled .fi-modal-window,
 .dark .sleek-oled .fi-modal-window,
 .dark body.sleek-oled .fi-modal-window,
 html.dark.sleek-oled .fi-modal-window,
-body.sleek-oled .fi-modal-window {
+body.dark.sleek-oled .fi-modal-window {
     background-color: #0c0c0e !important;
     border: 1px solid #27272a !important;
     box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a !important;
@@ -152,7 +165,9 @@ body.sleek-oled .fi-modal-window {
 .dark.sleek-oled .fi-modal-header,
 .dark.sleek-oled .fi-modal-footer,
 html.dark.sleek-oled .fi-modal-header,
-html.dark.sleek-oled .fi-modal-footer {
+html.dark.sleek-oled .fi-modal-footer,
+body.dark.sleek-oled .fi-modal-header,
+body.dark.sleek-oled .fi-modal-footer {
     border-color: #222225 !important;
 }
 
@@ -1081,8 +1096,22 @@ body.sleek-topbar-contrast:not(.dark) {
     background-color: #0f172a !important;
 }
 
-html.sleek-topbar-contrast .fi-main-ctn,
-body.sleek-topbar-contrast .fi-main-ctn {
+/* Light mode: Inset canvas sheet for main content */
+html.sleek-topbar-contrast:not(.dark) .fi-main-ctn,
+body.sleek-topbar-contrast:not(.dark) .fi-main-ctn {
+    background-color: #f8fafc !important;
+    border-start-start-radius: 2.25rem !important;
+    border-top-left-radius: 2.25rem !important;
+    border-color: #e2e8f0 !important;
+    border-top-color: #e2e8f0 !important;
+    border-inline-start-color: #e2e8f0 !important;
+    min-height: calc(100vh - 4rem) !important;
+}
+
+/* Dark mode: Main container border curvature */
+html.dark.sleek-topbar-contrast .fi-main-ctn,
+body.dark.sleek-topbar-contrast .fi-main-ctn,
+.dark body.sleek-topbar-contrast .fi-main-ctn {
     border-start-start-radius: 2.25rem !important;
     border-top-left-radius: 2.25rem !important;
     border-color: #334155 !important;
