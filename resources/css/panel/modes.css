@@ -1,15 +1,20 @@
-/* OLED / Pure Black Dark Mode */
+/* =========================================
+   OLED / Pure Black Dark Mode
+   ========================================= */
 .dark.sleek-oled .fi-body,
 .dark .sleek-oled.fi-body,
 .dark body.sleek-oled,
 .dark.sleek-oled,
+html.dark.sleek-oled,
+html.dark.sleek-oled body,
 .dark body.sleek-oled .fi-topbar,
 .dark body.sleek-oled .fi-simple-main-ctn:not(:has(.custom-auth-wrapper)) {
     background-color: #000000 !important;
 }
 
 .dark.sleek-oled .fi-main-ctn,
-.dark body.sleek-oled .fi-main-ctn {
+.dark body.sleek-oled .fi-main-ctn,
+html.dark.sleek-oled .fi-main-ctn {
     background-color: #050505 !important;
     border-color: #1a1a1a !important;
 }
@@ -25,14 +30,22 @@
 .dark.sleek-oled .fi-wi-widget,
 .dark body.sleek-oled .fi-wi-widget,
 .dark.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
-.dark body.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)) {
+.dark body.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
+html.dark.sleek-oled .fi-ta,
+html.dark.sleek-oled .fi-ta-ctn,
+html.dark.sleek-oled .fi-section,
+html.dark.sleek-oled .fi-sc-section,
+html.dark.sleek-oled .fi-wi-widget {
     background-color: #080808 !important;
     border-color: #1a1a1a !important;
 }
 
-/* Subtle Radius Override */
-.sleek-radius-subtle .fi-main-ctn {
-    @apply lg:rounded-ss-2xl;
+/* =========================================
+   Subtle Radius Mode
+   ========================================= */
+.sleek-radius-subtle .fi-main-ctn,
+html.sleek-radius-subtle .fi-main-ctn {
+    border-radius: 1rem !important;
 }
 
 .sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
@@ -43,8 +56,17 @@
 .sleek-radius-subtle .fi-wi-stats-overview-stat,
 .sleek-radius-subtle .fi-wi-widget,
 .sleek-radius-subtle .fi-modal-window,
-.sleek-radius-subtle .fi-dropdown-panel {
-    @apply rounded-xl;
+.sleek-radius-subtle .fi-dropdown-panel,
+html.sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
+html.sleek-radius-subtle .fi-ta,
+html.sleek-radius-subtle .fi-ta-ctn,
+html.sleek-radius-subtle .fi-section,
+html.sleek-radius-subtle .fi-sc-section,
+html.sleek-radius-subtle .fi-wi-stats-overview-stat,
+html.sleek-radius-subtle .fi-wi-widget,
+html.sleek-radius-subtle .fi-modal-window,
+html.sleek-radius-subtle .fi-dropdown-panel {
+    border-radius: 0.75rem !important;
 }
 
 /* =========================================
@@ -53,140 +75,162 @@
 .sleek-scrollbars *,
 html.sleek-scrollbars *,
 body.sleek-scrollbars * {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(156, 163, 175, 0.45) transparent;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(156, 163, 175, 0.45) transparent !important;
 }
 
 .sleek-scrollbars *::-webkit-scrollbar,
 html.sleek-scrollbars *::-webkit-scrollbar,
 body.sleek-scrollbars *::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 6px !important;
+    height: 6px !important;
 }
 
 .sleek-scrollbars *::-webkit-scrollbar-track,
 html.sleek-scrollbars *::-webkit-scrollbar-track,
 body.sleek-scrollbars *::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent !important;
 }
 
 .sleek-scrollbars *::-webkit-scrollbar-thumb,
 html.sleek-scrollbars *::-webkit-scrollbar-thumb,
 body.sleek-scrollbars *::-webkit-scrollbar-thumb {
-    background-color: rgba(156, 163, 175, 0.4);
-    border-radius: 9999px;
+    background-color: rgba(156, 163, 175, 0.4) !important;
+    border-radius: 9999px !important;
 }
 
 .sleek-scrollbars *::-webkit-scrollbar-thumb:hover,
 html.sleek-scrollbars *::-webkit-scrollbar-thumb:hover,
 body.sleek-scrollbars *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(156, 163, 175, 0.7);
+    background-color: rgba(156, 163, 175, 0.7) !important;
 }
 
 .dark.sleek-scrollbars *,
 .dark .sleek-scrollbars *,
-.dark body.sleek-scrollbars * {
-    scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+.dark body.sleek-scrollbars *,
+html.dark.sleek-scrollbars * {
+    scrollbar-color: rgba(107, 114, 128, 0.5) transparent !important;
 }
 
 .dark.sleek-scrollbars *::-webkit-scrollbar-thumb,
 .dark .sleek-scrollbars *::-webkit-scrollbar-thumb,
-.dark body.sleek-scrollbars *::-webkit-scrollbar-thumb {
-    background-color: rgba(107, 114, 128, 0.4);
+.dark body.sleek-scrollbars *::-webkit-scrollbar-thumb,
+html.dark.sleek-scrollbars *::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 114, 128, 0.4) !important;
 }
 
 .dark.sleek-scrollbars *::-webkit-scrollbar-thumb:hover,
 .dark .sleek-scrollbars *::-webkit-scrollbar-thumb:hover,
-.dark body.sleek-scrollbars *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(156, 163, 175, 0.7);
+.dark body.sleek-scrollbars *::-webkit-scrollbar-thumb:hover,
+html.dark.sleek-scrollbars *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 163, 175, 0.7) !important;
 }
 
 /* =========================================
    Compact / High Density Mode
    ========================================= */
-/* Table Header & Rows */
+/* Table Header Cells */
 .sleek-compact .fi-ta-header-cell,
 html.sleek-compact .fi-ta-header-cell,
 body.sleek-compact .fi-ta-header-cell {
     padding-top: 0.375rem !important;
     padding-bottom: 0.375rem !important;
+    padding-block: 0.375rem !important;
     font-size: 0.8125rem !important;
 }
 
-/* Table Column Cells (Text, Icon, Image, Checkbox, Toggle, Inputs) */
+/* Table Column Cells & All Contents */
+.sleek-compact .fi-ta-cell,
+html.sleek-compact .fi-ta-cell,
+body.sleek-compact .fi-ta-cell,
 .sleek-compact .fi-ta-col,
-.sleek-compact .fi-ta-text:not(.fi-inline),
-.sleek-compact .fi-ta-icon:not(.fi-inline),
-.sleek-compact .fi-ta-image:not(.fi-inline),
-.sleek-compact .fi-ta-checkbox:not(.fi-inline),
-.sleek-compact .fi-ta-color:not(.fi-inline),
-.sleek-compact .fi-ta-select:not(.fi-inline),
-.sleek-compact .fi-ta-text-input:not(.fi-inline),
-.sleek-compact .fi-ta-toggle:not(.fi-inline),
 html.sleek-compact .fi-ta-col,
-html.sleek-compact .fi-ta-text:not(.fi-inline),
-html.sleek-compact .fi-ta-icon:not(.fi-inline),
-html.sleek-compact .fi-ta-image:not(.fi-inline),
-html.sleek-compact .fi-ta-checkbox:not(.fi-inline),
-html.sleek-compact .fi-ta-color:not(.fi-inline),
-html.sleek-compact .fi-ta-select:not(.fi-inline),
-html.sleek-compact .fi-ta-text-input:not(.fi-inline),
-html.sleek-compact .fi-ta-toggle:not(.fi-inline) {
-    padding-top: 0.375rem !important;
-    padding-bottom: 0.375rem !important;
-}
-
-/* Table Actions & Selection Cells */
-.sleek-compact .fi-ta-cell:has(.fi-ta-actions),
-.sleek-compact .fi-ta-cell:has(.fi-ta-record-checkbox),
-.sleek-compact .fi-ta-cell:has(.fi-ta-reorder-handle),
+body.sleek-compact .fi-ta-col,
+.sleek-compact .fi-ta-text,
+html.sleek-compact .fi-ta-text,
+body.sleek-compact .fi-ta-text,
+.sleek-compact .fi-ta-text-item,
+html.sleek-compact .fi-ta-text-item,
+body.sleek-compact .fi-ta-text-item,
+.sleek-compact .fi-ta-icon,
+html.sleek-compact .fi-ta-icon,
+body.sleek-compact .fi-ta-icon,
+.sleek-compact .fi-ta-image,
+html.sleek-compact .fi-ta-image,
+body.sleek-compact .fi-ta-image,
+.sleek-compact .fi-ta-checkbox,
+html.sleek-compact .fi-ta-checkbox,
+body.sleek-compact .fi-ta-checkbox,
+.sleek-compact .fi-ta-color,
+html.sleek-compact .fi-ta-color,
+body.sleek-compact .fi-ta-color,
+.sleek-compact .fi-ta-select,
+html.sleek-compact .fi-ta-select,
+body.sleek-compact .fi-ta-select,
+.sleek-compact .fi-ta-text-input,
+html.sleek-compact .fi-ta-text-input,
+body.sleek-compact .fi-ta-text-input,
+.sleek-compact .fi-ta-toggle,
+html.sleek-compact .fi-ta-toggle,
+body.sleek-compact .fi-ta-toggle,
 .sleek-compact .fi-ta-selection-cell,
-.sleek-compact .fi-ta-actions,
-html.sleek-compact .fi-ta-cell:has(.fi-ta-actions),
-html.sleek-compact .fi-ta-cell:has(.fi-ta-record-checkbox),
-html.sleek-compact .fi-ta-cell:has(.fi-ta-reorder-handle),
 html.sleek-compact .fi-ta-selection-cell,
-html.sleek-compact .fi-ta-actions {
-    padding-top: 0.375rem !important;
-    padding-bottom: 0.375rem !important;
+body.sleek-compact .fi-ta-selection-cell,
+.sleek-compact .fi-ta-actions,
+html.sleek-compact .fi-ta-actions,
+body.sleek-compact .fi-ta-actions,
+.sleek-compact .fi-ta-cell.fi-ta-summary-row-heading-cell,
+html.sleek-compact .fi-ta-cell.fi-ta-summary-row-heading-cell,
+.sleek-compact .fi-ta-summary-header-cell,
+html.sleek-compact .fi-ta-summary-header-cell {
+    padding-top: 0.3125rem !important;
+    padding-bottom: 0.3125rem !important;
+    padding-block: 0.3125rem !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.25rem !important;
 }
 
-/* Table Summaries */
-.sleek-compact .fi-ta-cell.fi-ta-summary-row-heading-cell,
-.sleek-compact .fi-ta-summary-header-cell,
-html.sleek-compact .fi-ta-cell.fi-ta-summary-row-heading-cell,
-html.sleek-compact .fi-ta-summary-header-cell {
-    padding-top: 0.375rem !important;
-    padding-bottom: 0.375rem !important;
+/* Compact Table Rows */
+.sleek-compact .fi-ta-row,
+html.sleek-compact .fi-ta-row,
+body.sleek-compact .fi-ta-row {
+    height: auto !important;
+    min-height: 2.125rem !important;
 }
 
 /* Table Header & Toolbar */
 .sleek-compact .fi-ta-header,
-html.sleek-compact .fi-ta-header {
+html.sleek-compact .fi-ta-header,
+body.sleek-compact .fi-ta-header {
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
+    padding-block: 0.5rem !important;
 }
 
 .sleek-compact .fi-ta-header-toolbar,
-html.sleek-compact .fi-ta-header-toolbar {
+html.sleek-compact .fi-ta-header-toolbar,
+body.sleek-compact .fi-ta-header-toolbar {
     gap: 0.375rem !important;
 }
 
 /* Forms & Field Spacing */
 .sleek-compact .fi-fo-field-wrp,
-html.sleek-compact .fi-fo-field-wrp {
+html.sleek-compact .fi-fo-field-wrp,
+body.sleek-compact .fi-fo-field-wrp {
     gap: 0.25rem !important;
     margin-bottom: 0.5rem !important;
 }
 
 .sleek-compact .fi-fo-field-wrp-label,
-html.sleek-compact .fi-fo-field-wrp-label {
+html.sleek-compact .fi-fo-field-wrp-label,
+body.sleek-compact .fi-fo-field-wrp-label {
     margin-bottom: 0 !important;
     font-size: 0.8125rem !important;
 }
 
 .sleek-compact .fi-fo-field-wrp-hint,
-html.sleek-compact .fi-fo-field-wrp-hint {
+html.sleek-compact .fi-fo-field-wrp-hint,
+body.sleek-compact .fi-fo-field-wrp-hint {
     font-size: 0.75rem !important;
 }
 
@@ -200,26 +244,36 @@ html.sleek-compact .fi-fo-grid {
 }
 
 /* Inputs & Form Controls */
+.sleek-compact .fi-input-wrp,
+html.sleek-compact .fi-input-wrp,
+body.sleek-compact .fi-input-wrp {
+    min-height: 2rem !important;
+}
+
 .sleek-compact input.fi-input,
 .sleek-compact select.fi-select-input,
-.sleek-compact .fi-input-wrp,
 html.sleek-compact input.fi-input,
 html.sleek-compact select.fi-select-input,
-html.sleek-compact .fi-input-wrp {
+body.sleek-compact input.fi-input,
+body.sleek-compact select.fi-select-input {
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
-    min-height: 2.125rem !important;
+    padding-block: 0.25rem !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.25rem !important;
 }
 
 /* Sections & Cards */
 .sleek-compact .fi-section-header,
-html.sleek-compact .fi-section-header {
-    padding: 0.625rem 1rem !important;
+html.sleek-compact .fi-section-header,
+body.sleek-compact .fi-section-header {
+    padding: 0.5rem 0.875rem !important;
 }
 
 .sleek-compact .fi-section-content,
-html.sleek-compact .fi-section-content {
-    padding: 0.75rem 1rem !important;
+html.sleek-compact .fi-section-content,
+body.sleek-compact .fi-section-content {
+    padding: 0.625rem 0.875rem !important;
 }
 
 /* Sidebar Navigation */
@@ -228,64 +282,106 @@ html.sleek-compact .fi-sidebar-item-btn,
 body.sleek-compact .fi-sidebar-item-btn {
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
-    min-height: 2rem !important;
+    padding-block: 0.25rem !important;
+    min-height: 1.875rem !important;
 }
 
 .sleek-compact .fi-sidebar-item-label,
-html.sleek-compact .fi-sidebar-item-label {
+html.sleek-compact .fi-sidebar-item-label,
+body.sleek-compact .fi-sidebar-item-label {
     font-size: 0.8125rem !important;
 }
 
+.sleek-compact .fi-sidebar-nav,
+html.sleek-compact .fi-sidebar-nav,
+body.sleek-compact .fi-sidebar-nav {
+    row-gap: 0.75rem !important;
+    padding-block: 1rem !important;
+}
+
 .sleek-compact .fi-sidebar-nav-groups,
-html.sleek-compact .fi-sidebar-nav-groups {
-    gap: 0.375rem !important;
+html.sleek-compact .fi-sidebar-nav-groups,
+body.sleek-compact .fi-sidebar-nav-groups {
+    row-gap: 0.5rem !important;
+    gap: 0.5rem !important;
 }
 
 .sleek-compact .fi-sidebar-group-items,
-html.sleek-compact .fi-sidebar-group-items {
+html.sleek-compact .fi-sidebar-group-items,
+body.sleek-compact .fi-sidebar-group-items {
+    row-gap: 0.125rem !important;
     gap: 0.125rem !important;
 }
-
 
 /* =========================================
    Frosted Glass / Glassmorphism Mode
    ========================================= */
 .sleek-glass .fi-topbar,
+html.sleek-glass .fi-topbar,
 body.sleek-glass .fi-topbar {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.82) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark.sleek-glass .fi-topbar,
 .dark .sleek-glass .fi-topbar,
-.dark body.sleek-glass .fi-topbar {
-    background-color: rgba(17, 24, 39, 0.82) !important;
+.dark body.sleek-glass .fi-topbar,
+html.dark.sleek-glass .fi-topbar {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
 .dark.sleek-glass.sleek-oled .fi-topbar,
 .dark.sleek-oled .sleek-glass .fi-topbar,
-.dark.sleek-oled body.sleek-glass .fi-topbar {
-    background-color: rgba(0, 0, 0, 0.85) !important;
+.dark.sleek-oled body.sleek-glass .fi-topbar,
+html.dark.sleek-glass.sleek-oled .fi-topbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
 .sleek-glass .fi-modal-window,
+html.sleek-glass .fi-modal-window,
 body.sleek-glass .fi-modal-window {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12) !important;
+}
+
+.dark.sleek-glass .fi-modal-window,
+.dark .sleek-glass .fi-modal-window,
+.dark body.sleek-glass .fi-modal-window,
+html.dark.sleek-glass .fi-modal-window {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4) !important;
 }
 
 .sleek-glass .fi-dropdown-panel,
+html.sleek-glass .fi-dropdown-panel,
 body.sleek-glass .fi-dropdown-panel {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08) !important;
 }
 
 .dark.sleek-glass .fi-dropdown-panel,
 .dark .sleek-glass .fi-dropdown-panel,
-.dark body.sleek-glass .fi-dropdown-panel {
-    background-color: rgba(17, 24, 39, 0.88) !important;
+.dark body.sleek-glass .fi-dropdown-panel,
+html.dark.sleek-glass .fi-dropdown-panel {
+    background-color: rgba(15, 23, 42, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.sleek-glass .fi-ta-header-toolbar,
+html.sleek-glass .fi-ta-header-toolbar {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
 }
 
 /* =========================================
@@ -293,47 +389,123 @@ body.sleek-glass .fi-dropdown-panel {
    ========================================= */
 .sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
 .sleek-glow .fi-sidebar-item-active > .fi-sidebar-item-btn,
-body.sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
-    box-shadow: 0 4px 16px -2px rgba(var(--primary-500, var(--c-500, 59, 130, 246)), 0.35);
+body.sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+html.sleek-glow .fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
+    box-shadow: 0 4px 18px -2px color-mix(in srgb, var(--primary-500, #10b981) 50%, transparent), 0 2px 6px -1px color-mix(in srgb, var(--primary-600, #059669) 35%, transparent) !important;
 }
 
 .sleek-glow .fi-btn-primary:not(:disabled):hover,
-body.sleek-glow .fi-btn-primary:not(:disabled):hover {
-    box-shadow: 0 4px 16px -1px rgba(var(--primary-500, var(--c-500, 59, 130, 246)), 0.4);
+body.sleek-glow .fi-btn-primary:not(:disabled):hover,
+html.sleek-glow .fi-btn-primary:not(:disabled):hover {
+    box-shadow: 0 6px 20px -2px color-mix(in srgb, var(--primary-500, #10b981) 50%, transparent), 0 2px 6px -1px color-mix(in srgb, var(--primary-600, #059669) 35%, transparent) !important;
+}
+
+.sleek-glow .fi-tabs-item.fi-active,
+body.sleek-glow .fi-tabs-item.fi-active,
+html.sleek-glow .fi-tabs-item.fi-active {
+    box-shadow: 0 2px 10px -1px color-mix(in srgb, var(--primary-500, #10b981) 40%, transparent) !important;
 }
 
 /* =========================================
    Sidebar Contrast Mode (Dark sidebar in Light mode)
    ========================================= */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar,
 :not(.dark).sleek-sidebar-contrast .fi-sidebar,
 :not(.dark) body.sleek-sidebar-contrast .fi-sidebar {
     background-color: #0f172a !important;
     border-right-color: #1e293b !important;
 }
 
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header-ctn,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header-controls,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header-ctn,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-header-controls,
 :not(.dark).sleek-sidebar-contrast .fi-sidebar-header,
-:not(.dark) body.sleek-sidebar-contrast .fi-sidebar-header {
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-header-ctn,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-header-controls {
     background-color: #0f172a !important;
     border-bottom-color: #1e293b !important;
 }
 
-:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-label,
-:not(.dark) body.sleek-sidebar-contrast .fi-sidebar-item-label {
-    color: #cbd5e1 !important;
+/* Sidebar Logo & Branding */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-logo span,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-logo h1,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-sidebar-header-logo-ctn a {
+    color: #f8fafc !important;
 }
 
-:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-btn:hover,
-:not(.dark) body.sleek-sidebar-contrast .fi-sidebar-item-btn:hover {
+/* Tenant Menu in Contrast Sidebar */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger-text {
+    color: #f8fafc !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-tenant-menu-trigger:hover {
     background-color: #1e293b !important;
 }
 
-:not(.dark).sleek-sidebar-contrast .fi-sidebar-group-label,
-:not(.dark) body.sleek-sidebar-contrast .fi-sidebar-group-label {
-    color: #64748b !important;
-}
-
-:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-icon,
-:not(.dark) body.sleek-sidebar-contrast .fi-sidebar-item-icon {
+/* Sidebar Group Labels & Controls */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-group-label,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-group-label,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-group-label {
     color: #94a3b8 !important;
 }
 
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-group-collapse-btn,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-group-collapse-btn {
+    color: #94a3b8 !important;
+}
+
+/* Inactive Sidebar Items */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-label,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-label,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-label {
+    color: #cbd5e1 !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-icon,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-icon,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-icon {
+    color: #94a3b8 !important;
+}
+
+/* Hover States */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-btn:hover,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active) .fi-sidebar-item-btn:hover,
+:not(.dark).sleek-sidebar-contrast .fi-sidebar-item-btn:hover {
+    background-color: #1e293b !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-label,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-label {
+    color: #ffffff !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-icon,
+body.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:not(.fi-active):hover .fi-sidebar-item-icon {
+    color: #f8fafc !important;
+}
+
+/* Grouped Border Parts */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item.fi-active .fi-sidebar-item-grouped-border-part,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-item:hover.fi-active .fi-sidebar-item-grouped-border-part {
+    background-color: #0f172a !important;
+}
+
+/* Footer & User Menu */
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar-footer,
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-user-menu-trigger {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-user-menu-trigger:hover {
+    background-color: #1e293b !important;
+}
+
+html.sleek-sidebar-contrast:not(.dark) .fi-sidebar .fi-user-menu-trigger .fi-icon {
+    color: #94a3b8 !important;
+}

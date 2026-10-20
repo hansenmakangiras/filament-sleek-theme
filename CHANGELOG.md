@@ -15,9 +15,12 @@ All notable changes to this project will be documented in this file.
 - 🧪 Added full test coverage for all new modes, config defaults, and installer flags (19 tests, 48 assertions).
 
 ### Fixed
-- 🐛 **Fixed DOMException in Multi-Class Injection:** Fixed JavaScript error where multiple space-separated classes in `classList.add()` threw a `DOMException`, preventing classes like `.sleek-compact` from attaching to the DOM.
-- ⚡ **SPA / Livewire Navigated Support:** Added `livewire:navigated` listener so classes remain active during Filament SPA navigation (`->spa()`).
-- 🗜️ **Comprehensive Table & Form Compact Overrides:** Replaced superficial cell selectors with deep overrides targeting `.fi-ta-col`, `.fi-ta-text`, `.fi-ta-actions`, inputs, and form grids using `!important` to achieve visible, high-density compaction.
+- 🐛 **Fixed Accent Glow CSS Syntax in Tailwind v4:** Replaced deprecated `rgba(var(--primary-500))` with modern CSS `color-mix(in srgb, var(--primary-500) X%, transparent)` which natively supports OKLCH color palettes in Tailwind v4 and Filament v5 without browser property discards.
+- ⚡ **Synchronous Head Injection & CSP Nonce Support:** Moved theme mode classes injection to `PanelsRenderHook::HEAD_END` (with `BODY_START` fallback) and attached `Vite::cspNonce()` to guarantee classes apply before initial DOM paint and comply with Content Security Policies.
+- 📐 **Full Table & Form Compact Overrides:** Added `padding-block` overrides for `.fi-ta-cell`, `.fi-ta-col`, `.fi-ta-text`, input wrappers, and row min-heights to eliminate high default padding in Filament v5 tables.
+- 🌓 **Complete Sidebar Contrast Styling:** Comprehensive styling for `#fi-main-sidebar`, `.fi-sidebar-header-ctn`, `.fi-sidebar-header-controls`, tenant menus, group collapse buttons, inactive item labels, icons, hover states, and active grouped border parts.
+- 🪟 **True Frosted Glassmorphism:** Applied translucent background colors, borders, and `backdrop-filter: blur() saturate()` to topbars, modal windows, and dropdown panels so frosted glass is clearly visible against light and dark backdrops.
+- ⚡ **SPA / Livewire Navigated Support:** Added `livewire:navigated` and `livewire:init` listeners so classes remain active during Filament SPA navigation (`->spa()`).
 
 ## [1.1.0] - 2026-10-20
 

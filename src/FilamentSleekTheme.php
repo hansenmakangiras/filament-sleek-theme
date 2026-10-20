@@ -6,6 +6,7 @@ use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Colors\Color;
 use Filament\View\PanelsRenderHook;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\HtmlString;
 use InvalidArgumentException;
 
@@ -147,12 +148,19 @@ class FilamentSleekTheme implements Plugin
 
         if (! empty($classes)) {
             $jsonClasses = json_encode(array_values($classes));
-            $panel->renderHook(
-                PanelsRenderHook::BODY_START,
-                fn () => new HtmlString(
-                    "<script>(function(){const classes={$jsonClasses};const apply=()=>{classes.forEach(c=>{document.documentElement.classList.add(c);if(document.body){document.body.classList.add(c);}});};apply();document.addEventListener('DOMContentLoaded',apply);document.addEventListener('livewire:navigated',apply);})();</script>"
-                ),
-            );
+            $hookCallback = function () use ($jsonClasses): HtmlString {
+                $nonce = class_exists(Vite::class)
+                    ? Vite::cspNonce()
+                    : null;
+                $nonceAttr = filled($nonce) ? " nonce=\"{$nonce}\"" : '';
+
+                return new HtmlString(
+                    "<script{$nonceAttr}>(function(){const c={$jsonClasses};const a=()=>{c.forEach(k=>{document.documentElement.classList.add(k);if(document.body){document.body.classList.add(k);}});};a();if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',a);}document.addEventListener('livewire:navigated',a);document.addEventListener('livewire:init',a);})();</script>"
+                );
+            };
+
+            $panel->renderHook(PanelsRenderHook::HEAD_END, $hookCallback);
+            $panel->renderHook(PanelsRenderHook::BODY_START, $hookCallback);
         }
     }
 
