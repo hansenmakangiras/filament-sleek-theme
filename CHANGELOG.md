@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-10-20
+
+### Fixed
+- 🐛 **Pagination Display Bug (Issue #13):** Removed rigid `grid grid-rows-[auto_auto]` on `.fi-main-ctn` which was causing table pagination controls and footers to disappear or fail to render.
+- 🐛 **Modal Under Header Bug (Issue #14):** Fixed stacking context by replacing `sticky` with `relative` on `.fi-main-ctn` and ensuring `div.fi-modal` has top stacking context (`z-index: 9999`) above topbars and headers.
+- 🛡️ **Conflict with Auth Page Enhancers (Issue #17):** Added scoped selectors `:not(:has(.custom-auth-wrapper))` so auth enhancer plugins like `AuthUIEnhancerPlugin` or custom split-screen layouts are not distorted by the default card backgrounds and borders.
+- 📐 **Sidebar Menu Bleed:** Added `overflow: hidden` and `max-width: 100%` on `.fi-sidebar-item` to prevent navigation labels from overflowing during transition states.
+
 ## [1.0.0] - 2026-10-20
 
 ### Added

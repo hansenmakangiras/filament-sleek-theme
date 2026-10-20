@@ -6,6 +6,18 @@
     @apply px-4 rounded-full;
 }
 
+/* Prevent Sidebar Menu Items from bleeding wide across the screen */
+.fi-sidebar-item {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.fi-sidebar-item .fi-sidebar-item-btn {
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
 .fi-sidebar-item.fi-active .fi-sidebar-item-btn {
     @apply transition-all duration-300 rounded-full shadow-sm bg-primary-600 dark:bg-primary-500;
 }
@@ -27,7 +39,6 @@
 .fi-sidebar-item:hover .fi-sidebar-item-btn .fi-sidebar-item-icon {
     @apply text-gray-800 transition-all duration-300 dark:text-gray-200;
 }
-
 
 .fi-sidebar-item:hover.fi-active .fi-sidebar-item-btn {
     @apply bg-primary-500 dark:bg-primary-600;
