@@ -1,5 +1,6 @@
 .fi-dropdown-panel {
     @apply rounded-2xl dark:bg-gray-800 shadow-xl overflow-hidden;
+    z-index: 50 !important;
 }
 
 .fi-dropdown-list {
@@ -12,6 +13,13 @@
 
 .fi-dropdown-header {
     @apply rounded-xl;
+}
+
+/* Ensure active dropdown within table cells or rows floats above siblings */
+.fi-ta-row:has(.fi-dropdown-panel),
+.fi-ta-cell:has(.fi-dropdown-panel) {
+    position: relative;
+    z-index: 30;
 }
 
 .fi-topbar .fi-user-menu-trigger {

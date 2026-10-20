@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
   - **Modals:** Compacted modal headers, content, and footers.
 
 ### Fixed
+- 📑 **Table Dropdown & Filter Stacking Context in Glass Mode (`glass()`):** Fixed an issue where column toggle and filter dropdown panels (`.fi-dropdown-panel`) were partially sliced and obscured behind table rows and summary rows. Removed nested `backdrop-filter` from `.fi-ta-header`, `.fi-ta-header-toolbar`, and `.fi-ta-header-cell` that was creating an isolated stacking trap, elevated `.fi-ta-header-toolbar` with `z-index: 20`, guaranteed `z-index: 50 !important` on all dropdown panels, and added matching translucent styling to table summary rows.
 - 📊 **Stats Overview Outer Container Cleanup:** Eliminated redundant outer background plate and borders around `StatsOverviewWidget` containers (`.fi-wi-stats-overview`, `.fi-section-not-contained`, `.fi-sc-section-not-contained`) across default, glass, and OLED modes. Each stat widget card now sits cleanly and independently on the canvas without nested outer boxes or distracting backgrounds peeking through the gaps between stat items.
 - 🪟 **True Full-Dashboard Glassmorphism (`glass()`):** Transformed `.sleek-glass` into a real, full-dashboard glassmorphism system:
   - **Floating Panels & Dropdowns:** Converted `.fi-dropdown-panel` and `.fi-modal-window` to authentic frosted glass (`rgba(255, 255, 255, 0.8)`, `backdrop-filter: blur(20px) saturate(190%)`, white glass borders) so underlying table rows, widgets, and charts visibly blur through floating menus.

@@ -837,6 +837,7 @@ body.sleek-glass:not(.dark) .fi-dropdown-panel {
     border: 1px solid rgba(255, 255, 255, 0.85) !important;
     box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.14),
                 0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+    z-index: 50 !important;
 }
 
 html.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel,
@@ -847,6 +848,7 @@ body.dark.sleek-glass:not(.sleek-oled) .fi-dropdown-panel {
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6),
                 0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+    z-index: 50 !important;
 }
 
 html.dark.sleek-glass.sleek-oled .fi-dropdown-panel,
@@ -857,6 +859,7 @@ body.dark.sleek-glass.sleek-oled .fi-dropdown-panel {
     border: 1px solid rgba(255, 255, 255, 0.14) !important;
     box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.85),
                 0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+    z-index: 50 !important;
 }
 
 /* Form Inputs in Glass Mode */
@@ -874,12 +877,15 @@ body.dark.sleek-glass .fi-input-wrp {
     backdrop-filter: blur(8px) !important;
 }
 
-/* Table Header & Rows in Glass Mode */
+/* Table Header, Toolbar, Rows & Summary in Glass Mode */
 html.sleek-glass:not(.dark) .fi-ta-header,
 html.sleek-glass:not(.dark) .fi-ta-header-toolbar,
 html.sleek-glass:not(.dark) .fi-ta-header-cell {
     background-color: rgba(248, 250, 252, 0.45) !important;
-    backdrop-filter: blur(10px) !important;
+}
+
+html.sleek-glass:not(.dark) .fi-ta-summary-row {
+    background-color: rgba(248, 250, 252, 0.5) !important;
 }
 
 html.sleek-glass:not(.dark) .fi-ta-row:hover {
@@ -890,11 +896,25 @@ html.dark.sleek-glass .fi-ta-header,
 html.dark.sleek-glass .fi-ta-header-toolbar,
 html.dark.sleek-glass .fi-ta-header-cell {
     background-color: rgba(15, 23, 42, 0.45) !important;
-    backdrop-filter: blur(10px) !important;
+}
+
+html.dark.sleek-glass .fi-ta-summary-row {
+    background-color: rgba(15, 23, 42, 0.5) !important;
 }
 
 html.dark.sleek-glass .fi-ta-row:hover {
     background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Ensure Table Toolbar and Header in Glass Mode Maintain High Stacking Context */
+.sleek-glass .fi-ta-header-ctn,
+.sleek-glass .fi-ta-header-toolbar,
+html.sleek-glass .fi-ta-header-ctn,
+html.sleek-glass .fi-ta-header-toolbar,
+body.sleek-glass .fi-ta-header-ctn,
+body.sleek-glass .fi-ta-header-toolbar {
+    position: relative !important;
+    z-index: 20 !important;
 }
 
 /* =========================================

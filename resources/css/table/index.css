@@ -9,6 +9,12 @@
     @apply border-0;
 }
 
+.fi-ta-header-ctn,
+.fi-ta-header-toolbar {
+    position: relative;
+    z-index: 20;
+}
+
 .fi-dropdown .fi-icon-btn-badge-ctn {
     @apply dark:bg-gray-800;
 }
