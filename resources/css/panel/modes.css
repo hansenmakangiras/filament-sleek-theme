@@ -1,0 +1,48 @@
+/* OLED / Pure Black Dark Mode */
+.dark.sleek-oled .fi-body,
+.dark .sleek-oled.fi-body,
+.dark body.sleek-oled,
+.dark.sleek-oled,
+.dark body.sleek-oled .fi-topbar,
+.dark body.sleek-oled .fi-simple-main-ctn:not(:has(.custom-auth-wrapper)) {
+    background-color: #000000 !important;
+}
+
+.dark.sleek-oled .fi-main-ctn,
+.dark body.sleek-oled .fi-main-ctn {
+    background-color: #050505 !important;
+    border-color: #1a1a1a !important;
+}
+
+.dark.sleek-oled .fi-ta,
+.dark body.sleek-oled .fi-ta,
+.dark.sleek-oled .fi-ta-ctn,
+.dark body.sleek-oled .fi-ta-ctn,
+.dark.sleek-oled .fi-section,
+.dark body.sleek-oled .fi-section,
+.dark.sleek-oled .fi-sc-section,
+.dark body.sleek-oled .fi-sc-section,
+.dark.sleek-oled .fi-wi-widget,
+.dark body.sleek-oled .fi-wi-widget,
+.dark.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)),
+.dark body.sleek-oled .fi-simple-main:not(:has(.custom-auth-wrapper)) {
+    background-color: #080808 !important;
+    border-color: #1a1a1a !important;
+}
+
+/* Subtle Radius Override */
+.sleek-radius-subtle .fi-main-ctn {
+    @apply lg:rounded-ss-2xl;
+}
+
+.sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
+.sleek-radius-subtle .fi-ta,
+.sleek-radius-subtle .fi-ta-ctn,
+.sleek-radius-subtle .fi-section,
+.sleek-radius-subtle .fi-sc-section,
+.sleek-radius-subtle .fi-wi-stats-overview-stat,
+.sleek-radius-subtle .fi-wi-widget,
+.sleek-radius-subtle .fi-modal-window,
+.sleek-radius-subtle .fi-dropdown-panel {
+    @apply rounded-xl;
+}

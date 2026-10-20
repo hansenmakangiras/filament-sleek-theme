@@ -2,6 +2,7 @@
 
 namespace HansenMakangiras\FilamentSleekTheme;
 
+use HansenMakangiras\FilamentSleekTheme\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -12,7 +13,8 @@ class FilamentSleekThemeServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name(static::$name);
+            ->name(static::$name)
+            ->hasCommand(InstallCommand::class);
     }
 
     public function packageBooted(): void

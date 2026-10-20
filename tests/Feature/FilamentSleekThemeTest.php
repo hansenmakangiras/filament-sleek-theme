@@ -33,6 +33,69 @@ it('can customize primary color with palette or hex', function () {
     expect($plugin->getPrimaryColor())->toBe('#3b82f6');
 });
 
+it('can customize gray color palette', function () {
+    $plugin = FilamentSleekTheme::make();
+
+    expect($plugin->getGrayColor())->toBeNull();
+
+    $plugin->grayColor(Color::Slate);
+    expect($plugin->getGrayColor())->toBe(Color::Slate);
+
+    $panel = (new Panel)->id('admin');
+    $plugin->register($panel);
+
+    expect($panel->getColors()['gray'])->toBe(Color::Slate);
+});
+
+it('can configure custom typography font', function () {
+    $plugin = FilamentSleekTheme::make()
+        ->font('Plus Jakarta Sans');
+
+    expect($plugin->getFontFamily())->toBe('Plus Jakarta Sans');
+
+    $panel = (new Panel)->id('admin');
+    $plugin->register($panel);
+
+    expect($panel->getFontFamily())->toBe('Plus Jakarta Sans');
+});
+
+it('can apply curated aesthetic presets', function () {
+    $plugin = FilamentSleekTheme::make()->emerald();
+    expect($plugin->getPrimaryColor())->toBe(Color::Emerald)
+        ->and($plugin->getGrayColor())->toBe(Color::Slate);
+
+    $plugin->violet();
+    expect($plugin->getPrimaryColor())->toBe(Color::Violet)
+        ->and($plugin->getGrayColor())->toBe(Color::Zinc);
+
+    $plugin->preset('sunset');
+    expect($plugin->getPrimaryColor())->toBe('#f97316')
+        ->and($plugin->getGrayColor())->toBe(Color::Neutral);
+});
+
+it('can enable oled dark mode', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isOled())->toBeFalse();
+
+    $plugin->oled();
+    expect($plugin->isOled())->toBeTrue();
+
+    $panel = (new Panel)->id('admin');
+    $plugin->register($panel);
+    expect($panel->getId())->toBe('admin');
+});
+
+it('can customize border radius style', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->getRadius())->toBe('sleek');
+
+    $plugin->subtle();
+    expect($plugin->getRadius())->toBe('subtle');
+
+    $plugin->radius('sleek');
+    expect($plugin->getRadius())->toBe('sleek');
+});
+
 it('can register plugin into a filament panel', function () {
     $plugin = FilamentSleekTheme::make()->primaryColor(Color::Emerald);
     $panel = (new Panel)->id('admin');
@@ -57,4 +120,9 @@ it('can customize vite theme path', function () {
     $panel = (new Panel)->id('admin');
     $plugin->register($panel);
     expect($panel->getViteTheme())->toBe($customPath);
+});
+
+it('can execute install command', function () {
+    $this->artisan('filament-sleek:install --no-interaction')
+        ->assertSuccessful();
 });

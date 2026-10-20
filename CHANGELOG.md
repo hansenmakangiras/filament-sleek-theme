@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2026-10-20
+
+### Added
+- 🚀 **Artisan Install Command:** Added `php artisan filament-sleek:install` with optional `--publish-css` flag to streamline setup.
+- 🎨 **Gray Color Customization:** Added `grayColor()` fluent method with support for Filament palettes (`Color::Slate`, `Color::Zinc`, etc.) and hex codes.
+- 🔤 **Font / Typography Helper:** Added `font()` method to easily specify custom fonts with automatic font family, URL, and provider configuration on the Panel.
+- ✨ **Curated Aesthetic Presets:** Added built-in design presets: `emerald()`, `indigo()`, `violet()`, `rose()`, `amber()`, `cyan()`, `sky()`, `ocean()`, `sunset()`, and `preset(string)`.
+- 🖤 **OLED Pure Black Dark Mode:** Added `oled()` method and `.sleek-oled` CSS styles for pitch-black `#000000` backgrounds on dark mode.
+- 📐 **Subtle Border Radius Mode:** Added `radius('subtle')` / `subtle()` method and `.sleek-radius-subtle` styles for a cleaner, understated rectangular rounded aesthetic.
+- 🧪 Added full test coverage for all new theme customization methods and the install command.
+
 ## [1.0.1] - 2026-10-20
 
 ### Fixed
