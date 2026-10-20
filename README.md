@@ -1,5 +1,12 @@
 # Filament Sleek Theme
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hansenmakangiras/filament-sleek-theme.svg?style=flat-square)](https://packagist.org/packages/hansenmakangiras/filament-sleek-theme)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hansenmakangiras/filament-sleek-theme/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/hansenmakangiras/filament-sleek-theme/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/hansenmakangiras/filament-sleek-theme.svg?style=flat-square)](https://packagist.org/packages/hansenmakangiras/filament-sleek-theme)
+[![License](https://img.shields.io/packagist/l/hansenmakangiras/filament-sleek-theme.svg?style=flat-square)](https://packagist.org/packages/hansenmakangiras/filament-sleek-theme)
+[![PHP Version](https://img.shields.io/packagist/dependency-v/hansenmakangiras/filament-sleek-theme/php?style=flat-square)](https://packagist.org/packages/hansenmakangiras/filament-sleek-theme)
+[![Filament](https://img.shields.io/badge/filament-v4%20%7C%20v5-f59e0b?style=flat-square)](https://filamentphp.com)
+
 A **modern, sleek, responsive, and customizable** theme for FilamentPHP v4 & v5, designed to elevate your admin panel with curved interfaces, pill navigation, and minimal shadow styling.
 
 > [!NOTE]
