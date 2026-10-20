@@ -21,7 +21,9 @@ class FilamentSleekTheme implements Plugin
      */
     public array|string|null $grayColor = null;
 
-    public string $theme = 'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css';
+    public ?string $theme = null;
+
+    protected bool $hasCustomTheme = false;
 
     public ?string $fontFamily = null;
 
@@ -53,9 +55,15 @@ class FilamentSleekTheme implements Plugin
             $colors['gray'] = $this->grayColor;
         }
 
-        $panel
-            ->colors($colors)
-            ->viteTheme($this->theme);
+        $panel->colors($colors);
+
+        if ($this->hasCustomTheme) {
+            if ($this->theme !== null) {
+                $panel->viteTheme($this->theme);
+            }
+        } elseif ($panel->getViteTheme() === null) {
+            $panel->viteTheme($this->getTheme());
+        }
 
         if ($this->fontFamily !== null) {
             $panel->font($this->fontFamily, $this->fontUrl, $this->fontProvider);
@@ -197,11 +205,12 @@ class FilamentSleekTheme implements Plugin
     }
 
     /**
-     * Set the Vite theme CSS path.
+     * Set the Vite theme CSS path, or null to disable setting a theme.
      */
-    public function theme(string $theme): static
+    public function theme(?string $theme): static
     {
         $this->theme = $theme;
+        $this->hasCustomTheme = true;
 
         return $this;
     }
@@ -209,9 +218,9 @@ class FilamentSleekTheme implements Plugin
     /**
      * Get the Vite theme CSS path.
      */
-    public function getTheme(): string
+    public function getTheme(): ?string
     {
-        return $this->theme;
+        return $this->theme ?? 'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css';
     }
 
     /**

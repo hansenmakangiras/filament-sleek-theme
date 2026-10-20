@@ -122,6 +122,22 @@ it('can customize vite theme path', function () {
     expect($panel->getViteTheme())->toBe($customPath);
 });
 
+it('does not overwrite existing panel vite theme if not explicitly customized', function () {
+    $panel = (new Panel)->id('admin')->viteTheme('resources/css/filament/admin/theme.css');
+    $plugin = FilamentSleekTheme::make();
+    $plugin->register($panel);
+
+    expect($panel->getViteTheme())->toBe('resources/css/filament/admin/theme.css');
+});
+
+it('can disable setting vite theme using theme null', function () {
+    $panel = (new Panel)->id('admin');
+    $plugin = FilamentSleekTheme::make()->theme(null);
+    $plugin->register($panel);
+
+    expect($panel->getViteTheme())->toBeNull();
+});
+
 it('can execute install command', function () {
     $this->artisan('filament-sleek:install --no-interaction')
         ->assertSuccessful();

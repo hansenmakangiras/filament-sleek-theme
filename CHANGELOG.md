@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file.
 - 📐 **Subtle Border Radius Mode:** Added `radius('subtle')` / `subtle()` method and `.sleek-radius-subtle` styles for a cleaner, understated rectangular rounded aesthetic.
 - 🧪 Added full test coverage for all new theme customization methods and the install command.
 
+### Fixed
+- 🐛 **CSS Resolution in Symlinked / Path Repositories & Custom Themes:** Removed fragile relative `../../../../../vendor/filament/...` import from `resources/css/theme.css` which caused `@tailwindcss/vite` build failures when installed via Composer path repository or when imported into a custom panel theme.
+- 🛡️ **Preserve Panel Vite Theme:** Prevented `FilamentSleekTheme::register()` from overwriting an already configured `$panel->viteTheme(...)`, and added support for disabling theme registration via `->theme(null)`.
+
 ## [1.0.1] - 2026-10-20
 
 ### Fixed
