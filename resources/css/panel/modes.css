@@ -501,6 +501,23 @@ body.dark.sleek-oled .fi-no-database .fi-no-notification-unread-ctn::before {
     border-color: #27272a !important;
 }
 
+/* Tooltips in OLED Mode (Dark Only) */
+.dark.sleek-oled .tippy-box,
+html.dark.sleek-oled .tippy-box,
+body.dark.sleek-oled .tippy-box {
+    background-color: #0c0c0e !important;
+    border: 1px solid #27272a !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a !important;
+    color: #f4f4f5 !important;
+}
+
+.dark.sleek-oled .tippy-arrow,
+html.dark.sleek-oled .tippy-arrow,
+body.dark.sleek-oled .tippy-arrow {
+    color: #0c0c0e !important;
+}
+
 /* =========================================
    Subtle Radius Mode
    ========================================= */
@@ -575,6 +592,29 @@ body.sleek-radius-subtle .fi-tabs {
     border-radius: 0.75rem !important;
 }
 
+.sleek-radius-subtle .fi-btn,
+.sleek-radius-subtle .fi-btn-group,
+html.sleek-radius-subtle .fi-btn,
+html.sleek-radius-subtle .fi-btn-group,
+body.sleek-radius-subtle .fi-btn,
+body.sleek-radius-subtle .fi-btn-group {
+    border-radius: 0.5rem !important;
+}
+
+.sleek-radius-subtle .fi-btn-group > .fi-btn:nth-child(1 of .fi-btn),
+html.sleek-radius-subtle .fi-btn-group > .fi-btn:nth-child(1 of .fi-btn),
+body.sleek-radius-subtle .fi-btn-group > .fi-btn:nth-child(1 of .fi-btn) {
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+}
+
+.sleek-radius-subtle .fi-btn-group > .fi-btn:nth-last-child(1 of .fi-btn),
+html.sleek-radius-subtle .fi-btn-group > .fi-btn:nth-last-child(1 of .fi-btn),
+body.sleek-radius-subtle .fi-btn-group > .fi-btn:nth-last-child(1 of .fi-btn) {
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+}
+
 .sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window,
 html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window,
 body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window {
@@ -584,12 +624,40 @@ body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window
     border-bottom-right-radius: 0 !important;
 }
 
+.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header {
+    border-top-left-radius: 0.75rem !important;
+    border-top-right-radius: 0 !important;
+}
+
+.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    border-bottom-left-radius: 0.75rem !important;
+    border-bottom-right-radius: 0 !important;
+}
+
 .sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start .fi-modal-window,
 html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start .fi-modal-window,
 body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start .fi-modal-window {
     border-top-right-radius: 0.75rem !important;
     border-bottom-right-radius: 0.75rem !important;
     border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header,
+body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header {
+    border-top-right-radius: 0.75rem !important;
+    border-top-left-radius: 0 !important;
+}
+
+.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer,
+body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    border-bottom-right-radius: 0.75rem !important;
     border-bottom-left-radius: 0 !important;
 }
 
@@ -1656,6 +1724,34 @@ body.dark.sleek-glass .fi-no-database .fi-no-notification-unread-ctn {
     backdrop-filter: blur(14px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Frosted Tooltips in Glass Mode */
+html.sleek-glass .tippy-box,
+body.sleek-glass .tippy-box {
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    background-color: rgba(15, 23, 42, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4) !important;
+    color: #ffffff !important;
+}
+
+html.dark.sleek-glass.sleek-oled .tippy-box,
+body.dark.sleek-glass.sleek-oled .tippy-box {
+    background-color: rgba(12, 12, 15, 0.9) !important;
+    border: 1px solid #27272a !important;
+}
+
+html.sleek-glass .tippy-arrow,
+body.sleek-glass .tippy-arrow {
+    color: rgba(15, 23, 42, 0.85) !important;
+}
+
+html.dark.sleek-glass.sleek-oled .tippy-arrow,
+body.dark.sleek-glass.sleek-oled .tippy-arrow {
+    color: rgba(12, 12, 15, 0.9) !important;
 }
 
 /* =========================================

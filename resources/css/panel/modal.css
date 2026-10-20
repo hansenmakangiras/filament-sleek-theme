@@ -26,6 +26,24 @@
     @apply rounded-b-2xl;
 }
 
+/* Slide-over Drawers Sticky Header and Footer: keep screen edge flush */
+.fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header {
+    @apply rounded-ss-2xl rounded-se-none;
+}
+
+.fi-modal.fi-modal-slide-over-from-end.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    @apply rounded-es-2xl rounded-ee-none;
+}
+
+.fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-header > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-header {
+    @apply rounded-se-2xl rounded-ss-none;
+}
+
+.fi-modal.fi-modal-slide-over-from-start.fi-modal-has-sticky-footer > .fi-modal-window-ctn > .fi-modal-window > .fi-modal-footer {
+    @apply rounded-ee-2xl rounded-es-none;
+}
+
+
 /* Ensure modal dialog appears safely on top of headers */
 div.fi-modal {
     z-index: 9999;

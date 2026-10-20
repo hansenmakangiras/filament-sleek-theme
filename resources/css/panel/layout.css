@@ -47,3 +47,38 @@
 .fi-badge {
     @apply rounded-full;
 }
+
+/* Modern Rounded Buttons & Button Groups */
+.fi-btn {
+    @apply rounded-xl;
+}
+
+.fi-btn-group {
+    @apply rounded-xl;
+
+    & > .fi-btn {
+        @apply rounded-none;
+
+        &:nth-child(1 of .fi-btn) {
+            @apply rounded-s-xl;
+        }
+
+        &:nth-last-child(1 of .fi-btn) {
+            @apply rounded-e-xl;
+        }
+    }
+}
+
+/* Toggle Buttons (Segmented Controls) */
+.fi-fo-toggle-buttons.fi-btn-group {
+    @apply rounded-xl;
+}
+
+.fi-fo-toggle-buttons:not(.fi-btn-group) .fi-btn {
+    @apply rounded-xl;
+}
+
+/* Tooltip Modern Rounded Finish */
+.tippy-box {
+    @apply rounded-xl font-medium;
+}
