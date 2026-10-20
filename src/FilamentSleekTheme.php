@@ -40,7 +40,7 @@ class FilamentSleekTheme implements Plugin
     /**
      * Set the primary color.
      *
-     * @param array<string, string>|string $color
+     * @param  array<string, string>|string  $color
      */
     public function primaryColor(array|string $color): static
     {

@@ -12,3 +12,6 @@ package-lock.json
 composer.lock
 .idea
 .vscode
+.phpunit.cache
+.pest.xml
+phpunit.xml

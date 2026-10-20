@@ -53,8 +53,8 @@
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "lint": "pint",
-        "test": "pest",
+        "lint": "pint --parallel",
+        "test": "pest --parallel",
         "test:lint": "pint --test"
     },
     "extra": {

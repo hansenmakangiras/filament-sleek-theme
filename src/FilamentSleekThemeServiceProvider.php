@@ -20,7 +20,7 @@ class FilamentSleekThemeServiceProvider extends PackageServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../resources/css' => resource_path('css/filament/sleek-theme'),
+                __DIR__.'/../resources/css' => resource_path('css/filament/sleek-theme'),
             ], 'filament-sleek-theme-css');
         }
     }

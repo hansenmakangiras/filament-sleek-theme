@@ -35,9 +35,9 @@ it('can customize primary color with palette or hex', function () {
 
 it('can register plugin into a filament panel', function () {
     $plugin = FilamentSleekTheme::make()->primaryColor(Color::Emerald);
-    $panel = new Panel();
+    $panel = (new Panel)->id('admin');
 
     $plugin->register($panel);
 
-    expect($panel->getId())->toBeNull();
+    expect($panel->getId())->toBe('admin');
 });
