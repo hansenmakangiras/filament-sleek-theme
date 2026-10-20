@@ -11,7 +11,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'filament-sleek:install {--publish-css : Publish theme CSS files to resources/css}';
+    protected $signature = 'filament-sleek:install {--publish-css : Publish theme CSS files to resources/css} {--publish-config : Publish configuration file to config/filament-sleek-theme.php}';
 
     /**
      * The console command description.
@@ -29,13 +29,18 @@ class InstallCommand extends Command
         $this->line('  <bg=blue;fg=white;options=bold> FILAMENT SLEEK THEME </>  Installation & Setup');
         $this->info('');
 
-        $publish = (bool) $this->option('publish-css');
+        $publishCss = (bool) $this->option('publish-css');
+        $publishConfig = (bool) $this->option('publish-config');
 
-        if (! $publish && $this->input->isInteractive()) {
-            $publish = $this->confirm('Would you like to publish the theme CSS to resources/css/filament/sleek-theme?', false);
+        if (! $publishCss && $this->input->isInteractive()) {
+            $publishCss = $this->confirm('Would you like to publish the theme CSS to resources/css/filament/sleek-theme?', false);
         }
 
-        if ($publish) {
+        if (! $publishConfig && $this->input->isInteractive()) {
+            $publishConfig = $this->confirm('Would you like to publish the configuration file to config/filament-sleek-theme.php?', false);
+        }
+
+        if ($publishCss) {
             $this->call('vendor:publish', [
                 '--tag' => 'filament-sleek-theme-css',
                 '--force' => true,
@@ -43,12 +48,20 @@ class InstallCommand extends Command
             $this->components->info('Theme CSS published successfully.');
         }
 
+        if ($publishConfig) {
+            $this->call('vendor:publish', [
+                '--tag' => 'filament-sleek-theme-config',
+                '--force' => true,
+            ]);
+            $this->components->info('Configuration file published successfully.');
+        }
+
         $this->newLine();
         $this->line('  <options=bold>Next Steps:</>');
         $this->newLine();
 
         $this->line('  <fg=yellow>1.</> Add the theme CSS to your <fg=cyan>vite.config.js</>:');
-        if ($publish) {
+        if ($publishCss) {
             $this->line("     <fg=gray>'resources/css/filament/sleek-theme/theme.css'</>");
         } else {
             $this->line("     <fg=gray>'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css'</>");

@@ -14,6 +14,7 @@ class FilamentSleekThemeServiceProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name)
+            ->hasConfigFile('filament-sleek-theme')
             ->hasCommand(InstallCommand::class);
     }
 

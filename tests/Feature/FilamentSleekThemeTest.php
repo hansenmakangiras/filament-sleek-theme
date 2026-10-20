@@ -138,7 +138,69 @@ it('can disable setting vite theme using theme null', function () {
     expect($panel->getViteTheme())->toBeNull();
 });
 
-it('can execute install command', function () {
+it('can configure compact mode', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isCompact())->toBeFalse();
+
+    $plugin->compact();
+    expect($plugin->isCompact())->toBeTrue();
+
+    $plugin->compact(false);
+    expect($plugin->isCompact())->toBeFalse();
+});
+
+it('can configure glassmorphism mode', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isGlass())->toBeFalse();
+
+    $plugin->glass();
+    expect($plugin->isGlass())->toBeTrue();
+});
+
+it('can configure native thin scrollbars', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isThinScrollbars())->toBeTrue();
+
+    $plugin->thinScrollbars(false);
+    expect($plugin->isThinScrollbars())->toBeFalse();
+});
+
+it('can configure accent glow', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isAccentGlow())->toBeFalse();
+
+    $plugin->accentGlow();
+    expect($plugin->isAccentGlow())->toBeTrue();
+});
+
+it('can configure sidebar contrast mode', function () {
+    $plugin = FilamentSleekTheme::make();
+    expect($plugin->isSidebarContrast())->toBeFalse();
+
+    $plugin->sidebarContrast();
+    expect($plugin->isSidebarContrast())->toBeTrue();
+});
+
+it('loads defaults from config file', function () {
+    config()->set('filament-sleek-theme.preset', 'emerald');
+    config()->set('filament-sleek-theme.oled', true);
+    config()->set('filament-sleek-theme.compact', true);
+    config()->set('filament-sleek-theme.glass', true);
+    config()->set('filament-sleek-theme.accent_glow', true);
+
+    $plugin = FilamentSleekTheme::make();
+
+    expect($plugin->getPrimaryColor())->toBe(Color::Emerald)
+        ->and($plugin->isOled())->toBeTrue()
+        ->and($plugin->isCompact())->toBeTrue()
+        ->and($plugin->isGlass())->toBeTrue()
+        ->and($plugin->isAccentGlow())->toBeTrue();
+});
+
+it('can execute install command with publish flags', function () {
     $this->artisan('filament-sleek:install --no-interaction')
+        ->assertSuccessful();
+
+    $this->artisan('filament-sleek:install --publish-config --no-interaction')
         ->assertSuccessful();
 });

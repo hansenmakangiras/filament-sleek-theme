@@ -115,15 +115,74 @@ FilamentSleekTheme::make()
     ->subtle(); // or ->radius('subtle')
 ```
 
+### 6. Compact / High Density Mode
+Tighten table cells, form fields, and sidebar items for data-dense applications (ERP, Finance, CRM):
+```php
+FilamentSleekTheme::make()
+    ->compact();
+```
+
+### 7. Frosted Glass / Glassmorphism
+Add modern translucent backdrop blur (`backdrop-blur-md`) to the topbar, modals, and dropdowns:
+```php
+FilamentSleekTheme::make()
+    ->glass();
+```
+
+### 8. Native Thin Scrollbars
+Replace bulky OS scrollbars with minimal, modern 6px curved scrollbars (enabled by default):
+```php
+FilamentSleekTheme::make()
+    ->thinScrollbars(); // or ->thinScrollbars(false) to disable
+```
+
+### 9. Subtle Accent Ambient Glow
+Give active navigation pills and primary button hovers a soft modern ambient neon glow:
+```php
+FilamentSleekTheme::make()
+    ->accentGlow();
+```
+
+### 10. Sidebar Contrast Mode
+Render a dark high-contrast sidebar in light mode while keeping your main content area bright and clean:
+```php
+FilamentSleekTheme::make()
+    ->sidebarContrast();
+```
+
 ### Combine Everything Fluently
 ```php
 FilamentSleekTheme::make()
-    ->primaryColor(Color::Cyan)
-    ->grayColor(Color::Zinc)
-    ->font('Poppins')
+    ->emerald()
     ->oled()
-    ->subtle();
+    ->glass()
+    ->compact()
+    ->accentGlow();
 ```
+
+## ⚙️ Global Configuration File (Optional)
+
+You can publish the configuration file to define global defaults across all panels (especially useful for multi-panel applications):
+
+```bash
+php artisan vendor:publish --tag=filament-sleek-theme-config
+```
+or via the install command:
+```bash
+php artisan filament-sleek:install --publish-config
+```
+
+The published `config/filament-sleek-theme.php` allows you to set defaults for:
+- `preset`
+- `primary_color` & `gray_color`
+- `font`
+- `oled`
+- `radius`
+- `compact`
+- `glass`
+- `thin_scrollbars`
+- `accent_glow`
+- `sidebar_contrast`
 
 ## 🛠️ Customizing Theme CSS (Optional)
 

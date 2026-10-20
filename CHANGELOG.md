@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-10-20
+
+### Added
+- 📜 **Native Thin Scrollbars (`thinScrollbars()`):** Replaced bulky OS scrollbars with modern 6px curved scrollbars (supporting WebKit & Firefox) with light and dark mode adaptation.
+- 🗜️ **Compact / High-Density Mode (`compact()`):** Optimized table rows, form inputs, and sidebar spacing for data-heavy applications.
+- 🪟 **Frosted Glass / Glassmorphism (`glass()`):** Added modern backdrop blur (`backdrop-blur-md`) and translucent styling to topbars, modals, and dropdowns.
+- ✨ **Subtle Accent Glow (`accentGlow()`):** Added ambient glow effects to active navigation items, buttons on hover, and form inputs.
+- 🌓 **Sidebar Contrast Mode (`sidebarContrast()`):** Renders a dark high-contrast sidebar in light mode.
+- ⚙️ **Global Configuration File (`config/filament-sleek-theme.php`):** Added published configuration file for centralized theme settings across panels.
+- 🚀 **Install Command `--publish-config`:** Added flag and interactive prompt to publish the config file during installation.
+- 🧪 Added full test coverage for all new modes, config defaults, and installer flags (19 tests, 48 assertions).
+
 ## [1.1.0] - 2026-10-20
 
 ### Added

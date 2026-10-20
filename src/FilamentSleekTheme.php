@@ -35,6 +35,52 @@ class FilamentSleekTheme implements Plugin
 
     public string $radius = 'sleek';
 
+    public bool $compact = false;
+
+    public bool $glass = false;
+
+    public bool $thinScrollbars = true;
+
+    public bool $accentGlow = false;
+
+    public bool $sidebarContrast = false;
+
+    public function __construct()
+    {
+        if (function_exists('config')) {
+            if ($preset = config('filament-sleek-theme.preset')) {
+                $this->preset((string) $preset);
+            }
+
+            if ($primary = config('filament-sleek-theme.primary_color')) {
+                $this->primaryColor($primary);
+            }
+
+            if ($gray = config('filament-sleek-theme.gray_color')) {
+                $this->grayColor($gray);
+            }
+
+            $font = config('filament-sleek-theme.font', []);
+            if (! empty($font['family'])) {
+                $this->font($font['family'], $font['url'] ?? null, $font['provider'] ?? null);
+            }
+
+            if (config('filament-sleek-theme.oled', false)) {
+                $this->oled();
+            }
+
+            if ($radius = config('filament-sleek-theme.radius')) {
+                $this->radius((string) $radius);
+            }
+
+            $this->compact = (bool) config('filament-sleek-theme.compact', false);
+            $this->glass = (bool) config('filament-sleek-theme.glass', false);
+            $this->thinScrollbars = (bool) config('filament-sleek-theme.thin_scrollbars', true);
+            $this->accentGlow = (bool) config('filament-sleek-theme.accent_glow', false);
+            $this->sidebarContrast = (bool) config('filament-sleek-theme.sidebar_contrast', false);
+        }
+    }
+
     public function getId(): string
     {
         return 'filament-sleek-theme';
@@ -71,12 +117,32 @@ class FilamentSleekTheme implements Plugin
 
         $classes = [];
 
-        if ($this->oled) {
+        if ($this->isOled()) {
             $classes[] = 'sleek-oled';
         }
 
-        if ($this->radius === 'subtle') {
+        if ($this->getRadius() === 'subtle') {
             $classes[] = 'sleek-radius-subtle';
+        }
+
+        if ($this->isCompact()) {
+            $classes[] = 'sleek-compact';
+        }
+
+        if ($this->isGlass()) {
+            $classes[] = 'sleek-glass';
+        }
+
+        if ($this->isThinScrollbars()) {
+            $classes[] = 'sleek-scrollbars';
+        }
+
+        if ($this->isAccentGlow()) {
+            $classes[] = 'sleek-glow';
+        }
+
+        if ($this->isSidebarContrast()) {
+            $classes[] = 'sleek-sidebar-contrast';
         }
 
         if (! empty($classes)) {
@@ -202,6 +268,81 @@ class FilamentSleekTheme implements Plugin
     public function getRadius(): string
     {
         return $this->radius;
+    }
+
+    /**
+     * Enable or disable compact / high-density mode.
+     */
+    public function compact(bool $condition = true): static
+    {
+        $this->compact = $condition;
+
+        return $this;
+    }
+
+    public function isCompact(): bool
+    {
+        return $this->compact;
+    }
+
+    /**
+     * Enable or disable frosted glass / glassmorphism mode.
+     */
+    public function glass(bool $condition = true): static
+    {
+        $this->glass = $condition;
+
+        return $this;
+    }
+
+    public function isGlass(): bool
+    {
+        return $this->glass;
+    }
+
+    /**
+     * Enable or disable native thin / sleek scrollbars.
+     */
+    public function thinScrollbars(bool $condition = true): static
+    {
+        $this->thinScrollbars = $condition;
+
+        return $this;
+    }
+
+    public function isThinScrollbars(): bool
+    {
+        return $this->thinScrollbars;
+    }
+
+    /**
+     * Enable or disable subtle accent ambient glow.
+     */
+    public function accentGlow(bool $condition = true): static
+    {
+        $this->accentGlow = $condition;
+
+        return $this;
+    }
+
+    public function isAccentGlow(): bool
+    {
+        return $this->accentGlow;
+    }
+
+    /**
+     * Enable or disable sidebar contrast mode in light theme.
+     */
+    public function sidebarContrast(bool $condition = true): static
+    {
+        $this->sidebarContrast = $condition;
+
+        return $this;
+    }
+
+    public function isSidebarContrast(): bool
+    {
+        return $this->sidebarContrast;
     }
 
     /**
