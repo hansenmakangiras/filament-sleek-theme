@@ -104,24 +104,148 @@ body.sleek-scrollbars *::-webkit-scrollbar-thumb:hover {
 /* =========================================
    Compact / High Density Mode
    ========================================= */
-.sleek-compact .fi-ta-cell,
+/* Table Header & Rows */
 .sleek-compact .fi-ta-header-cell,
-body.sleek-compact .fi-ta-cell,
+html.sleek-compact .fi-ta-header-cell,
 body.sleek-compact .fi-ta-header-cell {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+    font-size: 0.8125rem !important;
 }
 
+/* Table Column Cells (Text, Icon, Image, Checkbox, Toggle, Inputs) */
+.sleek-compact .fi-ta-col,
+.sleek-compact .fi-ta-text:not(.fi-inline),
+.sleek-compact .fi-ta-icon:not(.fi-inline),
+.sleek-compact .fi-ta-image:not(.fi-inline),
+.sleek-compact .fi-ta-checkbox:not(.fi-inline),
+.sleek-compact .fi-ta-color:not(.fi-inline),
+.sleek-compact .fi-ta-select:not(.fi-inline),
+.sleek-compact .fi-ta-text-input:not(.fi-inline),
+.sleek-compact .fi-ta-toggle:not(.fi-inline),
+html.sleek-compact .fi-ta-col,
+html.sleek-compact .fi-ta-text:not(.fi-inline),
+html.sleek-compact .fi-ta-icon:not(.fi-inline),
+html.sleek-compact .fi-ta-image:not(.fi-inline),
+html.sleek-compact .fi-ta-checkbox:not(.fi-inline),
+html.sleek-compact .fi-ta-color:not(.fi-inline),
+html.sleek-compact .fi-ta-select:not(.fi-inline),
+html.sleek-compact .fi-ta-text-input:not(.fi-inline),
+html.sleek-compact .fi-ta-toggle:not(.fi-inline) {
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+}
+
+/* Table Actions & Selection Cells */
+.sleek-compact .fi-ta-cell:has(.fi-ta-actions),
+.sleek-compact .fi-ta-cell:has(.fi-ta-record-checkbox),
+.sleek-compact .fi-ta-cell:has(.fi-ta-reorder-handle),
+.sleek-compact .fi-ta-selection-cell,
+.sleek-compact .fi-ta-actions,
+html.sleek-compact .fi-ta-cell:has(.fi-ta-actions),
+html.sleek-compact .fi-ta-cell:has(.fi-ta-record-checkbox),
+html.sleek-compact .fi-ta-cell:has(.fi-ta-reorder-handle),
+html.sleek-compact .fi-ta-selection-cell,
+html.sleek-compact .fi-ta-actions {
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+}
+
+/* Table Summaries */
+.sleek-compact .fi-ta-cell.fi-ta-summary-row-heading-cell,
+.sleek-compact .fi-ta-summary-header-cell,
+html.sleek-compact .fi-ta-cell.fi-ta-summary-row-heading-cell,
+html.sleek-compact .fi-ta-summary-header-cell {
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+}
+
+/* Table Header & Toolbar */
+.sleek-compact .fi-ta-header,
+html.sleek-compact .fi-ta-header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.sleek-compact .fi-ta-header-toolbar,
+html.sleek-compact .fi-ta-header-toolbar {
+    gap: 0.375rem !important;
+}
+
+/* Forms & Field Spacing */
 .sleek-compact .fi-fo-field-wrp,
-body.sleek-compact .fi-fo-field-wrp {
-    margin-bottom: 0.75rem;
+html.sleek-compact .fi-fo-field-wrp {
+    gap: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
-.sleek-compact .fi-sidebar-item-btn,
-body.sleek-compact .fi-sidebar-item-btn {
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
+.sleek-compact .fi-fo-field-wrp-label,
+html.sleek-compact .fi-fo-field-wrp-label {
+    margin-bottom: 0 !important;
+    font-size: 0.8125rem !important;
 }
+
+.sleek-compact .fi-fo-field-wrp-hint,
+html.sleek-compact .fi-fo-field-wrp-hint {
+    font-size: 0.75rem !important;
+}
+
+.sleek-compact .fi-grid,
+.sleek-compact .fi-sc-grid,
+.sleek-compact .fi-fo-grid,
+html.sleek-compact .fi-grid,
+html.sleek-compact .fi-sc-grid,
+html.sleek-compact .fi-fo-grid {
+    gap: 0.75rem !important;
+}
+
+/* Inputs & Form Controls */
+.sleek-compact input.fi-input,
+.sleek-compact select.fi-select-input,
+.sleek-compact .fi-input-wrp,
+html.sleek-compact input.fi-input,
+html.sleek-compact select.fi-select-input,
+html.sleek-compact .fi-input-wrp {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    min-height: 2.125rem !important;
+}
+
+/* Sections & Cards */
+.sleek-compact .fi-section-header,
+html.sleek-compact .fi-section-header {
+    padding: 0.625rem 1rem !important;
+}
+
+.sleek-compact .fi-section-content,
+html.sleek-compact .fi-section-content {
+    padding: 0.75rem 1rem !important;
+}
+
+/* Sidebar Navigation */
+.sleek-compact .fi-sidebar-item-btn,
+html.sleek-compact .fi-sidebar-item-btn,
+body.sleek-compact .fi-sidebar-item-btn {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    min-height: 2rem !important;
+}
+
+.sleek-compact .fi-sidebar-item-label,
+html.sleek-compact .fi-sidebar-item-label {
+    font-size: 0.8125rem !important;
+}
+
+.sleek-compact .fi-sidebar-nav-groups,
+html.sleek-compact .fi-sidebar-nav-groups {
+    gap: 0.375rem !important;
+}
+
+.sleek-compact .fi-sidebar-group-items,
+html.sleek-compact .fi-sidebar-group-items {
+    gap: 0.125rem !important;
+}
+
 
 /* =========================================
    Frosted Glass / Glassmorphism Mode

@@ -146,10 +146,12 @@ class FilamentSleekTheme implements Plugin
         }
 
         if (! empty($classes)) {
-            $classString = implode(' ', $classes);
+            $jsonClasses = json_encode(array_values($classes));
             $panel->renderHook(
                 PanelsRenderHook::BODY_START,
-                fn () => new HtmlString("<script>document.documentElement.classList.add('{$classString}');document.body?.classList.add('{$classString}');</script>"),
+                fn () => new HtmlString(
+                    "<script>(function(){const classes={$jsonClasses};const apply=()=>{classes.forEach(c=>{document.documentElement.classList.add(c);if(document.body){document.body.classList.add(c);}});};apply();document.addEventListener('DOMContentLoaded',apply);document.addEventListener('livewire:navigated',apply);})();</script>"
+                ),
             );
         }
     }

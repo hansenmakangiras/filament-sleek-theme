@@ -14,6 +14,11 @@ All notable changes to this project will be documented in this file.
 - 🚀 **Install Command `--publish-config`:** Added flag and interactive prompt to publish the config file during installation.
 - 🧪 Added full test coverage for all new modes, config defaults, and installer flags (19 tests, 48 assertions).
 
+### Fixed
+- 🐛 **Fixed DOMException in Multi-Class Injection:** Fixed JavaScript error where multiple space-separated classes in `classList.add()` threw a `DOMException`, preventing classes like `.sleek-compact` from attaching to the DOM.
+- ⚡ **SPA / Livewire Navigated Support:** Added `livewire:navigated` listener so classes remain active during Filament SPA navigation (`->spa()`).
+- 🗜️ **Comprehensive Table & Form Compact Overrides:** Replaced superficial cell selectors with deep overrides targeting `.fi-ta-col`, `.fi-ta-text`, `.fi-ta-actions`, inputs, and form grids using `!important` to achieve visible, high-density compaction.
+
 ## [1.1.0] - 2026-10-20
 
 ### Added
