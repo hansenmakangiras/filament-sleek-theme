@@ -21,6 +21,8 @@ All notable changes to this project will be documented in this file.
 - 🔆 **Active Navigation Item Contrast in Dark & Light Modes:** Enforced pure white `#ffffff !important` with 600 font weight on active navigation item labels and icons in both light and dark mode, preventing washed-out mint or pale green text.
 - 🪟 **Frosted Glass Seamless Topbar (`glass()`):** Removed bottom border line from `.fi-topbar` under the logo to ensure an unbroken, clean layout matching the default sleek design.
 - 🏢 **Frosted Glass Dropdown Readability:** Enforced solid opaque backgrounds on `.fi-dropdown-panel` in `glass()` mode, preventing bright underlying elements (such as green active sidebar navigation pills) from bleeding through and obscuring menu items.
+- 👤 **Circular User Trigger & Rounded Dropdown Items:** Enforced `rounded-full` on `.fi-user-menu-trigger` to eliminate flat rectangular hover boxes around avatars, and added `rounded-xl` hover pills to dropdown items and theme switcher buttons.
+- 📐 **Signature Curved Content Frame in `topbarContrast()`:** Preserved the signature `2.25rem` (`rounded-ss-4xl`) corner on `.fi-main-ctn` when `topbarContrast()` is active, framing it against a unified `#0f172a` dark body background for seamless visual integration between topbar, sidebar, and content.
 
 ### Added
 - 📜 **Native Thin Scrollbars (`thinScrollbars()`):** Replaced bulky OS scrollbars with modern 6px curved scrollbars (supporting WebKit & Firefox) with light and dark mode adaptation.

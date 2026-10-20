@@ -627,10 +627,10 @@ body.sleek-sidebar-contrast:not(.dark) .fi-sidebar,
     border-right-color: #1e293b !important;
 }
 
-/* Ensure content container joins flush with sidebar - no awkward white rounded scoop! */
-html.sleek-sidebar-contrast .fi-main-ctn,
-body.sleek-sidebar-contrast .fi-main-ctn,
-:not(.dark).sleek-sidebar-contrast .fi-main-ctn {
+/* Ensure content container joins flush with sidebar when sidebarContrast is active without topbarContrast */
+html.sleek-sidebar-contrast:not(.sleek-topbar-contrast) .fi-main-ctn,
+body.sleek-sidebar-contrast:not(.sleek-topbar-contrast) .fi-main-ctn,
+:not(.dark).sleek-sidebar-contrast:not(.sleek-topbar-contrast) .fi-main-ctn {
     border-start-start-radius: 0 !important;
     border-top-left-radius: 0 !important;
 }
@@ -854,14 +854,19 @@ body.sleek-topbar-contrast:not(.dark) .fi-topbar-item.fi-active .fi-topbar-item-
 }
 
 /* Topbar User Menu Trigger */
+html.sleek-topbar-contrast .fi-topbar .fi-user-menu-trigger,
 html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger,
 body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger {
     color: #f8fafc !important;
+    border-radius: 9999px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
 }
 
 html.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger:hover,
 body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-user-menu-trigger:hover {
-    background-color: #1e293b !important;
+    background-color: transparent !important;
+    border-radius: 9999px !important;
 }
 
 /* Topbar Tenant Menu */
@@ -875,9 +880,20 @@ body.sleek-topbar-contrast:not(.dark) .fi-topbar .fi-tenant-menu-trigger:hover {
     background-color: #1e293b !important;
 }
 
-/* Topbar & Main Container Integration */
+/* Topbar & Main Container Integration: Keep the signature rounded curve and unify dark body frame */
+html.sleek-topbar-contrast:not(.dark) .fi-body,
+html.sleek-topbar-contrast:not(.dark),
+body.sleek-topbar-contrast:not(.dark) {
+    background-color: #0f172a !important;
+}
+
 html.sleek-topbar-contrast .fi-main-ctn,
 body.sleek-topbar-contrast .fi-main-ctn {
-    border-top-color: #1e293b !important;
+    border-start-start-radius: 2.25rem !important;
+    border-top-left-radius: 2.25rem !important;
+    border-color: #334155 !important;
+    border-top-color: #334155 !important;
+    border-inline-start-color: #334155 !important;
 }
+
 

@@ -1,3 +1,27 @@
 .fi-dropdown-panel {
-    @apply rounded-2xl dark:bg-gray-800;
+    @apply rounded-2xl dark:bg-gray-800 shadow-xl overflow-hidden;
+}
+
+.fi-dropdown-list {
+    @apply p-1.5 flex flex-col gap-0.5;
+}
+
+.fi-dropdown-list-item {
+    @apply rounded-xl transition-all duration-150;
+}
+
+.fi-dropdown-header {
+    @apply rounded-xl;
+}
+
+.fi-topbar .fi-user-menu-trigger {
+    @apply rounded-full overflow-hidden;
+}
+
+.fi-theme-switcher {
+    @apply rounded-xl p-0.5;
+}
+
+.fi-theme-switcher button {
+    @apply rounded-lg transition-all duration-150;
 }
