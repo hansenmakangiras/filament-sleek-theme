@@ -39,5 +39,22 @@ it('can register plugin into a filament panel', function () {
 
     $plugin->register($panel);
 
-    expect($panel->getId())->toBe('admin');
+    expect($panel->getId())->toBe('admin')
+        ->and($panel->getViteTheme())->toBe('vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css');
+});
+
+it('can customize vite theme path', function () {
+    $plugin = FilamentSleekTheme::make();
+
+    // Default theme path
+    expect($plugin->getTheme())->toBe('vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css');
+
+    // Custom theme path
+    $customPath = 'resources/css/filament/sleek-theme/theme.css';
+    $plugin->theme($customPath);
+    expect($plugin->getTheme())->toBe($customPath);
+
+    $panel = (new Panel)->id('admin');
+    $plugin->register($panel);
+    expect($panel->getViteTheme())->toBe($customPath);
 });

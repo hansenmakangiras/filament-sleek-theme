@@ -12,8 +12,7 @@ class FilamentSleekThemeServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name(static::$name)
-            ->hasAssets();
+            ->name(static::$name);
     }
 
     public function packageBooted(): void

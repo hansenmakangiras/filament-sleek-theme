@@ -76,47 +76,67 @@ FilamentSleekTheme::make()
     ->primaryColor('#3b82f6');
 ```
 
+## 🛠️ Customizing Theme CSS (Optional)
+
+If you published the CSS files via `vendor:publish`:
+```bash
+php artisan vendor:publish --tag=filament-sleek-theme-css
+```
+You can point the plugin to your published file:
+```php
+FilamentSleekTheme::make()
+    ->theme('resources/css/filament/sleek-theme/theme.css')
+```
+
 ## Screenshots
 <table>
     <tbody>
         <tr>
             <td>
-                <a href="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Dashboard-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Dashboard-dark.png" alt="Dashboard Dark"/>
+                <a href="./images/Dashboard-dark.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Dashboard-dark.png" alt="Dashboard Dark"/>
                 </a>
             </td>
             <td>
-                <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Dashboard-light.png" alt="Dashboard Light"/>
+                <a href="./images/Dashboard-light.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Dashboard-light.png" alt="Dashboard Light"/>
+                </a>
             </td>
         </tr>
         <tr>
             <td>
-                <a href="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Form-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Form-dark.png" alt="Form Dark"/>
+                <a href="./images/Form-dark.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Form-dark.png" alt="Form Dark"/>
                 </a>
             </td>
             <td>
-                <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Form-light.png" alt="Form Light"/>
+                <a href="./images/Form-light.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Form-light.png" alt="Form Light"/>
+                </a>
             </td>
         </tr>
         <tr>
             <td>
-                <a href="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Table-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Table-dark.png" alt="Table Dark"/>
+                <a href="./images/Table-dark.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Table-dark.png" alt="Table Dark"/>
                 </a>
             </td>
             <td>
-                <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Table-light.png" alt="Table Light"/>
+                <a href="./images/Table-light.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Table-light.png" alt="Table Light"/>
+                </a>
             </td>
         </tr>
         <tr>
             <td>
-                <a href="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Notifications-dark.png" target="_blank">
-                    <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Notifications-dark.png" alt="Notifications Dark"/>
+                <a href="./images/Notifications-dark.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Notifications-dark.png" alt="Notifications Dark"/>
                 </a>
             </td>
             <td>
-                <img style="border-radius: 10px" src="https://raw.githubusercontent.com/resmatech/filament-awin-theme/refs/heads/main/images/Notifications-light.png" alt="Notifications Light"/>
+                <a href="./images/Notifications-light.png" target="_blank">
+                    <img style="border-radius: 10px" src="./images/Notifications-light.png" alt="Notifications Light"/>
+                </a>
             </td>
         </tr>
     </tbody>

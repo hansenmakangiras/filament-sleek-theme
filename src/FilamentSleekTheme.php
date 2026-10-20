@@ -13,6 +13,8 @@ class FilamentSleekTheme implements Plugin
      */
     public array|string $primaryColor = Color::Blue;
 
+    public string $theme = 'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css';
+
     public function getId(): string
     {
         return 'filament-sleek-theme';
@@ -29,7 +31,7 @@ class FilamentSleekTheme implements Plugin
             ->colors([
                 'primary' => $this->primaryColor,
             ])
-            ->viteTheme('vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css');
+            ->viteTheme($this->theme);
     }
 
     public function boot(Panel $panel): void
@@ -57,5 +59,23 @@ class FilamentSleekTheme implements Plugin
     public function getPrimaryColor(): array|string
     {
         return $this->primaryColor;
+    }
+
+    /**
+     * Set the Vite theme CSS path.
+     */
+    public function theme(string $theme): static
+    {
+        $this->theme = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Get the Vite theme CSS path.
+     */
+    public function getTheme(): string
+    {
+        return $this->theme;
     }
 }
