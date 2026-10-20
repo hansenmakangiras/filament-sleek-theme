@@ -14,7 +14,16 @@ All notable changes to this project will be documented in this file.
   - **Section Cards & Forms:** Overrode contained section paddings to `0.625rem 0.875rem`, reduced form grid gaps, and condensed label/hint margins.
   - **Modals:** Compacted modal headers, content, and footers.
 
+### Added
+- 🏷️ **Universal Pill Badges:** Applied `rounded-full` styling across all Filament status tags and pills (`.fi-badge`), transforming table status badges, infolists, and form hints into modern, elegant capsule pills.
+- 🌫️ **Cinematic Modal Backdrop Blur:** Added `backdrop-filter: blur(8px) saturate(130%)` to `.fi-modal-close-overlay`, smoothly blurring the background behind open modals and slide-overs for enhanced focus and visual depth.
+
 ### Fixed
+- 🪟 **Slide-Over Modal Screen Edge Alignment:** Fixed an issue where `.fi-modal-window` applied rounded corners to all four sides even on slide-over drawers, causing awkward empty curved gaps against the screen edge. Drawer panels now keep their signature `rounded-2xl` inner corner while flattening cleanly against the viewport edge (`rounded-e-none` / `rounded-s-none`) across standard and `subtle()` modes.
+- 🔍 **Global Search Overlay Modernization & OLED/Glass Support:** Upgraded `.fi-global-search-results-ctn` from `rounded-lg` to modern `rounded-2xl shadow-2xl`, with dark/light group headers and subtle item borders. Added complete styling for OLED mode (`#0c0c0e`, `#27272a` hairline borders) and frosted glass mode (`blur(24px) saturate(190%)`, translucent surface, specular rings).
+- 📋 **Nested Form Components (Repeater, Builder & Key-Value):** Upgraded `.fi-fo-repeater-item`, `.fi-fo-builder-item`, and `.fi-fo-key-value` to modern rounded containers with dedicated headers. Fully adapted them across OLED mode (`#09090b` cards, `#0c0c0e` headers) and Glass mode (`blur(14px)`, acrylic fills).
+- ✍️ **Rich Editor & Markdown Editor Styling:** Framed `.fi-fo-rich-editor` and `.fi-fo-markdown-editor` in sleek rounded containers with seamlessly matching toolbars across default, OLED, and Glass modes.
+- ☑️ **Table Selection Indicator Bar:** Styled the bulk record selection toolbar (`.fi-ta-selection-indicator`) with matching translucent surfaces in Glass mode and OLED dark finishes in OLED mode.
 - 🔔 **Toast Notifications in OLED & Glass Modes:** Added first-class styling for Filament toast notifications (`.fi-no-notification`). In OLED mode, notifications now use true OLED dark surface (`#0c0c0e`) and hairline borders (`#27272a`). In Glass mode, notifications feature frosted glass acrylics (`backdrop-filter: blur(20px)`, translucent backgrounds, and specular highlights).
 - 📑 **Tabs Container Adaptations across OLED, Glass & Subtle Modes:** Enhanced `.fi-tabs` and its inner card layer (`.fi-tabs::before`) to seamlessly conform to all theme variations: pure black & OLED surfaces in OLED mode, frosted glass translucent surfaces in Glass mode, and proper `0.75rem` / `0.5rem` border radii in `subtle()` mode.
 - 📐 **Dashboard Chart & Generic Widgets Height Stretch:** Ensured all non-table dashboard widgets (`.fi-wi-widget:not(.fi-wi-stats-overview)`) and their inner `.fi-section` stretch via `flex flex-col flex-1 h-full`, preventing awkward bottom empty space when widgets sit alongside taller items in a dashboard grid.

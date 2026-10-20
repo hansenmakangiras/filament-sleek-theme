@@ -228,6 +228,81 @@ body.dark.sleek-oled .fi-tabs::before {
     border-color: #27272a !important;
 }
 
+/* Global Search in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-global-search-results-ctn,
+html.dark.sleek-oled .fi-global-search-results-ctn,
+body.dark.sleek-oled .fi-global-search-results-ctn {
+    background-color: #0c0c0e !important;
+    border: 1px solid #27272a !important;
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a !important;
+}
+
+.dark.sleek-oled .fi-global-search-result-group-header,
+html.dark.sleek-oled .fi-global-search-result-group-header,
+body.dark.sleek-oled .fi-global-search-result-group-header {
+    background-color: #09090b !important;
+    border-color: #222225 !important;
+}
+
+.dark.sleek-oled .fi-global-search-result-group-results,
+html.dark.sleek-oled .fi-global-search-result-group-results,
+body.dark.sleek-oled .fi-global-search-result-group-results {
+    background-color: #0c0c0e !important;
+}
+
+/* Table Selection Indicator in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-ta-selection-indicator,
+html.dark.sleek-oled .fi-ta-selection-indicator,
+body.dark.sleek-oled .fi-ta-selection-indicator {
+    background-color: #0c0c0e !important;
+    border-color: #222225 !important;
+}
+
+/* Repeaters, Builders & Key-Value in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-fo-repeater-item,
+.dark.sleek-oled .fi-fo-builder-item,
+.dark.sleek-oled .fi-fo-key-value,
+html.dark.sleek-oled .fi-fo-repeater-item,
+html.dark.sleek-oled .fi-fo-builder-item,
+html.dark.sleek-oled .fi-fo-key-value,
+body.dark.sleek-oled .fi-fo-repeater-item,
+body.dark.sleek-oled .fi-fo-builder-item,
+body.dark.sleek-oled .fi-fo-key-value {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
+.dark.sleek-oled .fi-fo-repeater-item-header,
+.dark.sleek-oled .fi-fo-builder-item-header,
+html.dark.sleek-oled .fi-fo-repeater-item-header,
+html.dark.sleek-oled .fi-fo-builder-item-header,
+body.dark.sleek-oled .fi-fo-repeater-item-header,
+body.dark.sleek-oled .fi-fo-builder-item-header {
+    background-color: #0c0c0e !important;
+    border-color: #222225 !important;
+}
+
+/* Rich Editor & Markdown Editor in OLED Mode (Dark Only) */
+.dark.sleek-oled .fi-fo-rich-editor,
+.dark.sleek-oled .fi-fo-markdown-editor,
+html.dark.sleek-oled .fi-fo-rich-editor,
+html.dark.sleek-oled .fi-fo-markdown-editor,
+body.dark.sleek-oled .fi-fo-rich-editor,
+body.dark.sleek-oled .fi-fo-markdown-editor {
+    background-color: #09090b !important;
+    border-color: #27272a !important;
+}
+
+.dark.sleek-oled .fi-fo-rich-editor-toolbar,
+.dark.sleek-oled .fi-fo-markdown-editor-toolbar,
+html.dark.sleek-oled .fi-fo-rich-editor-toolbar,
+html.dark.sleek-oled .fi-fo-markdown-editor-toolbar,
+body.dark.sleek-oled .fi-fo-rich-editor-toolbar,
+body.dark.sleek-oled .fi-fo-markdown-editor-toolbar {
+    background-color: #0c0c0e !important;
+    border-color: #222225 !important;
+}
+
 /* =========================================
    Subtle Radius Mode
    ========================================= */
@@ -247,6 +322,12 @@ html.sleek-radius-subtle .fi-main-ctn {
 .sleek-radius-subtle .fi-dropdown-panel,
 .sleek-radius-subtle .fi-no-notification,
 .sleek-radius-subtle .fi-tabs,
+.sleek-radius-subtle .fi-global-search-results-ctn,
+.sleek-radius-subtle .fi-fo-repeater-item,
+.sleek-radius-subtle .fi-fo-builder-item,
+.sleek-radius-subtle .fi-fo-key-value,
+.sleek-radius-subtle .fi-fo-rich-editor,
+.sleek-radius-subtle .fi-fo-markdown-editor,
 html.sleek-radius-subtle .fi-simple-main:not(:has(.custom-auth-wrapper)),
 html.sleek-radius-subtle .fi-ta,
 html.sleek-radius-subtle .fi-ta-ctn,
@@ -258,8 +339,32 @@ html.sleek-radius-subtle .fi-modal-window,
 html.sleek-radius-subtle .fi-dropdown-panel,
 html.sleek-radius-subtle .fi-no-notification,
 html.sleek-radius-subtle .fi-tabs,
+html.sleek-radius-subtle .fi-global-search-results-ctn,
+html.sleek-radius-subtle .fi-fo-repeater-item,
+html.sleek-radius-subtle .fi-fo-builder-item,
+html.sleek-radius-subtle .fi-fo-key-value,
+html.sleek-radius-subtle .fi-fo-rich-editor,
+html.sleek-radius-subtle .fi-fo-markdown-editor,
 body.sleek-radius-subtle .fi-tabs {
     border-radius: 0.75rem !important;
+}
+
+.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window,
+html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window,
+body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-end .fi-modal-window {
+    border-top-left-radius: 0.75rem !important;
+    border-bottom-left-radius: 0.75rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start .fi-modal-window,
+html.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start .fi-modal-window,
+body.sleek-radius-subtle .fi-modal.fi-modal-slide-over-from-start .fi-modal-window {
+    border-top-right-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .sleek-radius-subtle .fi-tabs::before,
@@ -1044,6 +1149,116 @@ html.dark.sleek-glass.sleek-oled .fi-tabs::before,
 body.dark.sleek-glass.sleek-oled .fi-tabs::before {
     background-color: rgba(12, 12, 15, 0.75) !important;
     border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Frosted Global Search in Glass Mode */
+html.sleek-glass:not(.dark) .fi-global-search-results-ctn,
+body.sleek-glass:not(.dark) .fi-global-search-results-ctn {
+    background-color: rgba(255, 255, 255, 0.82) !important;
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.16),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+html.sleek-glass:not(.dark) .fi-global-search-result-group-header,
+body.sleek-glass:not(.dark) .fi-global-search-result-group-header {
+    background-color: rgba(248, 250, 252, 0.6) !important;
+    border-bottom-color: rgba(226, 232, 240, 0.6) !important;
+}
+
+html.sleek-glass:not(.dark) .fi-global-search-result-group-results,
+body.sleek-glass:not(.dark) .fi-global-search-result-group-results {
+    background-color: transparent !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-global-search-results-ctn,
+body.dark.sleek-glass:not(.sleek-oled) .fi-global-search-results-ctn {
+    background-color: rgba(15, 23, 42, 0.82) !important;
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-global-search-result-group-header,
+body.dark.sleek-glass:not(.sleek-oled) .fi-global-search-result-group-header {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark.sleek-glass:not(.sleek-oled) .fi-global-search-result-group-results,
+body.dark.sleek-glass:not(.sleek-oled) .fi-global-search-result-group-results {
+    background-color: transparent !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-global-search-results-ctn,
+body.dark.sleek-glass.sleek-oled .fi-global-search-results-ctn {
+    background-color: rgba(12, 12, 15, 0.88) !important;
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-global-search-result-group-header,
+body.dark.sleek-glass.sleek-oled .fi-global-search-result-group-header {
+    background-color: rgba(12, 12, 15, 0.7) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark.sleek-glass.sleek-oled .fi-global-search-result-group-results,
+body.dark.sleek-glass.sleek-oled .fi-global-search-result-group-results {
+    background-color: transparent !important;
+}
+
+/* Frosted Table Selection Indicator in Glass Mode */
+html.sleek-glass:not(.dark) .fi-ta-selection-indicator,
+body.sleek-glass:not(.dark) .fi-ta-selection-indicator {
+    background-color: rgba(248, 250, 252, 0.55) !important;
+    border-bottom-color: rgba(226, 232, 240, 0.6) !important;
+}
+
+html.dark.sleek-glass .fi-ta-selection-indicator,
+body.dark.sleek-glass .fi-ta-selection-indicator {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Frosted Repeaters, Builders & Rich Editor in Glass Mode */
+html.sleek-glass:not(.dark) .fi-fo-repeater-item,
+html.sleek-glass:not(.dark) .fi-fo-builder-item,
+html.sleek-glass:not(.dark) .fi-fo-key-value,
+html.sleek-glass:not(.dark) .fi-fo-rich-editor,
+html.sleek-glass:not(.dark) .fi-fo-markdown-editor,
+body.sleek-glass:not(.dark) .fi-fo-repeater-item,
+body.sleek-glass:not(.dark) .fi-fo-builder-item,
+body.sleek-glass:not(.dark) .fi-fo-key-value,
+body.sleek-glass:not(.dark) .fi-fo-rich-editor,
+body.sleek-glass:not(.dark) .fi-fo-markdown-editor {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(14px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+    border-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+html.dark.sleek-glass .fi-fo-repeater-item,
+html.dark.sleek-glass .fi-fo-builder-item,
+html.dark.sleek-glass .fi-fo-key-value,
+html.dark.sleek-glass .fi-fo-rich-editor,
+html.dark.sleek-glass .fi-fo-markdown-editor,
+body.dark.sleek-glass .fi-fo-repeater-item,
+body.dark.sleek-glass .fi-fo-builder-item,
+body.dark.sleek-glass .fi-fo-key-value,
+body.dark.sleek-glass .fi-fo-rich-editor,
+body.dark.sleek-glass .fi-fo-markdown-editor {
+    background-color: rgba(15, 23, 42, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* =========================================

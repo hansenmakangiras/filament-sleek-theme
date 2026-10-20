@@ -1,4 +1,26 @@
+.fi-input-wrp {
+    @apply shadow-none;
+}
 
-  .fi-input-wrp {
-    @apply shadow-none
-   }
+/* Repeater, Builder & Key-Value Nested Containers */
+.fi-fo-repeater-item,
+.fi-fo-builder-item,
+.fi-fo-key-value {
+    @apply rounded-2xl border border-gray-200 dark:border-gray-700 shadow-none overflow-hidden bg-white dark:bg-gray-800 transition-all;
+}
+
+.fi-fo-repeater-item-header,
+.fi-fo-builder-item-header {
+    @apply bg-gray-50/80 dark:bg-gray-800/90 border-b border-gray-200 dark:border-gray-700;
+}
+
+/* Rich Editor & Markdown Editor Containers */
+.fi-fo-rich-editor,
+.fi-fo-markdown-editor {
+    @apply rounded-2xl border border-gray-300 dark:border-gray-700 overflow-hidden shadow-none;
+}
+
+.fi-fo-rich-editor-toolbar,
+.fi-fo-markdown-editor-toolbar {
+    @apply bg-gray-50/70 dark:bg-gray-800/70 border-b border-gray-200 dark:border-gray-700;
+}

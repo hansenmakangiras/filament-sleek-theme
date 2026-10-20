@@ -2,6 +2,21 @@
     @apply rounded-2xl;
 }
 
+/* Slide-over Drawers: Keep inner curved edge while making screen edge flush */
+.fi-modal.fi-modal-slide-over-from-end .fi-modal-window {
+    @apply rounded-s-2xl rounded-e-none;
+}
+
+.fi-modal.fi-modal-slide-over-from-start .fi-modal-window {
+    @apply rounded-e-2xl rounded-s-none;
+}
+
+/* Cinematic Modal Backdrop Blur */
+.fi-modal-close-overlay {
+    backdrop-filter: blur(8px) saturate(130%);
+    -webkit-backdrop-filter: blur(8px) saturate(130%);
+}
+
 /* Ensure modal dialog appears safely on top of headers */
 div.fi-modal {
     z-index: 9999;

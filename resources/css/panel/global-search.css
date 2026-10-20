@@ -1,11 +1,15 @@
 .fi-global-search-results-ctn {
-    @apply rounded-lg border-0;
-   }
+    @apply rounded-2xl border border-gray-200 dark:border-gray-700 shadow-2xl overflow-hidden bg-white dark:bg-gray-800 ring-0;
+}
 
 .fi-global-search-result-group-header {
-    @apply bg-gray-100 dark:bg-gray-700 p-4
+    @apply bg-gray-50 dark:bg-gray-800/90 px-4 py-2.5 font-semibold text-xs tracking-wider text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700/60;
 }
 
 .fi-global-search-result-group-results {
-    @apply bg-white dark:bg-gray-800
+    @apply bg-white dark:bg-gray-800 divide-y divide-gray-100 dark:divide-white/5;
+}
+
+.fi-global-search-result {
+    @apply transition-colors duration-150;
 }

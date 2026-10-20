@@ -42,3 +42,8 @@
 .fi-main {
     @apply block min-h-auto h-auto;
 }
+
+/* Universal Pill Badges */
+.fi-badge {
+    @apply rounded-full;
+}
