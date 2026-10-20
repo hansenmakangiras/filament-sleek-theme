@@ -616,6 +616,84 @@ html.sleek-glow .fi-tabs-item.fi-active {
     box-shadow: 0 0 12px 1px color-mix(in srgb, var(--primary-500, #10b981) 35%, transparent) !important;
 }
 
+/* Sidebar Item Hover with Accent Glow in Dark Mode */
+.dark.sleek-glow .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+.dark .sleek-glow .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+.dark .sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+html.dark.sleek-glow .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+html.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+body.dark.sleek-glow .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+body.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn {
+    background-color: color-mix(in srgb, var(--primary-500, #3b82f6) 20%, rgba(255, 255, 255, 0.09)) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 14px 1px color-mix(in srgb, var(--primary-500, #3b82f6) 25%, transparent) !important;
+}
+
+.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label,
+.dark .sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label,
+html.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label,
+body.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label {
+    color: #ffffff !important;
+}
+
+.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg,
+.dark .sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+.dark .sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg,
+html.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+html.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg,
+body.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+body.dark.sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg {
+    color: #ffffff !important;
+}
+
+/* Tenant Menu Trigger Hover in Dark Mode with Accent Glow */
+.dark.sleek-glow .fi-sidebar .fi-tenant-menu-trigger:hover,
+.dark .sleek-glow .fi-sidebar .fi-tenant-menu-trigger:hover,
+html.dark.sleek-glow .fi-sidebar .fi-tenant-menu-trigger:hover,
+body.dark.sleek-glow .fi-sidebar .fi-tenant-menu-trigger:hover {
+    background-color: color-mix(in srgb, var(--primary-500, #3b82f6) 20%, rgba(255, 255, 255, 0.09)) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 14px 1px color-mix(in srgb, var(--primary-500, #3b82f6) 22%, transparent) !important;
+}
+
+/* Sidebar Item Hover with Accent Glow in OLED Dark Mode */
+.dark.sleek-glow.sleek-oled .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+.dark.sleek-glow.sleek-oled .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+.dark.sleek-oled .sleek-glow .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+.dark.sleek-oled .sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+html.dark.sleek-glow.sleek-oled .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+html.dark.sleek-glow.sleek-oled .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+body.dark.sleek-glow.sleek-oled .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+body.dark.sleek-glow.sleek-oled .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn {
+    background-color: color-mix(in srgb, var(--primary-500, #3b82f6) 24%, #181818) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 14px 1px color-mix(in srgb, var(--primary-500, #3b82f6) 30%, transparent) !important;
+}
+
+/* Sidebar Item Hover with Accent Glow in Light Mode */
+html.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+html.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+body.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+body.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+:not(.dark).sleek-glow .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+:not(.dark).sleek-glow .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn {
+    background-color: color-mix(in srgb, var(--primary-500, #3b82f6) 12%, rgba(0, 0, 0, 0.04)) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 10px 1px color-mix(in srgb, var(--primary-500, #3b82f6) 18%, transparent) !important;
+}
+
+/* Sidebar Item Hover with Accent Glow & Sidebar Contrast in Light Mode */
+html.sleek-sidebar-contrast.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+html.sleek-sidebar-contrast.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+body.sleek-sidebar-contrast.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+body.sleek-sidebar-contrast.sleek-glow:not(.dark) .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn {
+    background-color: color-mix(in srgb, var(--primary-500, #3b82f6) 20%, rgba(255, 255, 255, 0.09)) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 14px 1px color-mix(in srgb, var(--primary-500, #3b82f6) 25%, transparent) !important;
+}
+
 /* =========================================
    Sidebar Contrast Mode (Dark sidebar in Light mode)
    ========================================= */

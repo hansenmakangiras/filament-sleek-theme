@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
   - **Modals:** Compacted modal headers, content, and footers.
 
 ### Fixed
+- 🌟 **Dark Mode Sidebar Menu Hover Visibility (`accentGlow()` & standard):** Replaced stripped `@apply dark:hover:bg-gray-800` with high-contrast, rounded-full pill hover styling in dark mode. When `accentGlow()` is active, inactive sidebar navigation items on hover now render a clearly visible rounded pill tinted with 20% primary color and a soft, ambient neon glow (`box-shadow: 0 0 14px 1px color-mix(...)`), crisp `#ffffff` labels, and matching tenant switcher hover states across dark, OLED, and light modes.
 - 🌟 **Smooth Rounded Accent Glow (`accentGlow()`):** Removed `overflow: hidden` on `.fi-sidebar-item` and `.fi-sidebar-item-btn` that was clipping the glow into a flat, boxy rectangle. Shifted to radial non-offset blur (`0 0 16px 2px`) that smoothly diffuses around the pill curvature.
 - 📐 **Seamless Content Join in `sidebarContrast()`:** Removed awkward rounded scoop (`border-top-left-radius: 0 !important; border-start-start-radius: 0 !important;`) on `.fi-main-ctn` so the main content joins completely flush against the dark sidebar.
 - 🏢 **Tenant Dropdown Contrast:** Targeted `.fi-tenant-menu-trigger-tenant-name` and chevron icons with high-contrast text (`#f8fafc`) on dark sidebar surfaces, eliminating low-contrast or invisible text in light mode.

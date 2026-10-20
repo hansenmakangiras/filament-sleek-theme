@@ -35,16 +35,50 @@
 }
 
 .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn {
-    @apply hover:bg-gray-100 dark:hover:bg-gray-800 hover:transition-all hover:duration-200 hover:rounded-full;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 9999px !important;
+}
+
+.fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+.fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn {
+    background-color: var(--color-gray-100, #f3f4f6);
+    border-radius: 9999px !important;
+}
+
+.dark .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+html.dark .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+html.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn,
+body.dark .fi-sidebar-item:not(.fi-active) > .fi-sidebar-item-btn:hover,
+body.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 9999px !important;
 }
 
 .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label {
-    @apply text-gray-900 dark:text-gray-100 transition-all duration-200;
+    color: #111827;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label,
+html.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label,
+body.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-sidebar-item-label {
+    color: #ffffff !important;
 }
 
 .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
 .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg {
-    @apply text-gray-700 dark:text-gray-300 transition-all duration-200;
+    color: #374151;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg,
+html.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+html.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg,
+body.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn .fi-icon,
+body.dark .fi-sidebar-item:not(.fi-active):hover > .fi-sidebar-item-btn svg {
+    color: #f1f5f9 !important;
 }
 
 .fi-sidebar-item:hover.fi-active > .fi-sidebar-item-btn {
