@@ -1,6 +1,41 @@
 /* =========================================
    OLED / Pure Black Dark Mode
    ========================================= */
+/* OLED Gray Palette Neutralization (Eliminate Slate Blue in Dark Mode) */
+.dark.sleek-oled,
+html.dark.sleek-oled,
+body.dark.sleek-oled {
+    --color-gray-950: #000000 !important;
+    --color-gray-900: #09090b !important;
+    --color-gray-800: #121215 !important;
+    --color-gray-700: #27272a !important;
+    --color-gray-600: #3f3f46 !important;
+    --gray-950: 0, 0, 0 !important;
+    --gray-900: 9, 9, 11 !important;
+    --gray-800: 18, 18, 21 !important;
+    --gray-700: 39, 39, 42 !important;
+    --gray-600: 63, 63, 70 !important;
+}
+
+/* Force All Tailwind Slate/Gray Dark Containers in OLED Mode to Pure Dark */
+.dark.sleek-oled [class*="dark:bg-gray-900"],
+.dark.sleek-oled [class*="dark:bg-gray-800"],
+html.dark.sleek-oled [class*="dark:bg-gray-900"],
+html.dark.sleek-oled [class*="dark:bg-gray-800"],
+body.dark.sleek-oled [class*="dark:bg-gray-900"],
+body.dark.sleek-oled [class*="dark:bg-gray-800"] {
+    background-color: #09090b !important;
+}
+
+.dark.sleek-oled [class*="dark:border-gray-800"],
+.dark.sleek-oled [class*="dark:border-gray-700"],
+html.dark.sleek-oled [class*="dark:border-gray-800"],
+html.dark.sleek-oled [class*="dark:border-gray-700"],
+body.dark.sleek-oled [class*="dark:border-gray-800"],
+body.dark.sleek-oled [class*="dark:border-gray-700"] {
+    border-color: #27272a !important;
+}
+
 .dark.sleek-oled .fi-body,
 .dark .sleek-oled.fi-body,
 .dark body.sleek-oled,
@@ -73,6 +108,16 @@ body.dark.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 body.dark.sleek-oled .fi-wi-stats-overview-stat {
     background-color: #09090b !important;
     border-color: #27272a !important;
+}
+
+/* Individual Stats Overview Stat Cards in OLED Mode (Ensure crisp 1px border) */
+.dark.sleek-oled .fi-wi-stats-overview-stat,
+.dark body.sleek-oled .fi-wi-stats-overview-stat,
+html.dark.sleek-oled .fi-wi-stats-overview-stat,
+body.dark.sleek-oled .fi-wi-stats-overview-stat {
+    background-color: #09090b !important;
+    border: 1px solid #27272a !important;
+    box-shadow: none !important;
 }
 
 /* Ensure Stats Overview Containers in OLED Mode Have No Enclosing Box */
@@ -215,7 +260,10 @@ body.dark.sleek-oled .fi-no-notification {
 .dark.sleek-oled .fi-tabs,
 .dark .sleek-oled .fi-tabs,
 html.dark.sleek-oled .fi-tabs,
-body.dark.sleek-oled .fi-tabs {
+body.dark.sleek-oled .fi-tabs,
+.dark.sleek-oled .fi-sc-tabs-tablist,
+html.dark.sleek-oled .fi-sc-tabs-tablist,
+body.dark.sleek-oled .fi-sc-tabs-tablist {
     background-color: #000000 !important;
     border-color: #27272a !important;
 }
@@ -226,6 +274,34 @@ html.dark.sleek-oled .fi-tabs::before,
 body.dark.sleek-oled .fi-tabs::before {
     background-color: #09090b !important;
     border-color: #27272a !important;
+}
+
+/* Contained Schema & Form Tabs (like Transaction Edit & Shield Roles) in OLED Mode */
+.dark.sleek-oled .fi-sc-tabs,
+.dark.sleek-oled .fi-sc-tabs.fi-contained,
+.dark.sleek-oled .fi-tabs.fi-contained,
+.dark.sleek-oled .fi-sc-tabs-tab,
+.dark.sleek-oled .fi-tabs-tab,
+html.dark.sleek-oled .fi-sc-tabs,
+html.dark.sleek-oled .fi-sc-tabs.fi-contained,
+html.dark.sleek-oled .fi-tabs.fi-contained,
+html.dark.sleek-oled .fi-sc-tabs-tab,
+html.dark.sleek-oled .fi-tabs-tab,
+body.dark.sleek-oled .fi-sc-tabs,
+body.dark.sleek-oled .fi-sc-tabs.fi-contained,
+body.dark.sleek-oled .fi-tabs.fi-contained,
+body.dark.sleek-oled .fi-sc-tabs-tab,
+body.dark.sleek-oled .fi-tabs-tab {
+    background-color: #09090b !important;
+    border: 1px solid #27272a !important;
+    box-shadow: none !important;
+}
+
+.dark.sleek-oled .fi-sc-tabs.fi-contained > .fi-tabs,
+html.dark.sleek-oled .fi-sc-tabs.fi-contained > .fi-tabs,
+body.dark.sleek-oled .fi-sc-tabs.fi-contained > .fi-tabs {
+    background-color: #0c0c0e !important;
+    border-bottom: 1px solid #27272a !important;
 }
 
 /* Global Search in OLED Mode (Dark Only) */
@@ -871,15 +947,22 @@ body.dark.sleek-glass.sleek-oled .fi-main-ctn {
 
 /* Glassmorphism Cards, Stats Widgets, Sections & Table Containers */
 html.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
+html.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 html.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
 html.sleek-glass:not(.dark) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.sleek-glass:not(.dark) .fi-sc-tabs,
+html.sleek-glass:not(.dark) .fi-sc-tabs.fi-contained,
+html.sleek-glass:not(.dark) .fi-sc-tabs-tab,
 html.sleek-glass:not(.dark) .fi-ta,
 html.sleek-glass:not(.dark) .fi-ta-ctn,
 body.sleek-glass:not(.dark) .fi-wi-stats-overview-stat,
 body.sleek-glass:not(.dark) .fi-wi-widget:not(.fi-wi-stats-overview),
 body.sleek-glass:not(.dark) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.sleek-glass:not(.dark) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.sleek-glass:not(.dark) .fi-sc-tabs,
+body.sleek-glass:not(.dark) .fi-sc-tabs.fi-contained,
+body.sleek-glass:not(.dark) .fi-sc-tabs-tab,
 body.sleek-glass:not(.dark) .fi-ta,
 body.sleek-glass:not(.dark) .fi-ta-ctn {
     background-color: rgba(255, 255, 255, 0.72) !important;
@@ -894,12 +977,18 @@ html.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
 html.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
 html.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs,
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs.fi-contained,
+html.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs-tab,
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 html.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-stats-overview-stat,
 body.dark.sleek-glass:not(.sleek-oled) .fi-wi-widget:not(.fi-wi-stats-overview),
 body.dark.sleek-glass:not(.sleek-oled) .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-glass:not(.sleek-oled) .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs,
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs.fi-contained,
+body.dark.sleek-glass:not(.sleek-oled) .fi-sc-tabs-tab,
 body.dark.sleek-glass:not(.sleek-oled) .fi-ta,
 body.dark.sleek-glass:not(.sleek-oled) .fi-ta-ctn {
     background-color: rgba(15, 23, 42, 0.65) !important;
@@ -914,12 +1003,18 @@ html.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
 html.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 html.dark.sleek-glass.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 html.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+html.dark.sleek-glass.sleek-oled .fi-sc-tabs,
+html.dark.sleek-glass.sleek-oled .fi-sc-tabs.fi-contained,
+html.dark.sleek-glass.sleek-oled .fi-sc-tabs-tab,
 html.dark.sleek-glass.sleek-oled .fi-ta,
 html.dark.sleek-glass.sleek-oled .fi-ta-ctn,
 body.dark.sleek-glass.sleek-oled .fi-wi-stats-overview-stat,
 body.dark.sleek-glass.sleek-oled .fi-wi-widget:not(.fi-wi-stats-overview),
 body.dark.sleek-glass.sleek-oled .fi-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
 body.dark.sleek-glass.sleek-oled .fi-sc-section:not(.fi-section-not-contained):not(.fi-wi-stats-overview *),
+body.dark.sleek-glass.sleek-oled .fi-sc-tabs,
+body.dark.sleek-glass.sleek-oled .fi-sc-tabs.fi-contained,
+body.dark.sleek-glass.sleek-oled .fi-sc-tabs-tab,
 body.dark.sleek-glass.sleek-oled .fi-ta,
 body.dark.sleek-glass.sleek-oled .fi-ta-ctn {
     background-color: rgba(12, 12, 15, 0.75) !important;
