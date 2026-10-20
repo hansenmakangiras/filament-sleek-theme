@@ -5,8 +5,19 @@
     @apply bg-white dark:bg-gray-800 rounded-[calc(var(--radius-2xl)-var(--spacing))]  border border-gray-300 dark:border-gray-700 ring-0 shadow-none
 }
 
-.fi-ta-ctn .fi-ta-header-toolbar {
-    @apply border-0;
+.fi-ta-ctn .fi-ta-header-toolbar,
+.fi-ta-ctn .fi-ta-header-ctn,
+.fi-ta-ctn .fi-ta-content-ctn {
+    border-top: 0 !important;
+    border-top-width: 0 !important;
+}
+
+.fi-ta-table thead th,
+.fi-ta-table thead .fi-ta-header-cell,
+.fi-ta-table thead .fi-ta-actions-header-cell,
+.fi-ta-table thead .fi-ta-empty-header-cell {
+    border-top: 0 !important;
+    border-top-width: 0 !important;
 }
 
 .fi-ta-header-ctn,

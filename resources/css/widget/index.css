@@ -16,5 +16,30 @@
 }
 
 .fi-wi-widget.fi-wi-table {
-    @apply p-0 border-0;
+    @apply p-0 border-0 flex flex-col h-full;
+}
+
+.fi-wi-widget.fi-wi-table > .fi-ta,
+.fi-wi-table > .fi-ta {
+    @apply flex flex-col flex-1 h-full;
+}
+
+.fi-wi-widget.fi-wi-table .fi-ta-ctn,
+.fi-wi-table .fi-ta-ctn {
+    @apply flex flex-col flex-1 h-full;
+}
+
+.fi-wi-widget.fi-wi-table .fi-ta-main,
+.fi-wi-table .fi-ta-main {
+    @apply flex flex-col flex-1;
+}
+
+.fi-wi-widget.fi-wi-table .fi-ta-content-ctn,
+.fi-wi-table .fi-ta-content-ctn {
+    @apply flex flex-col flex-1;
+}
+
+.fi-wi-widget.fi-wi-table .fi-ta-empty-state,
+.fi-wi-table .fi-ta-empty-state {
+    @apply flex-1 flex items-center justify-center;
 }

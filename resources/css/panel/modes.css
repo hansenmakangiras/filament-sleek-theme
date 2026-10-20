@@ -102,6 +102,8 @@ body.dark.sleek-oled .fi-sc-section-not-contained {
 .dark.sleek-oled .fi-ta-header,
 .dark.sleek-oled .fi-ta-header-toolbar,
 .dark.sleek-oled .fi-ta-header-cell,
+.dark.sleek-oled .fi-ta-actions-header-cell,
+.dark.sleek-oled .fi-ta-empty-header-cell,
 .dark.sleek-oled .fi-ta-cell,
 .dark.sleek-oled .fi-ta-row,
 .dark.sleek-oled .fi-ta-summary-row,
@@ -109,12 +111,16 @@ body.dark.sleek-oled .fi-sc-section-not-contained {
 html.dark.sleek-oled .fi-ta-header,
 html.dark.sleek-oled .fi-ta-header-toolbar,
 html.dark.sleek-oled .fi-ta-header-cell,
+html.dark.sleek-oled .fi-ta-actions-header-cell,
+html.dark.sleek-oled .fi-ta-empty-header-cell,
 html.dark.sleek-oled .fi-ta-cell,
 html.dark.sleek-oled .fi-ta-row,
 html.dark.sleek-oled .fi-ta-summary-row,
 html.dark.sleek-oled .fi-ta-pagination,
 body.dark.sleek-oled .fi-ta-row,
-body.dark.sleek-oled .fi-ta-header-cell {
+body.dark.sleek-oled .fi-ta-header-cell,
+body.dark.sleek-oled .fi-ta-actions-header-cell,
+body.dark.sleek-oled .fi-ta-empty-header-cell {
     border-color: #222225 !important;
 }
 
@@ -880,7 +886,9 @@ body.dark.sleek-glass .fi-input-wrp {
 /* Table Header, Toolbar, Rows & Summary in Glass Mode */
 html.sleek-glass:not(.dark) .fi-ta-header,
 html.sleek-glass:not(.dark) .fi-ta-header-toolbar,
-html.sleek-glass:not(.dark) .fi-ta-header-cell {
+html.sleek-glass:not(.dark) .fi-ta-header-cell,
+html.sleek-glass:not(.dark) .fi-ta-actions-header-cell,
+html.sleek-glass:not(.dark) .fi-ta-empty-header-cell {
     background-color: rgba(248, 250, 252, 0.45) !important;
 }
 
@@ -894,7 +902,9 @@ html.sleek-glass:not(.dark) .fi-ta-row:hover {
 
 html.dark.sleek-glass .fi-ta-header,
 html.dark.sleek-glass .fi-ta-header-toolbar,
-html.dark.sleek-glass .fi-ta-header-cell {
+html.dark.sleek-glass .fi-ta-header-cell,
+html.dark.sleek-glass .fi-ta-actions-header-cell,
+html.dark.sleek-glass .fi-ta-empty-header-cell {
     background-color: rgba(15, 23, 42, 0.45) !important;
 }
 
