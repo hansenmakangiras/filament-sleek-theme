@@ -60,11 +60,12 @@ class InstallCommand extends Command
         $this->line('  <options=bold>Next Steps:</>');
         $this->newLine();
 
-        $this->line('  <fg=yellow>1.</> Add the theme CSS to your <fg=cyan>vite.config.js</>:');
+        $this->line('  <fg=yellow>1.</> Import the theme CSS in your panel\'s theme file, after Filament\'s import');
+        $this->line('     (no theme file yet? run <fg=cyan>php artisan make:filament-theme</>):');
         if ($publishCss) {
-            $this->line("     <fg=gray>'resources/css/filament/sleek-theme/theme.css'</>");
+            $this->line("     <fg=gray>@import '../sleek-theme/theme.css';</>");
         } else {
-            $this->line("     <fg=gray>'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css'</>");
+            $this->line("     <fg=gray>@import '../../../../vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css';</>");
         }
         $this->line('     and run <fg=cyan>npm run build</>.');
         $this->newLine();
