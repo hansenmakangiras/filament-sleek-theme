@@ -42,23 +42,25 @@ Or optionally publish the CSS files directly into your project:
 php artisan filament-sleek:install --publish-css
 ```
 
-### 3. Add CSS to Vite
-In your `vite.config.js`, include the theme's CSS:
-```js
-input: [
-    // ...existing files,
-    'vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css'
-],
+### 3. Import the Theme into Your Panel's Theme
+Sleek's CSS builds on top of Filament's theme, so it goes into your panel's theme file, right after Filament's import. If the panel doesn't have a theme file yet, create one:
+```bash
+php artisan make:filament-theme
+```
+This creates `resources/css/filament/admin/theme.css`, adds it to `vite.config.js` and registers it on the panel with `->viteTheme()`. Then add Sleek's import below Filament's:
+```css
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@import '../../../../vendor/hansenmakangiras/filament-sleek-theme/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
 ```
 Then rebuild assets:
 ```bash
 npm run build
 ```
 
-*(Optional)* If you prefer publishing assets manually:
-```bash
-php artisan vendor:publish --tag=filament-sleek-theme-css
-```
+The plugin keeps the panel's existing `->viteTheme()`, so nothing else is needed.
 
 ### 4. Register the Plugin
 In your panel provider (e.g. `app/Providers/Filament/AdminPanelProvider.php`):
@@ -208,14 +210,14 @@ The published `config/filament-sleek-theme.php` allows you to set defaults for:
 
 ## 🛠️ Customizing Theme CSS (Optional)
 
-If you published the CSS files via `vendor:publish` or `--publish-css`:
+To edit the theme's CSS, publish it into your project:
 ```bash
 php artisan vendor:publish --tag=filament-sleek-theme-css
 ```
-You can point the plugin to your published file:
-```php
-FilamentSleekTheme::make()
-    ->theme('resources/css/filament/sleek-theme/theme.css')
+Then import the published file in your panel's theme file instead of the one in `vendor`:
+```css
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@import '../sleek-theme/theme.css';
 ```
 
 ## Screenshots
